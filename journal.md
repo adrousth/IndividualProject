@@ -4,13 +4,15 @@
 
 1/26/2016
 
-Set up work enviroment github, vm etc.
-
+Set up work environment github, virtual machine etc.
 
 
 ### Week 2
 
+1/30/2016
 
+completed project statement and added project plan.
+set up git with intellij
 
 ### Week 3
 
