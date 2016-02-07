@@ -7,17 +7,17 @@ A rental/loan system for movie rental or library
 ## Project Technologies/Techniques
 
 *Security/Authentication
-    *Admin role: add new users, add new products.
-    *User role: check out items, add items to wait lists.
-    *All: anyone can view items available.
+  *Admin role: add new users, add new products.
+  *User role: check out items, add items to wait lists.
+  *All: anyone can view items available.
 *Database
-    *Store users and what they have rented
-    *Store rental item info
+  *Store users and what they have rented
+  *Store rental item info
 *Web Services or APIs
-    *N/A
+  *N/A
 *Logging
-    *Log4J
+  *Log4J
 *Unit Testing
-    *JUnit
+  *JUnit
 Independent Research Topic
-    *TBD
+  *TBD
