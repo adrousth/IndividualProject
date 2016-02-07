@@ -2,7 +2,7 @@
 Individual project repository
 
 ## Problem Statement
-A rental/loan system for movie rental or library
+A rental/loan system for library
 
 ## Project Technologies/Techniques
 
