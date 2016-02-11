@@ -2,14 +2,14 @@
 Individual project repository
 
 ## Problem Statement
-A rental/loan system for library
+A rental/loan system for library, books only.
 
 ## Project Technologies/Techniques
 
 * Security/Authentication
-  * Admin role: add new users, add new products.
+  * Admin role: add new products, change book status checkout/in.
   * User role: check out items, add items to wait lists.
-  * All: anyone can view items available.
+  * All: can view books.
 * Database
   * Store users and what they have rented
   * Store rental item info
