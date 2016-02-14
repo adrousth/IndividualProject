@@ -7,10 +7,11 @@
 - [X] project statement
 
 ### Week 3
-- [] weekly journal entry
+- [X] weekly journal entry
 
 ### Week 4
-- [] weekly journal entry
+- [X] weekly journal entry
+- [X] project database
 
 ### Week 5
 - [] weekly journal entry
