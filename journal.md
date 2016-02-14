@@ -2,25 +2,31 @@
 
 ### Week 1
 
-1/26/2016
+01/26/2016
 
 Set up work environment github, virtual machine etc.
 
 
 ### Week 2
 
-1/30/2016
+01/30/2016
 
 completed project statement and added project plan.
 set up git with intellij
 
 ### Week 3
 
+02/08/2016
 
+did jUnit exercise. got openshift working.
+got MySQL working with intellij.
 
 ### Week 4
 
+02/14/2016
 
+figured out hibernate. started to design/make database for project.
+created very basic wireframe for project.
 
 ### Week 5
 
