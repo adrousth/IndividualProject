@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="library.entities.Author" table="authors">
+        <meta attribute="class-description">
+            This class contains details about a type book
+        </meta>
+
+        <!--Add id for the key -->
+        <id name="authorId" type="int"
+            column="author_id">
+
+        </id>
+        <!--Add a property for all other instance variables/columns-->
+        <property name="firstName" column="first_name"
+                  type="string"/>
+        <property name="lastName" column="last_name"
+                  type="string"/>
+
+    </class>
+
+</hibernate-mapping>

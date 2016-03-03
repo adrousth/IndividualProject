@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="library.entities.Book" table="books">
+        <meta attribute="class-description">
+            This class contains details about a type book
+        </meta>
+
+        <!--Add id for the key -->
+        <id name="isbn" type="int"
+            column="isbn">
+        </id>
+        <!--Add a property for all other instance variables/columns-->
+        <property name="title" column="title"
+                  type="string"/>
+        <property name="publisher" column="publisher"
+                  type="string"/>
+        <property name="publishYear" column="publish_year"
+                  type="int" />
+        <property name="edition" column="edition"
+                  type="int" />
+        <property name="copies" column="copies"
+                  type="int" />
+        <property name="availableCopies" column="copies_available"
+                  type="int" />
+        <set table="book_authors" name="authors">
+            <key column="isbn"/>
+            <many-to-many column="author_id" class="library.entities.Author"/>
+        </set>
+        <set table="book_categories" name="categories">
+            <key column="book_isbn"/>
+            <many-to-many column="book_category" class="library.entities.Category"/>
+        </set>
+        <!--<many-to-one name="authors" class="library.entities.Author" column=""/>-->
+    </class>
+
+</hibernate-mapping>

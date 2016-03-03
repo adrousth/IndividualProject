@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="library.entities.BookCopy" table="book_copies">
+        <meta attribute="class-description">
+            This class contains details about a type book
+        </meta>
+
+        <!--Add id for the key -->
+        <composite-id>
+            <key-property name="bookNumber" type="int" column="book_number"/>
+            <key-property name="isbn" type="int" column="isbn"/>
+        </composite-id>
+        <!--Add a property for all other instance variables/columns-->
+        <property name="bookCondition" column="book_condition"
+                  type="string"/>
+        <property name="checkoutStatus" column="checkout_status"
+                  type="char"/>
+
+
+    </class>
+
+</hibernate-mapping>
