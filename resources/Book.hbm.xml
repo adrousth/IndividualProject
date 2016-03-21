@@ -21,7 +21,7 @@
         <property name="publishYear" column="publish_year"
                   type="int" />
         <property name="edition" column="edition"
-                  type="int" />
+                  type="string" />
         <property name="copies" column="copies"
                   type="int" />
         <property name="availableCopies" column="copies_available"

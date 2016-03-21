@@ -10,11 +10,23 @@ public class Book {
     private String title;
     private String publisher;
     private int publishYear;
-    private int edition;
+    private String edition;
     private int copies;
     private int availableCopies;
     private Set<Author> authors;
     private Set<Category> categories;
+
+    public Book() {
+
+    }
+    public Book(int isbn, String title, String publisher, int publishYear, String edition, int copies) {
+        this.isbn = isbn;
+        this.title = title;
+        this.publisher = publisher;
+        this.publishYear = publishYear;
+        this.edition = edition;
+        this.copies = copies;
+    }
 
     public int getAvailableCopies() {
         return availableCopies;
@@ -56,11 +68,11 @@ public class Book {
         this.publishYear = publishYear;
     }
 
-    public int getEdition() {
+    public String getEdition() {
         return edition;
     }
 
-    public void setEdition(int edition) {
+    public void setEdition(String edition) {
         this.edition = edition;
     }
 

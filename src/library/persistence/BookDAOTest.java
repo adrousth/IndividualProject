@@ -37,11 +37,11 @@ public class BookDAOTest {
 
         int i = 0;
         Book x = new Book();
-        x.setIsbn(2);
+        x.setIsbn(10);
         x.setTitle("Hello World!");
         x.setPublisher("Java inc.");
         x.setPublishYear(1990);
-        x.setEdition(3);
+        x.setEdition("3rd");
         x.setCopies(3);
         x.setAvailableCopies(3);
         Set<Author> authors = new HashSet<>(aDao.findAuthorByParam("firstName", "Fred"));
@@ -89,5 +89,11 @@ public class BookDAOTest {
         System.out.print(" condition: " + copy.getBookCondition());
         System.out.println(" status: " + copy.getCheckoutStatus());
     }
-
+    @Test
+    public void testAddBookFromForm() {
+        ArrayList<String> testMessage = (ArrayList<String>) dao.addBookFromForm("1234", "Hello World", "Java Inc.", "1990", "2nd", "34");
+        for (String line : testMessage) {
+            System.out.println(line);
+        }
+    }
 }
