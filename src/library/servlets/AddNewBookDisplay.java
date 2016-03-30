@@ -17,7 +17,7 @@ public class AddNewBookDisplay extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url = "/index.jsp";
+        String url = "/admin/admin.jsp";
         String content = "/admin/addNewBookForm.jsp";
         String css = "../website.css";
 

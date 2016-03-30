@@ -1,24 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: paulawaite
-  Date: 9/20/15
-  Time: 9:04 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Welcome</title>
-</head>
-<body>
-<FORM ACTION="j_security_check" METHOD="POST">
-    <TABLE>
-        <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username">
-        <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password">
-        <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
-    </TABLE>
-</FORM>
-</body>
-</html>
-
-
+<div class="container">
+    <form class="form-horizontal col-lg-4 col-lg-offset-2" action="j_security_check" method="post">
+    <fieldset>
+        <legend>Sign In</legend>
+        <div class="form-group">
+            <label for="inputUserId" class="col-lg-2 control-label">User ID</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputUserId" placeholder="User ID" type="text" name="j_username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputPassword" placeholder="Password" type="password" name="j_password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <span class="help-block">If you do not have an account please visit our library to sign up!</span>
+    </fieldset>
+</form>
+</div>

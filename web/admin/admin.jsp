@@ -13,7 +13,7 @@
         <link href="website.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <c:import url="../sections/header.jsp"/>
+        <c:import url="adminHeader.jsp"/>
 
         <c:import url="${PageContent}"/>
         <c:import url="../sections/footer.jsp"/>

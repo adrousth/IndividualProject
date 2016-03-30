@@ -40,8 +40,9 @@ public class Startup extends HttpServlet {
 
         context.setAttribute("PageContent", content);
 
+        context.setAttribute("pageHeader", "sections/header.jsp");
         context.setAttribute("libraryDirectory", libraryDirectory);
         context.setAttribute("logger", log);
-        context.setAttribute("PageTitle", "Home Page");
+        context.setAttribute("pageTitle", "Home Page");
     }
 }

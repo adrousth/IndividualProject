@@ -63,4 +63,5 @@
     <li>${line}</li>
 </c:forEach>
 </ul>
+<c:remove var="message"/>
 

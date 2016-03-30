@@ -9,27 +9,110 @@
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
-            <form-login-page>/login.jsp</form-login-page>
-            <form-error-page>/failedLogin.jsp</form-error-page>
+            <form-login-page>/checkLogin</form-login-page>
+            <form-error-page>/failedLogin</form-error-page>
+
         </form-login-config>
+
     </login-config>
 
     <!--TODO: add one or more <security-constraint> elements to limit access
     - C:\tomEE\conf\server.xml -->
+
     <security-role>
         <role-name>administrator</role-name>
     </security-role>
+
     <security-role>
         <role-name>normalUser</role-name>
     </security-role>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>login</web-resource-name>
+            <url-pattern>/login</url-pattern>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>normalUser</role-name>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>admin</web-resource-name>
-            <url-pattern>/admin.jsp</url-pattern>
+            <url-pattern>/admin/*</url-pattern>
         </web-resource-collection>
 
         <auth-constraint>
             <role-name>administrator</role-name>
         </auth-constraint>
     </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>user</web-resource-name>
+            <url-pattern>/user/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>normalUser</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+
+<!--
+    <servlet>
+        <display-name>index</display-name>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <security-constraint>
+        <display-name>SecurityConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>WRCollection</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TutorialUser</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/loginform.html</form-login-page>
+            <form-error-page>/loginerror.html</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <role-name>TutorialUser</role-name>
+    </security-role>
+
+-->
+
+
+
+    <!-- servlet stuff -->
+
+    <!--
+    <servlet>
+        <servlet-name>admin</servlet-name>
+        <servlet-class>library.servlets.AdminHomeDisplay</servlet-class>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>admin</servlet-name>
+        <url-pattern>/admin/*</url-pattern>
+    </servlet-mapping>
+
+    -->
+    
+    
 </web-app>

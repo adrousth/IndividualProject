@@ -10,7 +10,7 @@
 <html>
   <c:import url="sections/head.jsp"/>
   <body>
-    <c:import url="sections/header.jsp"/>
+    <c:import url="${pageHeader}"/>
     <c:import url="${PageContent}"/>
     <c:import url="sections/footer.jsp"/>
   </body>

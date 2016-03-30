@@ -1,19 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: paulawaite
-  Date: 9/20/15
-  Time: 9:04 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Uh-Oh</title>
-</head>
-<>
-  Invalid userid/password combination. <br />
-  <a href="login.jsp">Try again</a>
-</body>
-</html>
-
-
+<div class="container">
+    <div class="container col-lg-5 text-center">
+        <h3>Log in failed</h3>
+        <p>The current home page for my website, most links do not work</p>
+        <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    </div>
+</div>
