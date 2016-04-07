@@ -1,6 +1,7 @@
 package library.servlets;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,10 +25,13 @@ public class LogoutServlet extends HttpServlet {
         if(request.getUserPrincipal() != null) {
             request.logout();
             message = "Logged out";
-            request.setAttribute("header", "sections/header.jsp");
+            header = "/sections/header.jsp";
+            ServletContext context = getServletContext();
+            context.setAttribute("pageHeader", header);
         } else {
             message = "Not logged in";
         }
+
 
         request.logout();
 

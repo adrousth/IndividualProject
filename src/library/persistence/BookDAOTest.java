@@ -35,12 +35,12 @@ public class BookDAOTest {
     @Test
     public void testAddBook() throws Exception {
 
-        int i = 0;
+        String i = "";
         Book x = new Book();
-        x.setIsbn(10);
+        x.setIsbn("10");
         x.setTitle("Hello World!");
         x.setPublisher("Java inc.");
-        x.setPublishYear(1990);
+        x.setPublishYear("1990");
         x.setEdition("3rd");
         x.setCopies(3);
         x.setAvailableCopies(3);
@@ -57,7 +57,7 @@ public class BookDAOTest {
         x.setCategories(categories);
 
         i = dao.addBook(x);
-        assertTrue(i > 0);
+        assertTrue(i != "");
     }
     @Test
     public void testGetBooks() {

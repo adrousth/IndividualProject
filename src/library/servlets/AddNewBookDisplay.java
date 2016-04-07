@@ -19,11 +19,9 @@ public class AddNewBookDisplay extends HttpServlet {
 
         String url = "/admin/admin.jsp";
         String content = "/admin/addNewBookForm.jsp";
-        String css = "../website.css";
 
         request.setAttribute("pageTitle", "Add Book");
         request.setAttribute("PageContent", content);
-        request.setAttribute("styleSheet", css);
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 
         dispatcher.forward(request, response);

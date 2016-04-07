@@ -4,15 +4,24 @@ package library.entities;
  * Created by Student on 2/11/2016.
  */
 public class Author {
-    private int authorId;
+    private String authorId;
     private String firstName;
     private String lastName;
+    private String name;
 
-    public int getAuthorId() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthorId() {
         return authorId;
     }
 
-    public void setAuthorId(int authorId) {
+    public void setAuthorId(String authorId) {
         this.authorId = authorId;
     }
 

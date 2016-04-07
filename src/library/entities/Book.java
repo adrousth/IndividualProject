@@ -6,26 +6,47 @@ import java.util.*;
  * Created by Student on 2/11/2016.
  */
 public class Book {
-    private int isbn;
+    private String isbn;
     private String title;
     private String publisher;
-    private int publishYear;
+    private String publishYear;
     private String edition;
     private int copies;
     private int availableCopies;
+    private String numberPages;
+    private String format;
+    private String description;
     private Set<Author> authors;
     private Set<Category> categories;
 
     public Book() {
-
+        authors = new HashSet<>();
+        categories = new HashSet<>();
     }
-    public Book(int isbn, String title, String publisher, int publishYear, String edition, int copies) {
-        this.isbn = isbn;
-        this.title = title;
-        this.publisher = publisher;
-        this.publishYear = publishYear;
-        this.edition = edition;
-        this.copies = copies;
+
+
+    public String getNumberPages() {
+        return numberPages;
+    }
+
+    public void setNumberPages(String numberPages) {
+        this.numberPages = numberPages;
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getAvailableCopies() {
@@ -36,11 +57,11 @@ public class Book {
         this.availableCopies = availableCopies;
     }
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
@@ -60,11 +81,11 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public int getPublishYear() {
+    public String getPublishYear() {
         return publishYear;
     }
 
-    public void setPublishYear(int publishYear) {
+    public void setPublishYear(String publishYear) {
         this.publishYear = publishYear;
     }
 
@@ -92,12 +113,20 @@ public class Book {
         this.authors = authors;
     }
 
+    public void addAuthor(Author author) {
+        authors.add(author);
+    }
+
     public Set<Category> getCategories() {
         return categories;
     }
 
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+
+    public void addCategory(Category category) {
+        categories.add(category);
     }
 
 }

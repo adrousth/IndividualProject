@@ -24,12 +24,11 @@ public class LoginDisplayServlet extends HttpServlet {
 
         String url = "/index.jsp";
         String content = "/login.jsp";
-        String css = "website.css";
+
 
 
         request.setAttribute("pageTitle", "Login");
         request.setAttribute("PageContent", content);
-        request.setAttribute("styleSheet", css);
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 
         dispatcher.forward(request, response);

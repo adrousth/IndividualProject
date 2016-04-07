@@ -23,7 +23,7 @@ public class AuthorDAOTest {
     public void testAddAuthor() throws Exception {
         Author testAuthor = new Author();
 
-        testAuthor.setAuthorId(100);
+        testAuthor.setAuthorId("100");
         testAuthor.setFirstName("Joe");
         testAuthor.setLastName("Smith");
 

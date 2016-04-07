@@ -33,14 +33,14 @@ public class Startup extends HttpServlet {
         libraryDirectory.add(rentalDirectory);
         libraryDirectory.add(userDirectory);
         */
-        final Logger log = Logger.getLogger(this.getClass());
+            final Logger log = Logger.getLogger(this.getClass());
         LibraryDAO libraryDirectory = new BookDAO();
         ServletContext context = getServletContext();
         String content = "indexContent.jsp";
 
         context.setAttribute("PageContent", content);
 
-        context.setAttribute("pageHeader", "sections/header.jsp");
+        context.setAttribute("pageHeader", "/sections/header.jsp");
         context.setAttribute("libraryDirectory", libraryDirectory);
         context.setAttribute("logger", log);
         context.setAttribute("pageTitle", "Home Page");

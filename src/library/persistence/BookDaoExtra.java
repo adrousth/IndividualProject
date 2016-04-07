@@ -45,7 +45,7 @@ public class BookDaoExtra extends LibraryDAO {
 
             for (int i = 0; i < book.getCopies(); i++) {
                 BookCopy newBook = new BookCopy();
-                newBook.setIsbn(book.getIsbn());
+                //newBook.setIsbn(book.getIsbn());
                 newBook.setBookCondition("New");
                 newBook.setCheckoutStatus('I');
                 newBook.setBookNumber(i + 1);

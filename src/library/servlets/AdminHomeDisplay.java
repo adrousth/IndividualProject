@@ -1,6 +1,7 @@
 package library.servlets;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,11 +24,10 @@ public class AdminHomeDisplay extends HttpServlet {
 
         String url = "/admin/admin.jsp";
         String content = "/admin/adminHomePage.jsp";
-        String css = "../website.css";
 
-        request.setAttribute("pageTitle", "User Home");
+        request.setAttribute("pageTitle", "Admin Home");
         request.setAttribute("PageContent", content);
-        request.setAttribute("styleSheet", css);
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 
         dispatcher.forward(request, response);

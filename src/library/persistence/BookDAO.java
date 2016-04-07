@@ -61,14 +61,14 @@ public class BookDAO extends LibraryDAO {
      ToDo: Check to make sure that the book doesn't already exist
 
      */
-    public int addBook(Book book) {
+    public String addBook(Book book) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
-        Integer bookId = 0;
+        String bookId = "";
         log.info("Book being added");
         try {
             tx = session.beginTransaction();
-            bookId = (Integer) session.save("Book", book);
+            bookId = (String) session.save("Book", book);
             tx.commit();
 
             for (int i = 0; i < book.getCopies(); i++) {
@@ -86,7 +86,7 @@ public class BookDAO extends LibraryDAO {
             if (tx!=null) {
                 tx.rollback();
             }
-            bookId = -1;
+            bookId = "-1";
             log.error("error did not add book");
         } finally {
             session.close();
@@ -130,7 +130,7 @@ public class BookDAO extends LibraryDAO {
         if (isbn == null || isbn.length() <= 0 || isbn.length() > 10 || !convertToNumber(isbn)) {
             messages.add("please enter a 10 digit isbn");
         } else {
-            newBook.setIsbn(Integer.valueOf(isbn));
+            newBook.setIsbn(isbn);
         }
 
         if (title == null || title.length() <= 0) {
@@ -150,7 +150,7 @@ public class BookDAO extends LibraryDAO {
             if (year <= 0 || year > Calendar.getInstance().get(Calendar.YEAR)) {
                 messages.add("please enter a number for the publish year between 0 and " + Calendar.getInstance().get(Calendar.YEAR));
             }
-            newBook.setPublishYear(Integer.valueOf(publishYear));
+            newBook.setPublishYear(publishYear);
         }
         if (messages.size() > 0) {
             messages.add("Book was not added.");
@@ -159,7 +159,7 @@ public class BookDAO extends LibraryDAO {
         newBook.setPublisher(publisher);
         newBook.setEdition(edition);
 
-        if (addBook(newBook) == Integer.valueOf(isbn)) {
+        if (addBook(newBook) == isbn) {
             messages.add("Book was successfully added");
         } else {
             messages.add("Book was not added");

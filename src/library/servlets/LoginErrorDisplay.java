@@ -14,11 +14,10 @@ import javax.servlet.annotation.*;
         urlPatterns = { "/failedLogin" }
 )
 public class LoginErrorDisplay extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String url = "/index.jsp";
-
         if (request.isUserInRole("administrator")) {
             url = "admin/home";
             response.sendRedirect(url);

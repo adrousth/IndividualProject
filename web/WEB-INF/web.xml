@@ -31,7 +31,6 @@
         <web-resource-collection>
             <web-resource-name>login</web-resource-name>
             <url-pattern>/login</url-pattern>
-            <http-method>POST</http-method>
         </web-resource-collection>
         <auth-constraint>
             <role-name>normalUser</role-name>

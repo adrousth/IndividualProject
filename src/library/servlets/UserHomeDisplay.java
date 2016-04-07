@@ -17,15 +17,16 @@ public class UserHomeDisplay extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
         String url = "/user/user.jsp";
         String content = "/user/userHomePage.jsp";
-        String css = "../website.css";
-        String header = "userHeader.jsp";
-
+        String header = "/user/userHeader.jsp";
 
         request.setAttribute("pageTitle", "User Home");
         request.setAttribute("PageContent", content);
-        request.setAttribute("styleSheet", css);
+        request.setAttribute("pageHeader", header);
+
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 
         dispatcher.forward(request, response);

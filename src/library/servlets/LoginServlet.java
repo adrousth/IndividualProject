@@ -1,6 +1,7 @@
 package library.servlets;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,15 +20,20 @@ public class LoginServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url = "";
+        String url = "/failedLogin";;
+        String header = "";
+
         if (request.isUserInRole("administrator")) {
             url = "/admin/home";
+            header = "/admin/adminHeader.jsp";
         } else if (request.isUserInRole("normalUser")) {
             url = "/user/home";
+            header = "/user/userHeader.jsp";
         } else {
-            url = "/failedLogin";
+            response.sendRedirect(url);
         }
-
+        ServletContext context = getServletContext();
+        context.setAttribute("pageHeader", header);
 
 
         response.sendRedirect(url);

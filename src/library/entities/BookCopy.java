@@ -6,16 +6,16 @@ import java.io.Serializable;
  */
 public class BookCopy implements Serializable{
     private Book bookInfo;
-    private int isbn;
+    private String isbn;
     private int bookNumber;
     private String bookCondition;
     private char checkoutStatus; // char use single quotes - 'A' not "A"
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 

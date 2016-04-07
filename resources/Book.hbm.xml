@@ -10,7 +10,7 @@
         </meta>
 
         <!--Add id for the key -->
-        <id name="isbn" type="int"
+        <id name="isbn" type="string"
             column="isbn">
         </id>
         <!--Add a property for all other instance variables/columns-->
@@ -19,13 +19,21 @@
         <property name="publisher" column="publisher"
                   type="string"/>
         <property name="publishYear" column="publish_year"
-                  type="int" />
+                  type="string" />
         <property name="edition" column="edition"
                   type="string" />
         <property name="copies" column="copies"
                   type="int" />
         <property name="availableCopies" column="copies_available"
                   type="int" />
+
+        <property name="numberPages" column="number_pages"
+                  type="string" />
+        <property name="format" column="format"
+                  type="string" />
+        <property name="description" column="description"
+                  type="string" />
+
         <set table="book_authors" name="authors">
             <key column="isbn"/>
             <many-to-many column="author_id" class="library.entities.Author"/>
@@ -34,7 +42,7 @@
             <key column="book_isbn"/>
             <many-to-many column="book_category" class="library.entities.Category"/>
         </set>
-        <!--<many-to-one name="authors" class="library.entities.Author" column=""/>-->
+
     </class>
 
 </hibernate-mapping>

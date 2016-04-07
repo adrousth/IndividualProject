@@ -10,7 +10,7 @@
         </meta>
 
         <!--Add id for the key -->
-        <id name="authorId" type="int"
+        <id name="authorId" type="string"
             column="author_id">
 
         </id>
@@ -18,6 +18,8 @@
         <property name="firstName" column="first_name"
                   type="string"/>
         <property name="lastName" column="last_name"
+                  type="string"/>
+        <property name="name" column="name"
                   type="string"/>
 
     </class>

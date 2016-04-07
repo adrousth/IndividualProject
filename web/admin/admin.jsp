@@ -10,10 +10,10 @@
 <html>
     <head>
         <title>${pageTitle}</title>
-        <link href="website.css" rel="stylesheet" type="text/css" />
+        <link href="/website.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <c:import url="adminHeader.jsp"/>
+        <c:import url="/admin/adminHeader.jsp"/>
 
         <c:import url="${PageContent}"/>
         <c:import url="../sections/footer.jsp"/>

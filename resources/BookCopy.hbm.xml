@@ -12,7 +12,7 @@
         <!--Add id for the key -->
         <composite-id>
             <key-property name="bookNumber" type="int" column="book_number"/>
-            <key-property name="isbn" type="int" column="isbn"/>
+            <key-property name="isbn" type="string" column="isbn"/>
         </composite-id>
         <!--Add a property for all other instance variables/columns-->
         <property name="bookCondition" column="book_condition"
