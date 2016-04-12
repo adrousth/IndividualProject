@@ -14,11 +14,9 @@
             com.mysql.jdbc.Driver
         </property>
         <property name="connection.username">
-            student
+            root
         </property>
-        <property name="connection.password">
-            student
-        </property>
+        <property name="connection.password"></property>
         <mapping resource="Book.hbm.xml" />
         <mapping class="library.entities.Book" />
 

@@ -5,7 +5,7 @@ import java.io.Serializable;
  * Created by Student on 2/11/2016.
  */
 public class BookCopy implements Serializable{
-    private Book bookInfo;
+    //private Book bookInfo;
     private String isbn;
     private int bookNumber;
     private String bookCondition;
@@ -23,9 +23,9 @@ public class BookCopy implements Serializable{
         return bookInfo;
     }*/
 
-    public void setBookInfo(Book bookInfo) {
+    /*public void setBookInfo(Book bookInfo) {
         this.bookInfo = bookInfo;
-    }
+    }*/
 
     public int getBookNumber() {
         return bookNumber;
@@ -50,4 +50,15 @@ public class BookCopy implements Serializable{
     public void setBookCondition(String bookCondition) {
         this.bookCondition = bookCondition;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
 }

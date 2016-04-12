@@ -3,6 +3,7 @@ package src.webService;
 
 import library.entities.Author;
 import library.entities.Book;
+import library.persistence.AuthorDAO;
 import library.persistence.BookDAO;
 import src.entities.AuthorType;
 import src.entities.BookType;
@@ -82,33 +83,119 @@ public class Bookworm {
 
     public static void main(String[] args) {
         Bookworm x = new Bookworm();
-        GoodreadsResponseType books = x.getRecomendationWithTitleAndAuthor("john", "flanagan");
-        ArrayList<BookType> books1 = (ArrayList<BookType>) books.getAuthor().getBooks().getBook();
-        for (BookType book : books1) {
-            Book newBook = new Book();
-            if (book.getIsbn().length() != 0 && book.getIsbn() != null) {
-                newBook.setIsbn(book.getIsbn());
-                newBook.setTitle(book.getTitle());
-                newBook.setPublisher(book.getPublisher());
-                newBook.setPublishYear(book.getPublicationYear());
-                newBook.setEdition(book.getEditionInformation());
-                newBook.setNumberPages(book.getNumPages());
-                newBook.setFormat(book.getFormat());
-                newBook.setDescription(book.getDescription());
 
-                AuthorType author = book.getAuthors().getAuthor();
-                Author newAuthor = new Author();
-                newAuthor.setName(author.getName());
-                newAuthor.setAuthorId(author.getId());
 
-                newBook.addAuthor(newAuthor);
+        ArrayList<String> firstNames = new ArrayList<>();
+        ArrayList<String> lastNames = new ArrayList<>();
 
-                BookDAO dao = new BookDAO();
-                dao.addBook(newBook);
+
+        firstNames.add("kurt");
+        lastNames.add("vonnegut");
+        firstNames.add("john");
+        lastNames.add("grisham");
+        firstNames.add("david");
+        lastNames.add("baldacci");
+        firstNames.add("mark");
+        lastNames.add("twain");
+        firstNames.add("james");
+        lastNames.add("patterson");
+        firstNames.add("maeve");
+        lastNames.add("binchey");
+        firstNames.add("william");
+        lastNames.add("faulkner");
+
+        firstNames.add("stephen");
+        lastNames.add("king");
+
+        firstNames.add("ernest");
+        lastNames.add("hemingway");
+
+        firstNames.add("william");
+        lastNames.add("shakespeare");
+
+        firstNames.add("betty");
+        lastNames.add("crocker");
+        firstNames.add("virginia");
+        lastNames.add("woolf");
+        firstNames.add("jan");
+        lastNames.add("austen");
+        firstNames.add("truman");
+        lastNames.add("capote");
+        firstNames.add("harper");
+        lastNames.add("lee");
+        firstNames.add("toni");
+        lastNames.add("morrison");
+        firstNames.add("helen");
+        lastNames.add("macdonald");
+        firstNames.add("rachel");
+        lastNames.add("carson");
+        firstNames.add("margaret");
+        lastNames.add("mead");
+        firstNames.add("noam");
+        lastNames.add("chomsky");
+
+        for (int count = 0; count < firstNames.size(); count++) {
+
+
+
+
+            GoodreadsResponseType books = x.getRecomendationWithTitleAndAuthor(firstNames.get(count), lastNames.get(count));
+            try {
+                Thread.sleep(1000);                 //1000 milliseconds is one second.
+            } catch(InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+
+            ArrayList<BookType> books1 = (ArrayList<BookType>) books.getAuthor().getBooks().getBook();
+            BookDAO dao = new BookDAO();
+
+            AuthorDAO authorDAO = new AuthorDAO();
+
+            Author bookAuthor = new Author();
+
+            books.getAuthor().getId();
+
+
+            bookAuthor.setAuthorId(books.getAuthor().getId());
+            bookAuthor.setFirstName(firstNames.get(count));
+            bookAuthor.setLastName(lastNames.get(count));
+
+
+            authorDAO.addAuthor(bookAuthor);
+
+
+            for (BookType book : books1) {
+                Book newBook = new Book();
+                if (book.getIsbn().length() != 0 && book.getIsbn() != null) {
+                    int copies = (int) Math.round((4 * Math.random()) + 1);
+                    newBook.setIsbn(book.getIsbn());
+                    newBook.setTitle(book.getTitle());
+                    newBook.setPublisher(book.getPublisher());
+                    newBook.setPublishYear(book.getPublicationYear());
+                    newBook.setEdition(book.getEditionInformation());
+                    newBook.setNumberPages(book.getNumPages());
+                    newBook.setFormat(book.getFormat());
+                    newBook.setDescription(book.getDescription());
+                    newBook.setCopies(copies);
+
+                    AuthorType author = book.getAuthors().getAuthor();
+                    Author newAuthor = new Author();
+
+                    newAuthor.setFirstName("john");
+                    newAuthor.setLastName("flanagan");
+                    newAuthor.setName(author.getName());
+                    newAuthor.setAuthorId(author.getId());
+
+                    newBook.addAuthor(newAuthor);
+
+
+                    dao.addBook(newBook);
+                }
+
             }
 
 
-
+        }
             /*
             System.out.println("isbn: " + book.getIsbn());
             System.out.println("title: " + book.getTitle());
@@ -124,7 +211,7 @@ public class Bookworm {
             }
             */
 
-        }
+
     }
 
 }

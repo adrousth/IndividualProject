@@ -14,20 +14,21 @@ import java.util.List;
  */
 public class AuthorDAO extends LibraryDAO {
     //todo fix methods to use startTransaction from library dao
-    public int addAuthor(Author newAuthor) {
+    public String addAuthor(Author newAuthor) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
-        Integer authorId = 0;
+        String authorId = "0";
         try {
             tx = session.beginTransaction();
-            authorId = (Integer) session.save("Author", newAuthor);
+            authorId = (String) session.save("Author", newAuthor);
 
-
+            tx.commit();
             //log.info("Added user: " + employee + " with id of: " + employeeId);
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             e.printStackTrace();//log.error(e);
+            authorId = "-1";
         } finally {
             session.close();
         }

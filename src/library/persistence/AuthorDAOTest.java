@@ -27,9 +27,9 @@ public class AuthorDAOTest {
         testAuthor.setFirstName("Joe");
         testAuthor.setLastName("Smith");
 
-        int i = 0;
+        String i = "0";
         i = dao.addAuthor(testAuthor);
-        assertTrue(i > 0);
+        assertTrue(i != "0");
     }
     @Test
     public void testSearchAuthorById() throws Exception {

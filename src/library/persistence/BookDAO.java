@@ -44,7 +44,7 @@ public class BookDAO extends LibraryDAO {
      finds all copies of a book by it's isbn
      ToDo: by able to search by other params
      */
-    public Collection<BookCopy> findBookCopies(int bookIsbn) {
+    public Collection<BookCopy> findBookCopies(String bookIsbn) {
         Collection<BookCopy> copies;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
@@ -111,7 +111,7 @@ public class BookDAO extends LibraryDAO {
      finds a single book copy by the isbn and the book number
      ToDo: implement findBookCopies method?
      */
-    public BookCopy getCopyById(int bookNumber, int isbn) {
+    public BookCopy getCopyById(int bookNumber, String isbn) {
         BookCopy copy;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
@@ -120,6 +120,15 @@ public class BookDAO extends LibraryDAO {
                 .add(Restrictions.eq("bookNumber", bookNumber))
                 .list().get(0);
         return copy;
+    }
+
+    public List<Book> getAllBooks() {
+        List<Book> allBooks = null;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        allBooks = (List<Book>) session.createCriteria(Book.class).list();
+
+        return allBooks;
     }
 
     public List<String> addBookFromForm(String isbn, String title, String publisher, String publishYear, String edition, String copies) {
