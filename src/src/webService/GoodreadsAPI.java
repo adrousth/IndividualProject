@@ -36,7 +36,11 @@ public class GoodreadsAPI {
         } catch (Exception e) {
             System.out.println(e);
         }
-
+        try {
+            Thread.sleep(1000);                 //1000 milliseconds is one second.
+        } catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
         return authorId;
     }
 
@@ -55,14 +59,18 @@ public class GoodreadsAPI {
         InputStream in = goodreadsUrl.openStream();
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
-        String line;
+        String line = null;
         String xml = "";
-        while (reader.ready()) {
-            line = reader.readLine();
+        while ((line = reader.readLine()) != null) {
+
             xml += line;
             System.out.println(line);
+
         }
+
+        reader.close();
         return xml;
+
     }
 
 

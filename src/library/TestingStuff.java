@@ -9,7 +9,10 @@ public class TestingStuff {
 
     public static void main(String[] args) {
         TestingStuff stuff = new TestingStuff();
-        stuff.run();
+        for (int i = 0; i < 100; i++) {
+            int copies = (int) Math.round((6 * Math.random()) + 1);
+            System.out.println(copies);
+        }
     }
 
     private void run() {

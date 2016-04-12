@@ -33,6 +33,19 @@ public class BookDAOTest {
     }
 
     @Test
+    public void testGetAllBooks() {
+        List<Book> books = dao.getAllBooks();
+        int i = 1;
+        for (Book book: books) {
+            System.out.println("book #: " + i);
+            System.out.println(book.getIsbn());
+            System.out.println(book.getTitle());
+            System.out.println();
+            i++;
+        }
+    }
+
+    @Test
     public void testAddBook() throws Exception {
 
         String i = "";
@@ -61,7 +74,7 @@ public class BookDAOTest {
     }
     @Test
     public void testGetBooks() {
-        Set<BookCopy> books = new HashSet<>(dao.findBookCopies(1234567890));
+        Set<BookCopy> books = new HashSet<>(dao.findBookCopies("1234567890"));
         for (BookCopy copy : books) {
             System.out.print("isbn: " + copy.getIsbn());
             System.out.print(" book#: " + copy.getBookNumber());
@@ -72,7 +85,7 @@ public class BookDAOTest {
     }
     @Test
     public void testGetBooksByParam() {
-        Set<BookCopy> books = new HashSet<>(dao.findCopiesByParam("isbn", 1234567890));
+        Set<BookCopy> books = new HashSet<>(dao.findCopiesByParam("isbn", "1234567890"));
         for (BookCopy copy : books) {
             System.out.print("isbn: " + copy.getIsbn());
             System.out.print(" book#: " + copy.getBookNumber());
@@ -83,7 +96,7 @@ public class BookDAOTest {
     }
     @Test
     public void testGetBookById() {
-        BookCopy copy = dao.getCopyById(2, 1234567890);
+        BookCopy copy = dao.getCopyById(2, "1234567890");
         System.out.print("isbn: " + copy.getIsbn());
         System.out.print(" book#: " + copy.getBookNumber());
         System.out.print(" condition: " + copy.getBookCondition());
