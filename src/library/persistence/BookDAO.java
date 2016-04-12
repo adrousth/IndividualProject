@@ -87,7 +87,7 @@ public class BookDAO extends LibraryDAO {
                 tx.rollback();
             }
             bookId = "-1";
-            log.error("error did not add book");
+            log.error(e);
         } finally {
             session.close();
         }
