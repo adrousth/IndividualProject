@@ -31,7 +31,7 @@ public class SearchServlet  extends HttpServlet {
         ServletContext context = getServletContext();
         BookDAO dao = (BookDAO) context.getAttribute("bookDAO");
         List<Book> results;
-        results = dao.getAllBooks();
+        results = dao.;
 
 
         /*
