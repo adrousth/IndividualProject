@@ -46,6 +46,18 @@ public class BookDAOTest {
     }
 
     @Test
+    public void testNumberOFBooks() {
+        List<Book> books = dao.getNumberOfBooks(2, 3);
+        int i = 1;
+        for (Book book: books) {
+            System.out.println("book #: " + i);
+            System.out.println(book.getIsbn());
+            System.out.println(book.getTitle());
+            System.out.println();
+            i++;
+        }
+    }
+    @Test
     public void testAddBook() throws Exception {
 
         String i = "";
@@ -109,4 +121,7 @@ public class BookDAOTest {
             System.out.println(line);
         }
     }
+
+
+
 }

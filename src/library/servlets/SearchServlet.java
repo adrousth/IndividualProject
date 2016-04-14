@@ -21,17 +21,27 @@ import java.util.List;
  */
 @WebServlet(
         name = "search",
-        urlPatterns = { "/search" }
+        urlPatterns = { "/search" } // search/#
 )
 public class SearchServlet  extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        request.setAttribute("pageNumber", 0/*#*/);
         String url = "/search/search.jsp";
         String content = "/search/searchResults.jsp";
         ServletContext context = getServletContext();
         BookDAO dao = (BookDAO) context.getAttribute("bookDAO");
         List<Book> results;
-        results = dao.getAllBooks();
+        results = dao.getNumberOfBooks(0, 10);
+
+        request.setAttribute("results", results);
+        request.setAttribute("pageTitle", "Search Results");
+        request.setAttribute("PageContent", content);
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+
+        dispatcher.forward(request, response);
 
 
         /*
@@ -52,18 +62,6 @@ public class SearchServlet  extends HttpServlet {
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-
-
-
          */
-        request.setAttribute("results", results);
-        request.setAttribute("pageTitle", "Search Results");
-        request.setAttribute("PageContent", content);
-
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-
-        dispatcher.forward(request, response);
-
-
     }
 }

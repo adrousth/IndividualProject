@@ -131,6 +131,15 @@ public class BookDAO extends LibraryDAO {
         return allBooks;
     }
 
+    public List<Book> getNumberOfBooks(int firstResult, int numberOfBooks) {
+        List<Book> books = null;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        books = (List<Book>) session.createCriteria(Book.class).setFirstResult(firstResult).setMaxResults(numberOfBooks).list();
+
+        return books;
+    }
+
     public List<String> addBookFromForm(String isbn, String title, String publisher, String publishYear, String edition, String copies) {
 
         List<String> messages = new ArrayList<>();
