@@ -16,20 +16,7 @@
                 <li class="active"><a href="#">Help<span class="sr-only">(current)</span></a></li>
                 <li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>
             </ul>
-            <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                    <label for="select" class="control-label">Search By:</label>
-                    <select class="form-control" id="select">
-                        <option>----</option>
-                        <option>Author</option>
-                        <option>Title</option>
-                        <option>ISBN</option>
-                        <option>Category</option>
-                    </select>
-                    <input class="form-control" placeholder="Search" type="text">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+            <c:import url="/sections/searchBar.jsp"/>
         </div>
     </div>
 </nav>

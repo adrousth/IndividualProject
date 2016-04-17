@@ -1,19 +1,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<h3>Search Results Home Page</h3>
+<div class="col-lg-8 col-lg-offset-2">
+    <h4>Search Results</h4>
+    <h5 >Search results for books with...</h5>
+    <h5>
+        Showing ${(currentPage - 1) * 10 + 1} - ${((currentPage - 1) * 10) + results.size()} of ${numberOfBooks} results
+    </h5>
+</div>
+<c:if test="${numberOfPages > 1}">
+    <c:import url="/search/pagination.jsp"/>
+</c:if>
+<div  class="container">
+    <c:forEach var="book" items="${results}">
 
-
-<ul class="pagination container center-block">
-    <li class="disabled"><a href="#">&laquo;</a></li>
-    <li class="active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">&raquo;</a></li>
-</ul>
-    <c:forEach var="book"  items="${results}">
-
-            <div class="container panel panel-primary col-lg-7">
+            <div class="container panel panel-primary col-lg-9">
                 <div class="panel-heading">
                     <h3 class="panel-title">${book.title}</h3>
                 </div>
@@ -28,23 +27,22 @@
                         <li>Format: ${book.format}</li>
                     </ul>
                     <div class="container col-lg-8">
-
-                            ${book.description}
-
+                        <c:choose>
+                            <c:when test="${book.description.length() > 900}">
+                                ${book.description.substring(0, 800)}(...)
+                            </c:when>
+                            <c:otherwise>
+                                ${book.description}
+                            </c:otherwise>
+                        </c:choose>
                     </div>
                 </div>
             </div>
 
     </c:forEach>
+</div>
 
 
-
-<ul class="pagination container center-block">
-    <li class="disabled"><a href="#">&laquo;</a></li>
-    <li class="active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">&raquo;</a></li>
-</ul>
+<c:if test="${numberOfPages > 1}">
+    <c:import url="/search/pagination.jsp"/>
+</c:if>

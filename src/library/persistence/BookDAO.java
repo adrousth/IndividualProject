@@ -1,14 +1,16 @@
 package library.persistence;
 
+import library.entities.Author;
 import library.entities.Book;
 //import org.apache.log4j.Logger;
 import library.entities.BookCopy;
+import library.entities.SearchResults;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.sql.JoinType;
 
 import java.util.*;
 
@@ -83,9 +85,10 @@ public class BookDAO extends LibraryDAO {
 
             //log.info("Added user: " + employee + " with id of: " + employeeId);
         } catch (HibernateException e) {
-            if (tx!=null) {
+            if (tx != null) {
                 tx.rollback();
             }
+            session.close();
             bookId = "-1";
             log.error(e);
         } finally {
@@ -131,13 +134,75 @@ public class BookDAO extends LibraryDAO {
         return allBooks;
     }
 
-    public List<Book> getNumberOfBooks(int firstResult, int numberOfBooks) {
-        List<Book> books = null;
+    public List<Author> searchForNumberOfAuthorBooks(int firstResult, int numberOfBooks, String searchType, String searchValue) {
+
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
-        books = (List<Book>) session.createCriteria(Book.class).setFirstResult(firstResult).setMaxResults(numberOfBooks).list();
 
-        return books;
+        List<Author> authors = session.createCriteria(Author.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).list();
+
+
+                /*
+        select books.title, books.isbn, authors.first_name, authors.last_name
+        FROM books
+        INNER join book_authors
+        ON books.isbn = book_authors.isbn
+        INNER JOIN authors
+        ON book_authors.author_id = authors.author_id
+        where authors.first_name LIKE '%e%';
+        */
+
+
+
+        return authors;
+    }
+
+    public SearchResults searchForNumberOfBooks(int firstResult, int numberOfBooks, String searchType, String searchValue) {
+        List<Book> books = null;
+        SearchResults searchResults = new SearchResults();
+
+        int number = 0;
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        if (searchType.equals("")) {
+            books = session.createCriteria(Book.class).setFirstResult(firstResult).setMaxResults(numberOfBooks).addOrder(Order.asc("title")).list();
+            number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).uniqueResult());
+        } else if (searchType.equals("firstName") || searchType.equals("lastName")) {
+            Author author = (Author) session.createCriteria(Author.class).add(Restrictions.eq(searchType, searchValue)).list().get(0);
+            number = author.getBooks().size();
+
+            if ((numberOfBooks + firstResult) > author.getBooks().size()) {
+                books = new ArrayList<>(author.getBooks()).subList(firstResult, author.getBooks().size());
+            } else {
+                books = new ArrayList<>(author.getBooks()).subList(firstResult, firstResult + numberOfBooks);
+            }
+
+        } else {
+            books = session.createCriteria(Book.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).setFirstResult(firstResult).setMaxResults(numberOfBooks).addOrder(Order.asc("title")).list();
+            number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).add(Restrictions.like(searchType, "%" + searchValue + "%")).uniqueResult());
+        }
+
+        searchResults.setBooks(books);
+        searchResults.setCount(number);
+        return searchResults;
+    }
+
+    public int getNumberOfBooks(String searchType, String searchValue) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        int number = 0;
+        if (searchType.equals("")) {
+            number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).uniqueResult());
+        } else if (searchType.equals("firstName")) {
+            List<Author> authors = session.createCriteria(Author.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).list();
+            for (Author author: authors) {
+                number += author.getBooks().size();
+            }
+
+        } else {
+            number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).add(Restrictions.like(searchType, "%" + searchValue + "%")).uniqueResult());
+        }
+        session.close();
+        return number;
     }
 
     public List<String> addBookFromForm(String isbn, String title, String publisher, String publishYear, String edition, String copies) {

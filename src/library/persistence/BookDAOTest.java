@@ -1,11 +1,6 @@
 package library.persistence;
 
-import library.entities.Author;
-import library.entities.Book;
-import library.entities.BookCopy;
-import library.entities.Category;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
+import library.entities.*;
 import org.hibernate.Transaction;
 import org.junit.Before;
 import org.junit.Test;
@@ -47,9 +42,9 @@ public class BookDAOTest {
 
     @Test
     public void testNumberOFBooks() {
-        List<Book> books = dao.getNumberOfBooks(2, 3);
+        SearchResults results = dao.searchForNumberOfBooks(2, 3, "title", "hello");
         int i = 1;
-        for (Book book: books) {
+        for (Book book: results.getBooks()) {
             System.out.println("book #: " + i);
             System.out.println(book.getIsbn());
             System.out.println(book.getTitle());
@@ -122,6 +117,41 @@ public class BookDAOTest {
         }
     }
 
+    @Test
+    public void testSearchNumberOfBooks() {
+        SearchResults results = dao.searchForNumberOfBooks(0, 1000, "title", "the");
+        System.out.println(Math.ceil((float)results.getBooks().size() / 7));
+        assertTrue(results.getBooks().size() > 1);
+
+    }
+
+    @Test
+    public void testSearchingBookAuthors() {
+        Set<Book> books = new HashSet<>();
+        List<Author> authors = dao.searchForNumberOfAuthorBooks(0, 10, "firstName", "e");
+        System.out.println(authors.size());
+        for (Author author: authors) {
+            books.addAll(author.getBooks());
+        }
+        System.out.println(books.size());
+        for (Book book: books) {
+            System.out.println(book.getTitle());
+        }
+        assertTrue(authors.size() > 1);
+    }
+
+    @Test
+    public void testSearchingBookAuthors2() {
+        SearchResults results = dao.searchForNumberOfBooks(10, 20, "firstName", "mark");
+        System.out.println(results.getBooks().get(0).getTitle());
+        System.out.println(results.getBooks().size());
 
 
+    }
+
+    @Test
+    public void testing() {
+        SearchResults results = dao.searchForNumberOfBooks(10, 10, "firstName", "mark");
+
+    }
 }

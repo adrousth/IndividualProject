@@ -38,6 +38,7 @@
             <key column="isbn"/>
             <many-to-many column="author_id" class="library.entities.Author"/>
         </set>
+
         <set table="book_categories" name="categories">
             <key column="book_isbn"/>
             <many-to-many column="book_category" class="library.entities.Category"/>

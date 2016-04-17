@@ -21,6 +21,10 @@
                   type="string"/>
         <property name="name" column="name"
                   type="string"/>
+        <set table="book_authors" name="books">
+            <key column="author_id"/>
+            <many-to-many column="isbn" class="library.entities.Book"/>
+        </set>
 
     </class>
 
