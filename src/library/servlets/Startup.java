@@ -42,7 +42,7 @@ public class Startup extends HttpServlet {
         context.setAttribute("PageContent", content);
 
         context.setAttribute("pageHeader", "/sections/header.jsp");
-
+        context.setAttribute("message", "The current home page for my website, most links do not work");
         context.setAttribute("bookDAO", bookDAO);
         context.setAttribute("logger", log);
         context.setAttribute("pageTitle", "Home Page");

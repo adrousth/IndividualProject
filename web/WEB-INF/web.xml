@@ -20,11 +20,11 @@
     - C:\tomEE\conf\server.xml -->
 
     <security-role>
-        <role-name>administrator</role-name>
+        <role-name>ADMIN</role-name>
     </security-role>
 
     <security-role>
-        <role-name>normalUser</role-name>
+        <role-name>USER</role-name>
     </security-role>
 
     <security-constraint>
@@ -33,8 +33,8 @@
             <url-pattern>/login</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>normalUser</role-name>
-            <role-name>administrator</role-name>
+            <role-name>USER</role-name>
+            <role-name>ADMIN</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -45,7 +45,7 @@
         </web-resource-collection>
 
         <auth-constraint>
-            <role-name>administrator</role-name>
+            <role-name>ADMIN</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -55,7 +55,7 @@
             <url-pattern>/user/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>normalUser</role-name>
+            <role-name>USER</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -69,7 +69,7 @@
     </servlet>
     <security-constraint>
         <display-name>SecurityConstraint</display-name>
-        <web-resource-collection>
+        <web-resource-collesction>
             <web-resource-name>WRCollection</web-resource-name>
             <url-pattern>/*</url-pattern>
         </web-resource-collection>

@@ -23,10 +23,10 @@ public class LoginServlet extends HttpServlet {
         String url = "/failedLogin";;
         String header = "";
 
-        if (request.isUserInRole("administrator")) {
+        if (request.isUserInRole("ADMIN")) {
             url = "/admin/home";
             header = "/admin/adminHeader.jsp";
-        } else if (request.isUserInRole("normalUser")) {
+        } else if (request.isUserInRole("USER")) {
             url = "/user/home";
             header = "/user/userHeader.jsp";
         } else {

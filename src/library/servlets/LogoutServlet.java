@@ -40,7 +40,7 @@ public class LogoutServlet extends HttpServlet {
         String url = "/index.jsp";
 
         request.setAttribute("Title", "Log out");
-        request.setAttribute("PageContent", "/logout.jsp");
+        request.setAttribute("PageContent", "/indexContent.jsp");
         request.setAttribute("message", message);
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 

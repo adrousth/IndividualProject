@@ -12,6 +12,7 @@
         <!--Add id for the key -->
         <id name="userId" type="int"
             column="user_id">
+            <generator class="native"/>
         </id>
         <!--Add a property for all other instance variables/columns-->
         <property name="firstName" column="first_name"

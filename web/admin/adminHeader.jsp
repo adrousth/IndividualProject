@@ -16,7 +16,7 @@
                 <li class="active"><a href="#">Help<span class="sr-only">(current)</span></a></li>
                 <li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>
             </ul>
-            <c:import url="/sections/searchBar.jsp"/>
+            <c:import url="/sections/searchHeader.jsp"/>
         </div>
     </div>
 </nav>
