@@ -3,8 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <!--TODO: add a <login-config> element to specify the login and error
-    pages.-->
 
     <login-config>
         <auth-method>FORM</auth-method>
@@ -15,9 +13,6 @@
         </form-login-config>
 
     </login-config>
-
-    <!--TODO: add one or more <security-constraint> elements to limit access
-    - C:\tomEE\conf\server.xml -->
 
     <security-role>
         <role-name>ADMIN</role-name>
@@ -61,57 +56,4 @@
 
 
 
-<!--
-    <servlet>
-        <display-name>index</display-name>
-        <servlet-name>index</servlet-name>
-        <jsp-file>/index.jsp</jsp-file>
-    </servlet>
-    <security-constraint>
-        <display-name>SecurityConstraint</display-name>
-        <web-resource-collesction>
-            <web-resource-name>WRCollection</web-resource-name>
-            <url-pattern>/*</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>TutorialUser</role-name>
-        </auth-constraint>
-        <user-data-constraint>
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-        </user-data-constraint>
-    </security-constraint>
-    <login-config>
-        <auth-method>FORM</auth-method>
-        <form-login-config>
-            <form-login-page>/loginform.html</form-login-page>
-            <form-error-page>/loginerror.html</form-error-page>
-        </form-login-config>
-    </login-config>
-    <security-role>
-        <role-name>TutorialUser</role-name>
-    </security-role>
-
--->
-
-
-
-    <!-- servlet stuff -->
-
-    <!--
-    <servlet>
-        <servlet-name>admin</servlet-name>
-        <servlet-class>library.servlets.AdminHomeDisplay</servlet-class>
-        <security-role-ref>
-            <role-name>administrator</role-name>
-        </security-role-ref>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>admin</servlet-name>
-        <url-pattern>/admin/*</url-pattern>
-    </servlet-mapping>
-
-    -->
-    
-    
 </web-app>

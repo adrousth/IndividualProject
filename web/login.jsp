@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="form-horizontal col-lg-4 col-lg-offset-2" action="j_security_check" method="POST">
+<form class="form-horizontal col-lg-4 col-lg-offset-2" action="j_security_check" method="POST">
     <fieldset>
         <legend>Sign In</legend>
         <div class="form-group">

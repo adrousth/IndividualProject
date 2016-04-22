@@ -14,12 +14,31 @@ public class User {
     private String addressTwo;
     private String state;
     private String city;
+    private String zipCode;
     private Date birthday;
     private String email;
     private String phone;
     private String password;
     private float fees;
     private List<Rental> rentals;
+
+    public User() {
+
+    }
+
+    public User(String firstName, String lastName, Date birthday , String email, String phone, String addressOne, String addressTwo, String city, String state, String zipCode, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.addressOne = addressOne;
+        this.addressTwo = addressTwo;
+        this.city = city;
+        this.state = state;
+        this.birthday = birthday;
+        this.email = email;
+        this.phone = phone;
+        this.zipCode = zipCode;
+        this.password = password;
+    }
 
     public float getFees() {
         return fees;
@@ -123,5 +142,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 }

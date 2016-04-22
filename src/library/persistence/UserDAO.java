@@ -1,10 +1,19 @@
 package library.persistence;
 
+import library.entities.AddUserResults;
 import library.entities.User;
+import org.apache.bval.routines.EMailValidationUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Student on 3/15/2016.
@@ -33,5 +42,35 @@ public class UserDAO extends LibraryDAO {
             session.close();
         }
         return userId;
+    }
+
+    public ArrayList<String> newUserFromForm(String firstName, String lastName, String birthday, String email, String phone, String addressOne, String addressTwo, String city, String state, String zip) {
+        ArrayList<String> messages = new ArrayList<>();
+        AddUserResults results = new AddUserResults();
+        DateFormat format = new SimpleDateFormat("yyyy-dd-MM");
+        Date date = null;
+        if (firstName.length() < 2 || firstName.equals(null)) {
+            results.addMessage("first name must be at least two letters long");
+        }
+        if (lastName.length() < 2 || lastName.equals(null)) {
+            results.addMessage("last name must be at least two letters long");
+        }
+        try {
+            date = format.parse(birthday);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            results.addMessage("invalid date");
+        }
+        if (!EMailValidationUtils.isValid(email)) {
+            results.addMessage("email is not valid");
+        }
+        if (results.getMessages().size() == 0) {
+            String userPassword = RandomStringUtils.random(6, true, true);
+            User user = new User(firstName, lastName, date, email, phone, addressOne, addressTwo, city, state, zip, userPassword);
+            results.setNewUserId(addNewUser(user));
+            results.setNewUserPassword(userPassword);
+            results.setSuccess(true);
+        }
+        return messages;
     }
 }
