@@ -1,5 +1,6 @@
 package library.persistence;
 
+import library.entities.AddUserResults;
 import library.entities.User;
 import org.apache.bval.routines.EMailValidationUtils;
 import org.apache.commons.lang.RandomStringUtils;
@@ -37,17 +38,24 @@ public class UserDAOTest {
 
     @Test
     public void testAddnewUserFromForm() {
-        /*
-        ArrayList<String> messages = dao.newUserFromForm("","","2013-20-2","","","","","","","");
-        for (String message : messages) {
+        AddUserResults results = dao.newUserFromForm("John", "Deerson", "2016-02-29", "hello@world.net", "777-7777", "5432 North street avenue", "", "Java town", "WI", "44444");
+        for (String message : results.getMessages()) {
             System.out.println(message);
         }
-        assertTrue(messages.size() > 0);
-        */
-        //System.out.println("new user password: " + RandomStringUtils.random(6, true, true));
-
-        System.out.println(EMailValidationUtils.isValid("testworld.ad"));
+        System.out.println(results.getNewUserId());
+        System.out.println(results.getNewUserPassword());
+        assertTrue(results.isSuccess());
 
     }
 
+    @Test
+    public void testing() {
+        String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+
+        String email1 = "user@domain.com";
+        String email2 = "user^domain.co.in";
+        System.out.println(Pattern.matches(regex, email1));
+        System.out.println(Pattern.matches(regex, ""));
+
+    }
 }

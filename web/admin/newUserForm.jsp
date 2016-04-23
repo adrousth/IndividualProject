@@ -1,3 +1,23 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<div class="container col-lg-offset-2 col-lg-5">
+    <c:choose>
+        <c:when test="${results.success}">
+            <p>new user added</p>
+            <ul>
+                <li>new user id: ${results.newUserId}</li>
+                <li>new user password: ${results.newUserPassword}</li>
+            </ul>
+        </c:when>
+        <c:when test="${!results.success}">
+            <ul>
+            <c:forEach var="message" items="${results.messages}">
+                <li>${message}</li>
+            </c:forEach>
+            </ul>
+        </c:when>
+    </c:choose>
+
+</div>
 <div class="container">
 <form class="form-horizontal col-lg-6 col-lg-offset-2" action="/admin/addUser" method="POST">
     <fieldset>

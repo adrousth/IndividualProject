@@ -37,6 +37,7 @@
                   type="string"/>
         <property name="fees" column="fees"
                   type="float"/>
+
     </class>
 
 </hibernate-mapping>

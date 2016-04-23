@@ -1,5 +1,6 @@
 package library.servlets;
 
+import library.entities.AddUserResults;
 import library.persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -37,16 +38,16 @@ public class NewUserServlet extends HttpServlet {
         String state = request.getParameter("state");
         String zip = request.getParameter("zip");
 
-        ArrayList<String> messages = userDAO.newUserFromForm(firstName, lastName, birthday, email, phone, addressOne, addressTwo, city, state, zip);
+        AddUserResults results = userDAO.newUserFromForm(firstName, lastName, birthday, email, phone, addressOne, addressTwo, city, state, zip);
 
-        for (String message : messages) {
+        for (String message : results.getMessages()) {
             System.out.println(message);
         }
 
         String url = "/admin/admin.jsp";
         String content = "/admin/newUserForm.jsp";
 
-
+        request.setAttribute("results", results);
 
         request.setAttribute("pageTitle", "New User");
         request.setAttribute("PageContent", content);

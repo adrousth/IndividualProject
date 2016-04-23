@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class AddUserResults {
     private ArrayList<String> messages;
     private boolean success;
-    private String newUserId;
+    private int newUserId;
     private String newUserPassword;
 
 
@@ -24,7 +24,7 @@ public class AddUserResults {
         this.success = success;
     }
 
-    public String getNewUserId() {
+    public int getNewUserId() {
         return newUserId;
     }
 
