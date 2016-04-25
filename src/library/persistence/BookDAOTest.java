@@ -62,7 +62,7 @@ public class BookDAOTest {
         x.setPublisher("Java inc.");
         x.setPublishYear("1990");
         x.setEdition("3rd");
-        x.setCopies(3);
+        x.setTotalCopies(3);
         x.setAvailableCopies(3);
         Set<Author> authors = new HashSet<>(aDao.findAuthorByParam("firstName", "Fred"));
         Set<Category> categories = new HashSet<>();
@@ -151,7 +151,11 @@ public class BookDAOTest {
 
     @Test
     public void testing() {
-        SearchResults results = dao.searchForNumberOfBooks(10, 10, "firstName", "mark");
+        SearchResults results = dao.searchForNumberOfBooks(0, 10, "firstName", "mark");
+        for (BookCopy copy : results.getBooks().get(0).getBookCopies()) {
+            System.out.println("book number: " + copy.getBookNumber());
+            System.out.println("isbn: " + copy.getIsbn());
+        }
 
     }
 }

@@ -28,6 +28,7 @@ public class LogoutServlet extends HttpServlet {
             header = "/sections/header.jsp";
             ServletContext context = getServletContext();
             context.setAttribute("pageHeader", header);
+            context.setAttribute("user", null);
         } else {
             message = "Not logged in";
         }

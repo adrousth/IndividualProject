@@ -1,16 +1,12 @@
 package library.persistence;
 
-import library.entities.Author;
-import library.entities.Book;
+import library.entities.*;
 //import org.apache.log4j.Logger;
-import library.entities.BookCopy;
-import library.entities.SearchResults;
 import org.apache.log4j.Logger;
 import org.hibernate.*;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.sql.JoinType;
 
 import java.util.*;
 
@@ -73,7 +69,7 @@ public class BookDAO extends LibraryDAO {
             bookId = (String) session.save("Book", book);
             tx.commit();
 
-            for (int i = 0; i < book.getCopies(); i++) {
+            for (int i = 0; i < book.getTotalCopies(); i++) {
                 BookCopy newBook = new BookCopy();
                 newBook.setIsbn(book.getIsbn());
                 newBook.setBookCondition("New");
@@ -123,6 +119,41 @@ public class BookDAO extends LibraryDAO {
                 .add(Restrictions.eq("bookNumber", bookNumber))
                 .list().get(0);
         return copy;
+    }
+
+    public void updateCheckoutStatus(BookCopy bookCopy) {
+
+    }
+    /*
+    public void updateUser(User user) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction tx = null;
+        try {
+            tx = session.beginTransaction();
+            session.saveOrUpdate("User", user);
+            tx.commit();
+
+            log.info("Updated user: " + user.getFirstName() + " " + user.getLastName());
+        } catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            log.error(e);
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+    }
+     */
+
+
+    public boolean checkoutBookCopy(Rental rental) {
+        BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
+        if (copy.getCheckoutStatus() == 'I') {
+            updateCheckoutStatus(copy);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public List<Book> getAllBooks() {
@@ -225,7 +256,7 @@ public class BookDAO extends LibraryDAO {
         if (copies == null || copies.length() <= 0 || !convertToNumber(copies)) {
             messages.add("please enter the number of copies being added");
         } else {
-            newBook.setCopies(Integer.valueOf(copies));
+            newBook.setTotalCopies(Integer.valueOf(copies));
         }
 
         if (convertToNumber(publishYear)) {

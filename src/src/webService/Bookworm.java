@@ -176,7 +176,7 @@ public class Bookworm {
                     newBook.setNumberPages(book.getNumPages());
                     newBook.setFormat(book.getFormat());
                     newBook.setDescription(book.getDescription());
-                    newBook.setCopies(copies);
+                    newBook.setTotalCopies(copies);
 
                     AuthorType author = book.getAuthors().getAuthor();
                     Author newAuthor = new Author();

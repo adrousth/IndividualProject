@@ -5,7 +5,7 @@
         <div class="form-group">
             <label for="inputUserId" class="col-lg-2 control-label">User ID</label>
             <div class="col-lg-10">
-                <input class="form-control" id="inputUserId" placeholder="User ID" type="text" name="j_username">
+                <input class="form-control" id="inputUserId" placeholder="User ID" type="text" name="j_username" autofocus="autofocus">
             </div>
         </div>
         <div class="form-group">

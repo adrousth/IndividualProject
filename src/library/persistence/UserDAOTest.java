@@ -1,9 +1,12 @@
 package library.persistence;
 
 import library.entities.AddUserResults;
+import library.entities.Rental;
+import library.entities.SimpleUser;
 import library.entities.User;
 import org.apache.bval.routines.EMailValidationUtils;
 import org.apache.commons.lang.RandomStringUtils;
+import org.hibernate.Session;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -57,5 +60,25 @@ public class UserDAOTest {
         System.out.println(Pattern.matches(regex, email1));
         System.out.println(Pattern.matches(regex, ""));
 
+    }
+
+    @Test
+    public void gettingRentals() {
+        User user = dao.getUserById(1005);
+        System.out.println(user.getRentals().size());
+    }
+
+    @Test
+    public void updatingUser() {
+        Date date = new Date();
+        User user = dao.getUserById(1005);
+        user.setAddressTwo("PO box 104");
+        Rental rental = new Rental();
+        rental.setIsbn("0006498523");
+        rental.setBookNumber(3);
+        rental.setCheckoutDate(date);
+        rental.setUserId(1005);
+        user.addRental(rental);
+        dao.updateUser(user);
     }
 }

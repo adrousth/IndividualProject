@@ -1,15 +1,21 @@
 package library.entities;
 import java.io.Serializable;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by Student on 2/11/2016.
  */
 public class BookCopy implements Serializable{
-    //private Book bookInfo;
     private String isbn;
     private int bookNumber;
     private String bookCondition;
     private char checkoutStatus; // char use single quotes - 'A' not "A"
+    private Set<Rental> rentals;
+
+    public BookCopy() {
+        rentals = new TreeSet<>();
+    }
 
     public String getIsbn() {
         return isbn;
@@ -18,14 +24,6 @@ public class BookCopy implements Serializable{
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
-
-   /* public Book getBookInfo() {
-        return bookInfo;
-    }*/
-
-    /*public void setBookInfo(Book bookInfo) {
-        this.bookInfo = bookInfo;
-    }*/
 
     public int getBookNumber() {
         return bookNumber;
@@ -61,4 +59,11 @@ public class BookCopy implements Serializable{
         return super.hashCode();
     }
 
+    public Set<Rental> getRentals() {
+        return rentals;
+    }
+
+    public void setRentals(Set<Rental> rentals) {
+        this.rentals = rentals;
+    }
 }

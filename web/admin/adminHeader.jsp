@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/logout">Log out<span class="sr-only">(current)</span></a></li>
                 <li class="active"><a href="/admin/newUser">New User<span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="/admin/checkout">About<span class="sr-only">(current)</span></a></li>
             </ul>
             <c:import url="/sections/searchHeader.jsp"/>
         </div>

@@ -20,7 +20,25 @@
         <property name="checkoutStatus" column="checkout_status"
                   type="char"/>
 
+        <set table="rentals" name="rentals" lazy="false">
+            <key>
+                <column name="isbn"/>
+                <column name="book_number"/>
+            </key>
 
+            <many-to-many class="library.entities.User">
+                <column name="user_id"/>
+            </many-to-many>
+        </set>
+        <!--
+        <set name="rentals">
+            <key>
+                <column name="isbn"/>
+                <column name="book_number"/>
+            </key>
+            <one-to-many class="library.entities.Rental"/>
+        </set>
+        -->
     </class>
 
 </hibernate-mapping>

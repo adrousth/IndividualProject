@@ -14,21 +14,41 @@ import java.util.Collection;
  * Created by Student on 2/28/2016.
  */
 public class RentalDAO extends LibraryDAO {
-    //todo fix methods to use startTransaction from library dao
 
     public int addRental(Rental rental) {
+
+        BookDAO bookDAO = new BookDAO();
+        BookCopy copy = bookDAO.getCopyById(rental.getBookNumber(), rental.getIsbn());
+
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction tx = startTransaction(session);
+        Transaction tx = null;
+        int rentalId = 0;
+        try {
+            tx = session.beginTransaction();
 
-
-
-        BookDAO dao = new BookDAO();
-        Integer rentalId;
-        //BookCopy rentalItem = dao.getCopyById(rental.getBookNumber(), rental.getIsbn());
-        rentalId = (Integer) session.save("Rental", rental);
-        tx.commit();
-
-
+            rentalId = (Integer) session.save("Rental", rental);
+            tx.commit();
+        } catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            log.error(e);
+        } finally {
+            session.close();
+        }
         return rentalId;
+    }
+
+    public boolean checkoutBookCopy(Rental rental) {
+        BookDAO bookDAO = new BookDAO();
+        BookCopy copy = bookDAO.getCopyById(rental.getBookNumber(), rental.getIsbn());
+        if (copy.getCheckoutStatus() == 'I') {
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void getRentals() {
+
     }
 }

@@ -43,7 +43,7 @@ public class BookDaoExtra extends LibraryDAO {
             bookId = (Integer) session.save("Book", book);
             tx.commit();
 
-            for (int i = 0; i < book.getCopies(); i++) {
+            for (int i = 0; i < book.getTotalCopies(); i++) {
                 BookCopy newBook = new BookCopy();
                 //newBook.setIsbn(book.getIsbn());
                 newBook.setBookCondition("New");

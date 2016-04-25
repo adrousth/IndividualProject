@@ -1,7 +1,6 @@
 package library.entities;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Student on 2/11/2016.
@@ -20,20 +19,14 @@ public class User {
     private String phone;
     private String password;
     private float fees;
-    private List<Rental> rentals;
+    private Set<Rental> rentals;
     private String role;
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     public User() {
-
+        rentals = new TreeSet<>();
     }
+
+
 
     public User(String firstName, String lastName, Date birthday , String email, String phone, String addressOne, String addressTwo, String city, String state, String zipCode, String password) {
         this.firstName = firstName;
@@ -49,6 +42,26 @@ public class User {
         this.password = password;
     }
 
+    public SimpleUser simpleUserInfo() {
+        SimpleUser user = new SimpleUser();
+        user.setUserId(userId);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setBirthday(birthday);
+        user.setEmail(email);
+        user.setPhone(phone);
+        user.setRentals(rentals);
+        return user;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public float getFees() {
         return fees;
     }
@@ -56,13 +69,17 @@ public class User {
     public void setFees(float fees) {
         this.fees = fees;
     }
-/*
-    public List<Rental> getRentals() {
+
+    public Set<Rental> getRentals() {
         return rentals;
     }
-*/
-    public void setRentals(List<Rental> rentals) {
+
+    public void setRentals(Set<Rental> rentals) {
         this.rentals = rentals;
+    }
+
+    public void addRental(Rental rental) {
+        rentals.add(rental);
     }
 
     public int getUserId() {

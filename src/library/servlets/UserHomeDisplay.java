@@ -1,5 +1,9 @@
 package library.servlets;
 
+import library.entities.SimpleUser;
+import library.entities.User;
+import library.persistence.UserDAO;
+
 import java.io.*;
 import java.util.*;
 import javax.servlet.*;
@@ -17,6 +21,13 @@ public class UserHomeDisplay extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        ServletContext context = getServletContext();
+        if (context.getAttribute("user") == null) {
+            UserDAO dao = (UserDAO) context.getAttribute("userDAO");
+            SimpleUser user = dao.getSimpleUserById(Integer.parseInt(request.getRemoteUser()));
+            System.out.println(request.getRemoteUser());
+            context.setAttribute("user", user);
+        }
 
         String url = "/user/user.jsp";
         String content = "/user/userHomePage.jsp";

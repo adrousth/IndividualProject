@@ -1,5 +1,8 @@
 package library.servlets;
 
+import library.entities.SimpleUser;
+import library.persistence.UserDAO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -32,6 +35,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.sendRedirect(url);
         }
+
         ServletContext context = getServletContext();
         context.setAttribute("pageHeader", header);
 

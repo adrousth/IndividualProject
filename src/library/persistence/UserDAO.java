@@ -1,6 +1,7 @@
 package library.persistence;
 
 import library.entities.AddUserResults;
+import library.entities.SimpleUser;
 import library.entities.User;
 import org.apache.bval.routines.EMailValidationUtils;
 import org.apache.commons.lang.RandomStringUtils;
@@ -8,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -48,6 +50,39 @@ public class UserDAO extends LibraryDAO {
         return userId;
     }
 
+    public void updateUser(User user) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction tx = null;
+        try {
+            tx = session.beginTransaction();
+            session.saveOrUpdate("User", user);
+            tx.commit();
+
+            log.info("Updated user: " + user.getFirstName() + " " + user.getLastName());
+        } catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            log.error(e);
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+    }
+    public User getUserById(int userId) {
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        User user = (User)session.createCriteria(User.class).add(Restrictions.eq("userId", userId)).list().get(0);
+        session.close();
+        return user;
+    }
+    public SimpleUser getSimpleUserById(int userId) {
+
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        SimpleUser user = new SimpleUser();
+        user = ((User)session.createCriteria(User.class).add(Restrictions.eq("userId", userId)).list().get(0)).simpleUserInfo();
+        return user;
+    }
+
     public AddUserResults newUserFromForm(String firstName, String lastName, String birthday, String email, String phone, String addressOne, String addressTwo, String city, String state, String zip) {
         System.out.println(birthday);
         AddUserResults results = new AddUserResults();
@@ -77,4 +112,5 @@ public class UserDAO extends LibraryDAO {
         }
         return results;
     }
+
 }

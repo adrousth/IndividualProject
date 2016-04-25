@@ -11,19 +11,32 @@ public class Book {
     private String publisher;
     private String publishYear;
     private String edition;
-    private int copies;
+    private int totalCopies;
     private int availableCopies;
     private String numberPages;
     private String format;
     private String description;
+    private Set<BookCopy> bookCopies;
     private Set<Author> authors;
     private Set<Category> categories;
 
     public Book() {
         authors = new HashSet<>();
         categories = new HashSet<>();
+        bookCopies = new HashSet<>();
     }
 
+    public Set<BookCopy> getBookCopies() {
+        return bookCopies;
+    }
+
+    public void setBookCopies(Set<BookCopy> bookCopies) {
+        this.bookCopies = bookCopies;
+    }
+
+    public void addBookCopy(BookCopy copy) {
+        bookCopies.add(copy);
+    }
 
     public String getNumberPages() {
         return numberPages;
@@ -97,12 +110,12 @@ public class Book {
         this.edition = edition;
     }
 
-    public int getCopies() {
-        return copies;
+    public int getTotalCopies() {
+        return totalCopies;
     }
 
-    public void setCopies(int copies) {
-        this.copies = copies;
+    public void setTotalCopies(int copies) {
+        this.totalCopies = copies;
     }
 
     public Set<Author> getAuthors() {

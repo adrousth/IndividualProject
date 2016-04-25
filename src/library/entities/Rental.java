@@ -1,19 +1,19 @@
 package library.entities;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Student on 2/11/2016.
  */
-public class Rental {
+public class Rental implements Serializable {
 
-
-    private int isbn;
     private int rentalId;
+    private String isbn;
     private int userId;
     private int bookNumber;
-    //private BookCopy book;
+    private Book book;
     private Date checkoutDate;
     private Date returnDate;
     private int rentalTime;
@@ -24,21 +24,21 @@ public class Rental {
 
     }
 
-    public Rental(int isbn, int rentalId, int userId, int bookNumber, int rentalTime, float fees, String feesInfo) {
+    public Rental(String isbn, int userId, int bookNumber, int rentalTime, float fees, String feesInfo, Date checkoutDate) {
         this.isbn = isbn;
-        this.rentalId = rentalId;
         this.userId = userId;
         this.bookNumber = bookNumber;
         this.rentalTime = rentalTime;
         this.fees = fees;
         this.feesInfo = feesInfo;
+        this.checkoutDate = checkoutDate;
     }
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
     public int getRentalId() {

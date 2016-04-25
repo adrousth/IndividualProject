@@ -22,7 +22,7 @@
                   type="string" />
         <property name="edition" column="edition"
                   type="string" />
-        <property name="copies" column="copies"
+        <property name="totalCopies" column="copies"
                   type="int" />
         <property name="availableCopies" column="copies_available"
                   type="int" />
@@ -42,6 +42,13 @@
         <set table="book_categories" name="categories">
             <key column="book_isbn"/>
             <many-to-many column="book_category" class="library.entities.Category"/>
+        </set>
+
+        <set name="bookCopies">
+            <key>
+                <column name="isbn"/>
+            </key>
+            <one-to-many class="library.entities.BookCopy"/>
         </set>
 
     </class>

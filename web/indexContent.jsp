@@ -6,9 +6,9 @@
         <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
     </div>
     <div class="container">
-        <form class="form-horizontal col-lg-4 col-lg-offset-2" action="j_security_check " method="POST">
+        <form class="form-horizontal col-lg-4 col-lg-offset-2" action="j_security_check" method="POST">
             <fieldset>
-                <legend>Sign In</legend>
+                <legend>Sign In(Does not work, use sign in link)</legend>
                 <div class="form-group">
                     <label for="inputUserId" class="col-lg-2 control-label">User ID</label>
                     <div class="col-lg-10">
