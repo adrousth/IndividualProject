@@ -2,12 +2,15 @@ package library.entities;
 
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Created by Student on 2/11/2016.
  */
 public class Rental implements Serializable {
+
 
     private int rentalId;
     private String isbn;
@@ -21,7 +24,7 @@ public class Rental implements Serializable {
     private String feesInfo;
 
     public Rental() {
-
+        returnDate = null;
     }
 
     public Rental(String isbn, int userId, int bookNumber, int rentalTime, float fees, String feesInfo, Date checkoutDate) {
@@ -66,13 +69,13 @@ public class Rental implements Serializable {
         this.userId = userId;
     }
 
-
-
     public Date getCheckoutDate() {
+
         return checkoutDate;
     }
 
     public void setCheckoutDate(Date checkoutDate) {
+
         this.checkoutDate = checkoutDate;
     }
 

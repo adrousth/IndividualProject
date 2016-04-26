@@ -16,6 +16,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -69,9 +70,13 @@ public class UserDAO extends LibraryDAO {
 
     }
     public User getUserById(int userId) {
-
+        List<User> users;
+        User user = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        User user = (User)session.createCriteria(User.class).add(Restrictions.eq("userId", userId)).list().get(0);
+        users = (List<User>) session.createCriteria(User.class).add(Restrictions.eq("userId", userId)).list();
+        if (users.size() != 0) {
+            user = users.get(0);
+        }
         session.close();
         return user;
     }

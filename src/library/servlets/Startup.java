@@ -1,6 +1,7 @@
 package library.servlets;
 
 import library.entities.Book;
+import library.entities.Rental;
 import library.persistence.*;
 import org.apache.log4j.Logger;
 
@@ -37,6 +38,7 @@ public class Startup extends HttpServlet {
             final Logger log = Logger.getLogger(this.getClass());
         BookDAO bookDAO = new BookDAO();
         UserDAO userDAO = new UserDAO();
+        RentalDAO rentalDAO = new RentalDAO();
         ServletContext context = getServletContext();
         String content = "indexContent.jsp";
 
@@ -46,6 +48,7 @@ public class Startup extends HttpServlet {
         context.setAttribute("message", "The current home page for my website, most links do not work");
         context.setAttribute("bookDAO", bookDAO);
         context.setAttribute("userDAO", userDAO);
+        context.setAttribute("rentalDAO", rentalDAO);
         context.setAttribute("logger", log);
         context.setAttribute("pageTitle", "Home Page");
     }

@@ -1,7 +1,9 @@
 package library.servlets;
 
+import library.entities.Rental;
 import library.entities.SimpleUser;
 import library.entities.User;
+import library.persistence.RentalDAO;
 import library.persistence.UserDAO;
 
 import java.io.*;
@@ -29,6 +31,9 @@ public class UserHomeDisplay extends HttpServlet {
             context.setAttribute("user", user);
         }
 
+        RentalDAO rentalDAO = (RentalDAO) context.getAttribute("rentalDAO");
+        List<Rental> rentals = rentalDAO.getAllRentals();
+
         String url = "/user/user.jsp";
         String content = "/user/userHomePage.jsp";
         String header = "/user/userHeader.jsp";
@@ -36,6 +41,7 @@ public class UserHomeDisplay extends HttpServlet {
         request.setAttribute("pageTitle", "User Home");
         request.setAttribute("PageContent", content);
         request.setAttribute("pageHeader", header);
+        request.setAttribute("rentals", rentals);
 
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);

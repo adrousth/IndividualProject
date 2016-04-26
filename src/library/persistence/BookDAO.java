@@ -111,29 +111,34 @@ public class BookDAO extends LibraryDAO {
      ToDo: implement findBookCopies method?
      */
     public BookCopy getCopyById(int bookNumber, String isbn) {
-        BookCopy copy;
+        List<BookCopy> copies;
+        BookCopy copy = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
-        copy = (BookCopy) session.createCriteria(BookCopy.class)
+        copies = (List<BookCopy>) session.createCriteria(BookCopy.class)
                 .add(Restrictions.eq("isbn", isbn))
                 .add(Restrictions.eq("bookNumber", bookNumber))
-                .list().get(0);
+                .list();
+        if (copies.size() != 0) {
+            copy = copies.get(0);
+        }
+        session.close();
         return copy;
     }
 
-    public void updateCheckoutStatus(BookCopy bookCopy) {
-
-    }
-    /*
-    public void updateUser(User user) {
+    public void changeCheckoutStatus(BookCopy bookCopy) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
+        if (bookCopy.getCheckoutStatus() == 'I') {
+            bookCopy.setCheckoutStatus('O');
+        } else {
+            bookCopy.setCheckoutStatus('I');
+        }
         try {
             tx = session.beginTransaction();
-            session.saveOrUpdate("User", user);
+            session.update("BookCopy", bookCopy);
             tx.commit();
 
-            log.info("Updated user: " + user.getFirstName() + " " + user.getLastName());
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
@@ -141,15 +146,24 @@ public class BookDAO extends LibraryDAO {
         } finally {
             session.close();
         }
-
     }
-     */
+
 
 
     public boolean checkoutBookCopy(Rental rental) {
         BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
         if (copy.getCheckoutStatus() == 'I') {
-            updateCheckoutStatus(copy);
+            changeCheckoutStatus(copy);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean returnBookCopy(Rental rental) {
+        BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
+        if (copy.getCheckoutStatus() == 'O') {
+            changeCheckoutStatus(copy);
             return true;
         } else {
             return false;
