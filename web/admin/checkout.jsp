@@ -1,8 +1,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container col-lg-offset-2 col-lg-5">
-    <c:if test="">
-
-    </c:if>
+    <c:choose>
+        <c:when test="${results.success}">
+            <ul>
+                <li>Checked out</li>
+                <li>Return by: ${results.date}</li>
+            </ul>
+        </c:when>
+        <c:otherwise>
+            <ul>
+                <c:forEach var="message" items="${results.messages}">
+                    <li>${message}</li>
+                </c:forEach>
+            </ul>
+        </c:otherwise>
+    </c:choose>
 </div>
 <div class="container">
     <form class="container form-horizontal col-lg-6 col-lg-offset-2" action="/admin/submit-checkout" method="post">

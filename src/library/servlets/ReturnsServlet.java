@@ -1,6 +1,6 @@
 package library.servlets;
 
-import library.entities.AddRentalResults;
+import library.entities.ReturnResults;
 import library.persistence.RentalDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Alex on 4/23/2016.
+ * Created by Alex on 4/26/2016.
  */
 @WebServlet(
-        name = "submit-checkout",
-        urlPatterns = { "/admin/submit-checkout" }
+        name = "submit-return",
+        urlPatterns = { "/admin/submit-return" }
 )
-public class CheckoutServlet extends HttpServlet {
+public class ReturnsServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -27,28 +27,13 @@ public class CheckoutServlet extends HttpServlet {
         ServletContext context = getServletContext();
         RentalDAO rentalDAO = (RentalDAO) context.getAttribute("rentalDAO");
 
-
-
-        String userId = request.getParameter("userId");
         String isbn = request.getParameter("isbn");
         String bookNumber = request.getParameter("bookNumber");
-        String days = request.getParameter("days");
 
-        System.out.println(userId);
-        System.out.println(isbn);
-        System.out.println(bookNumber);
-        System.out.println(days);
-
-        AddRentalResults results = rentalDAO.checkoutFromForm(userId, isbn, bookNumber, days);
-
-        for (String message: results.getMessages()) {
-            System.out.println(message);
-        }
-        System.out.println(results.getDate());
-
+        ReturnResults results = rentalDAO.returnFromForm(isbn, bookNumber);
 
         String url = "/admin/admin.jsp";
-        String content = "/admin/checkout.jsp";
+        String content = "/admin/return.jsp";
 
         request.setAttribute("results", results);
         request.setAttribute("pageTitle", "Checkouts");

@@ -50,7 +50,7 @@ public class RentalDAOTest {
 
     @Test
     public void returningRental() {
-        Rental rental = dao.getRental(1005, 3, "0006498523");
+        Rental rental = dao.getRental(3, "0006498523");
         System.out.println(rental.getRentalId());
         dao.returningRental(rental);
     }

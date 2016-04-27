@@ -8,14 +8,14 @@ import java.util.Date;
 /**
  * Created by Alex on 4/26/2016.
  */
-public class AddRentalResults {
+public class ReturnResults {
     private static final DateFormat format = new SimpleDateFormat("MM-dd-yyyy");
     private ArrayList<String> messages;
     private Date returnDate;
     private String date;
     private boolean success;
 
-    public AddRentalResults() {
+    public ReturnResults() {
         messages = new ArrayList<>();
     }
 
