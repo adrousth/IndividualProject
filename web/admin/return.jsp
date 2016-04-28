@@ -3,8 +3,17 @@
     <c:choose>
         <c:when test="${results.success}">
             <ul>
-                <li>*user* Returned book</li>
-                <li> x days late/early</li>
+                <li>${results.user.firstName} ${results.user.lastName} (${results.user.userId}) Returned book</li>
+                <ul>
+                    <li><div class="col-lg-2">ISBN:</div> ${results.book.isbn}</li>
+                    <li><div class="col-lg-2">Book#:</div> ${results.book.bookNumber}</li>
+                    <li><div class="col-lg-2">Title:</div> ${results.book.title}</li>
+                    <li><div class="col-lg-2">Edition:</div> ${results.book.edition}</li>
+                    <li><div class="col-lg-2">Format:</div> ${results.book.format}</li>
+                </ul>
+
+                <li>${results.daysLate} days late</li>
+
             </ul>
         </c:when>
         <c:otherwise>
@@ -15,6 +24,7 @@
             </ul>
         </c:otherwise>
     </c:choose>
+    <c:remove var="results"/>
 </div>
 <div class="container">
     <form class="container form-horizontal col-lg-6 col-lg-offset-2" action="/admin/submit-return" method="post">

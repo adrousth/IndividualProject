@@ -1,9 +1,8 @@
 package library.persistence;
 
-import library.entities.AddUserResults;
+import library.entities.NewUserResults;
 import library.entities.SimpleUser;
 import library.entities.User;
-import org.apache.bval.routines.EMailValidationUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
@@ -14,7 +13,6 @@ import org.hibernate.criterion.Restrictions;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -37,7 +35,8 @@ public class UserDAO extends LibraryDAO {
         try {
             tx = session.beginTransaction();
             userId = (int) session.save("User", user);
-            session.createSQLQuery("INSERT INTO user_roles(user_id) VALUE (" + userId + ")").executeUpdate();
+            session.createSQLQuery("INSERT INTO user_roles(user_id) VALUE ("
+                                    + userId + ")").executeUpdate();
 
             tx.commit();
 
@@ -73,24 +72,28 @@ public class UserDAO extends LibraryDAO {
         List<User> users;
         User user = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        users = (List<User>) session.createCriteria(User.class).add(Restrictions.eq("userId", userId)).list();
+        users = (List<User>) session.createCriteria(User.class)
+                            .add(Restrictions.eq("userId", userId)).list();
         if (users.size() != 0) {
             user = users.get(0);
         }
         session.close();
         return user;
     }
+
     public SimpleUser getSimpleUserById(int userId) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         SimpleUser user = new SimpleUser();
-        user = ((User)session.createCriteria(User.class).add(Restrictions.eq("userId", userId)).list().get(0)).simpleUserInfo();
+        user = ((User)session.createCriteria(User.class)
+                .add(Restrictions.eq("userId", userId)).list().get(0)).simpleUserInfo();
+
         return user;
     }
 
-    public AddUserResults newUserFromForm(String firstName, String lastName, String birthday, String email, String phone, String addressOne, String addressTwo, String city, String state, String zip) {
+    public NewUserResults newUserFromForm(String firstName, String lastName, String birthday, String email, String phone, String addressOne, String addressTwo, String city, String state, String zip) {
         System.out.println(birthday);
-        AddUserResults results = new AddUserResults();
+        NewUserResults results = new NewUserResults();
         DateFormat format = new SimpleDateFormat("yyyy-dd-MM");
         Date date = null;
         if (firstName.length() < 2 || firstName.equals(null)) {

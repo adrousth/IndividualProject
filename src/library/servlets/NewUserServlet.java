@@ -1,6 +1,6 @@
 package library.servlets;
 
-import library.entities.AddUserResults;
+import library.entities.NewUserResults;
 import library.persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by Alex on 4/22/2016.
@@ -38,7 +37,7 @@ public class NewUserServlet extends HttpServlet {
         String state = request.getParameter("state");
         String zip = request.getParameter("zip");
 
-        AddUserResults results = userDAO.newUserFromForm(firstName, lastName, birthday, email, phone, addressOne, addressTwo, city, state, zip);
+        NewUserResults results = userDAO.newUserFromForm(firstName, lastName, birthday, email, phone, addressOne, addressTwo, city, state, zip);
 
         for (String message : results.getMessages()) {
             System.out.println(message);

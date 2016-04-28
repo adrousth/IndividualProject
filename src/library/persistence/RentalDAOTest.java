@@ -1,16 +1,14 @@
 package library.persistence;
 
-import library.entities.AddRentalResults;
+import library.entities.CheckoutResults;
 import library.entities.Rental;
-import library.entities.User;
+import library.entities.ReturnResults;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -67,12 +65,19 @@ public class RentalDAOTest {
     public void fromForm() {
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
-        AddRentalResults results = dao.checkoutFromForm("1005", "0006498523", "6", "6");
+        CheckoutResults results = dao.checkoutFromForm("1005", "0006498523", "3", "6");
         System.out.println(results.getMessages().size());
         System.out.println(results.getDate());
         assertTrue(results != null);
 
     }
+
+    @Test
+    public void returnForm() {
+        ReturnResults results = dao.returnFromForm("0446522597", "2");
+    }
+
+
 
 
 

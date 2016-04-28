@@ -7,12 +7,12 @@ import java.util.List;
 /**
  * Created by Alex on 4/10/2016.
  */
-public class SearchResults {
+public class SearchResults extends Results {
     private List<Book> books;
     private int count;
-    private boolean hasResults;
 
     public SearchResults() {
+        super();
         books = new ArrayList<>();
     }
 

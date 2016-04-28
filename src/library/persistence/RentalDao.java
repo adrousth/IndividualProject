@@ -91,7 +91,9 @@ public class RentalDAO extends LibraryDAO {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
 
-        rentals = (List<Rental>) session.createCriteria(Rental.class).add(Restrictions.allEq(propertiesMap)).addOrder(Order.desc("rentalId")).list();
+        rentals = (List<Rental>) session.createCriteria(Rental.class)
+                        .add(Restrictions.allEq(propertiesMap))
+                        .addOrder(Order.desc("rentalId")).list();
 
         if (rentals.size() != 0) {
             rental = rentals.get(0);
@@ -103,9 +105,10 @@ public class RentalDAO extends LibraryDAO {
 
     }
 
-    public AddRentalResults checkoutFromForm(String userId, String isbn, String bookNumber, String days) {
+    public CheckoutResults checkoutFromForm(String userId, String isbn,
+                                            String bookNumber, String days) {
 
-        AddRentalResults results = new AddRentalResults();
+        CheckoutResults results = new CheckoutResults();
 
         UserDAO userDAO = new UserDAO();
         User user = null;
@@ -139,6 +142,8 @@ public class RentalDAO extends LibraryDAO {
             rental.setCheckoutDate(new Date());
             rental.setBookNumber(number);
             rental.setIsbn(isbn);
+            int time = Integer.parseInt(days);
+            rental.setRentalTime(time);
 
             int rentalId = addRental(rental);
             if (rentalId == -1 || rentalId == 0) {
@@ -146,7 +151,7 @@ public class RentalDAO extends LibraryDAO {
                 return results;
             }
             Calendar calendar = new GregorianCalendar();
-            int time = Integer.parseInt(days);
+
             calendar.add(Calendar.DAY_OF_MONTH, time);
             results.setReturnDate(calendar.getTime());
             results.setSuccess(true);
@@ -158,6 +163,7 @@ public class RentalDAO extends LibraryDAO {
     public ReturnResults returnFromForm(String isbn, String bookNumber) {
         ReturnResults results = new ReturnResults();
 
+        UserDAO userDAO = new UserDAO();
         BookDAO bookDAO = new BookDAO();
         BookCopy copy = null;
         int number = 0;
@@ -174,13 +180,23 @@ public class RentalDAO extends LibraryDAO {
         if (results.getMessages().size() == 0) {
             Rental rental;
             rental = getRental(number, isbn);
-
-            if (returningRental(rental) > 0) {
+            if (rental == null) {
                 results.addMessage("Error, book has not been checked out");
                 return results;
             }
-            Calendar calendar = new GregorianCalendar();
-            results.setReturnDate(calendar.getTime());
+
+            if (returningRental(rental) < 0) {
+                results.addMessage("Error, book has not been checked out");
+                return results;
+            }
+
+            results.setBook(bookDAO.getSimpleCopyById(number, isbn));
+            results.setUser(userDAO.getSimpleUserById(rental.getUserId()));
+            results.setRentalTime(rental.getRentalTime());
+            results.setReturnDate(new Date());
+            results.setCheckoutDate(rental.getCheckoutDate());
+            results.calculateDaysLate();
+
             results.setSuccess(true);
 
         }

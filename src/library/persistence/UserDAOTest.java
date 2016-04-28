@@ -1,18 +1,12 @@
 package library.persistence;
 
-import library.entities.AddUserResults;
+import library.entities.NewUserResults;
 import library.entities.Rental;
-import library.entities.SimpleUser;
 import library.entities.User;
-import org.apache.bval.routines.EMailValidationUtils;
-import org.apache.commons.lang.RandomStringUtils;
-import org.hibernate.Session;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
@@ -41,7 +35,7 @@ public class UserDAOTest {
 
     @Test
     public void testAddnewUserFromForm() {
-        AddUserResults results = dao.newUserFromForm("John", "Deerson", "2016-02-29", "hello@world.net", "777-7777", "5432 North street avenue", "", "Java town", "WI", "44444");
+        NewUserResults results = dao.newUserFromForm("John", "Deerson", "2016-02-29", "hello@world.net", "777-7777", "5432 North street avenue", "", "Java town", "WI", "44444");
         for (String message : results.getMessages()) {
             System.out.println(message);
         }

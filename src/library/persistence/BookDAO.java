@@ -16,7 +16,6 @@ import java.util.*;
 public class BookDAO extends LibraryDAO {
 
     private final Logger log = Logger.getLogger(this.getClass());
-
     /*
      adds a copy of a book to the database. atm only called by addBook when a new book is entered
      ToDo: be able to add individual books
@@ -38,21 +37,6 @@ public class BookDAO extends LibraryDAO {
         }
     }
 
-    /*
-     finds all copies of a book by it's isbn
-     ToDo: by able to search by other params
-     */
-    public Collection<BookCopy> findBookCopies(String bookIsbn) {
-        Collection<BookCopy> copies;
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-
-        copies = session.createCriteria(BookCopy.class).add(Restrictions.eq("isbn", bookIsbn)).addOrder(Order.desc("bookNumber")).list();
-
-        session.close();
-
-        return copies;
-
-    }
 
     /*
      adds a new book to the database, as well as copies based on the number of copies.
@@ -77,9 +61,6 @@ public class BookDAO extends LibraryDAO {
                 newBook.setBookNumber(i + 1);
                 addBookCopy(newBook);
             }
-
-
-            //log.info("Added user: " + employee + " with id of: " + employeeId);
         } catch (HibernateException e) {
             if (tx != null) {
                 tx.rollback();
@@ -95,35 +76,52 @@ public class BookDAO extends LibraryDAO {
 
 
     /*
-     currently only really able to search by isbn
-     ToDo: should either get rid of this method or merge it with findBookCopies
-     */
-    public Collection<BookCopy> findCopiesByParam(String searchType, Object searchParam) {
-        Collection<BookCopy> copies;
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-
-        copies = session.createCriteria(BookCopy.class).add(Restrictions.eq(searchType, searchParam)).list();
-        return copies;
-    }
-
-    /*
      finds a single book copy by the isbn and the book number
      ToDo: implement findBookCopies method?
      */
     public BookCopy getCopyById(int bookNumber, String isbn) {
-        List<BookCopy> copies;
+        List<BookCopy> copies = null;
         BookCopy copy = null;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        copies =  session.createCriteria(BookCopy.class)
+                .add(Restrictions.eq("isbn", isbn))
+                .add(Restrictions.eq("bookNumber", bookNumber))
+                .list();
+        if (copies != null && copies.size() > 0) {
+            copy = copies.get(0);
+        }
+        session.close();
+        return copy;
+    }
+
+    public SimpleBook getSimpleCopyById(int bookNumber, String isbn) {
+        List<BookCopy> copies;
+        SimpleBook book = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
         copies = (List<BookCopy>) session.createCriteria(BookCopy.class)
                 .add(Restrictions.eq("isbn", isbn))
                 .add(Restrictions.eq("bookNumber", bookNumber))
                 .list();
-        if (copies.size() != 0) {
-            copy = copies.get(0);
+        if (copies.size() > 0) {
+            book = new SimpleBook(getBookByIsbn(isbn));
+            book.setBookNumber(copies.get(0).getBookNumber());
         }
         session.close();
-        return copy;
+        return book;
+    }
+
+    public Book getBookByIsbn(String isbn) {
+        Book book = new Book();
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        List<Book> books = (List<Book>) session.createCriteria(Book.class)
+                .add(Restrictions.eq("isbn", isbn))
+                .list();
+        if (books.size() > 0) {
+            book = books.get(0);
+        }
+        return book;
     }
 
     public void changeCheckoutStatus(BookCopy bookCopy) {
@@ -131,8 +129,10 @@ public class BookDAO extends LibraryDAO {
         Transaction tx = null;
         if (bookCopy.getCheckoutStatus() == 'I') {
             bookCopy.setCheckoutStatus('O');
+            // decrease copies available
         } else {
             bookCopy.setCheckoutStatus('I');
+            // increase copies available
         }
         try {
             tx = session.beginTransaction();
@@ -148,12 +148,13 @@ public class BookDAO extends LibraryDAO {
         }
     }
 
-
-
     public boolean checkoutBookCopy(Rental rental) {
         BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
         if (copy.getCheckoutStatus() == 'I') {
             changeCheckoutStatus(copy);
+            Book book = getBookByIsbn(rental.getIsbn());
+            book.decreaseAvailableCopies();
+            //update book
             return true;
         } else {
             return false;
@@ -164,6 +165,9 @@ public class BookDAO extends LibraryDAO {
         BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
         if (copy.getCheckoutStatus() == 'O') {
             changeCheckoutStatus(copy);
+            Book book = getBookByIsbn(rental.getIsbn());
+            book.increaseAvailableCopies();
+            // update book
             return true;
         } else {
             return false;
@@ -185,18 +189,6 @@ public class BookDAO extends LibraryDAO {
 
 
         List<Author> authors = session.createCriteria(Author.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).list();
-
-
-                /*
-        select books.title, books.isbn, authors.first_name, authors.last_name
-        FROM books
-        INNER join book_authors
-        ON books.isbn = book_authors.isbn
-        INNER JOIN authors
-        ON book_authors.author_id = authors.author_id
-        where authors.first_name LIKE '%e%';
-        */
-
 
 
         return authors;
@@ -250,61 +242,4 @@ public class BookDAO extends LibraryDAO {
         return number;
     }
 
-    public List<String> addBookFromForm(String isbn, String title, String publisher, String publishYear, String edition, String copies) {
-
-        List<String> messages = new ArrayList<>();
-        Book newBook = new Book();
-
-        if (isbn == null || isbn.length() <= 0 || isbn.length() > 10 || !convertToNumber(isbn)) {
-            messages.add("please enter a 10 digit isbn");
-        } else {
-            newBook.setIsbn(isbn);
-        }
-
-        if (title == null || title.length() <= 0) {
-            messages.add("please enter a title");
-        } else {
-            newBook.setTitle(title);
-        }
-
-        if (copies == null || copies.length() <= 0 || !convertToNumber(copies)) {
-            messages.add("please enter the number of copies being added");
-        } else {
-            newBook.setTotalCopies(Integer.valueOf(copies));
-        }
-
-        if (convertToNumber(publishYear)) {
-            int year = Integer.valueOf(publishYear);
-            if (year <= 0 || year > Calendar.getInstance().get(Calendar.YEAR)) {
-                messages.add("please enter a number for the publish year between 0 and " + Calendar.getInstance().get(Calendar.YEAR));
-            }
-            newBook.setPublishYear(publishYear);
-        }
-        if (messages.size() > 0) {
-            messages.add("Book was not added.");
-            return messages;
-        }
-        newBook.setPublisher(publisher);
-        newBook.setEdition(edition);
-
-        if (addBook(newBook) == isbn) {
-            messages.add("Book was successfully added");
-        } else {
-            messages.add("Book was not added");
-        }
-
-
-        return messages;
-    }
-
-    private boolean convertToNumber(String number) {
-        try {
-            Integer.valueOf(number);
-        } catch (NumberFormatException e){
-            log.error(e);
-            System.out.println(e);
-            return false;
-        }
-        return true;
-    }
 }

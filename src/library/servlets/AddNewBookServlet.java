@@ -34,10 +34,10 @@ public class AddNewBookServlet extends HttpServlet {
         System.out.println(title);
         System.out.println(year);
 
-        ArrayList<String> message = (ArrayList<String>) bookDirectory.addBookFromForm(isbn, title, publisher, year, edition, copies);
+        //ArrayList<String> message = (ArrayList<String>) bookDirectory.addBookFromForm(isbn, title, publisher, year, edition, copies);
 
         System.out.println();
-        session.setAttribute("message", message);
+        //session.setAttribute("message", message);
 
         String url = "/admin/addNewBook";
         response.sendRedirect(url);

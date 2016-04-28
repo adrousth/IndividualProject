@@ -79,28 +79,7 @@ public class BookDAOTest {
         i = dao.addBook(x);
         assertTrue(i != "");
     }
-    @Test
-    public void testGetBooks() {
-        Set<BookCopy> books = new HashSet<>(dao.findBookCopies("1234567890"));
-        for (BookCopy copy : books) {
-            System.out.print("isbn: " + copy.getIsbn());
-            System.out.print(" book#: " + copy.getBookNumber());
-            System.out.print(" condition: " + copy.getBookCondition());
-            System.out.println(" status: " + copy.getCheckoutStatus());
-        }
 
-    }
-    @Test
-    public void testGetBooksByParam() {
-        Set<BookCopy> books = new HashSet<>(dao.findCopiesByParam("isbn", "1234567890"));
-        for (BookCopy copy : books) {
-            System.out.print("isbn: " + copy.getIsbn());
-            System.out.print(" book#: " + copy.getBookNumber());
-            System.out.print(" condition: " + copy.getBookCondition());
-            System.out.println(" status: " + copy.getCheckoutStatus());
-        }
-
-    }
     @Test
     public void testGetBookById() {
         BookCopy copy = dao.getCopyById(2, "1234567890");
@@ -108,13 +87,6 @@ public class BookDAOTest {
         System.out.print(" book#: " + copy.getBookNumber());
         System.out.print(" condition: " + copy.getBookCondition());
         System.out.println(" status: " + copy.getCheckoutStatus());
-    }
-    @Test
-    public void testAddBookFromForm() {
-        ArrayList<String> testMessage = (ArrayList<String>) dao.addBookFromForm("1234", "Hello World", "Java Inc.", "1990", "2nd", "34");
-        for (String line : testMessage) {
-            System.out.println(line);
-        }
     }
 
     @Test

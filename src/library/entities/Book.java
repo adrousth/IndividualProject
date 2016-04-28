@@ -26,6 +26,18 @@ public class Book {
         bookCopies = new HashSet<>();
     }
 
+    public void decreaseAvailableCopies() {
+        if (availableCopies > 0) {
+            availableCopies--;
+        }
+    }
+
+    public void increaseAvailableCopies() {
+        if (availableCopies < totalCopies) {
+            availableCopies++;
+        }
+    }
+
     public Set<BookCopy> getBookCopies() {
         return bookCopies;
     }
