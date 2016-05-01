@@ -7,21 +7,24 @@
         <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
         <a href="#">change password</a>
     </div>
-    <div class="container col-lg-5">
-        <h4>Current checkouts</h4>
-        <ul>
+        <h4 class="col-lg-offset-1">Current checkouts</h4>
         <c:forEach var="rental" items="${rentals}">
             <c:if test="${rental.returnDate == null}">
-                <li>
-                    <ul>
-                        <li>${rental.rentalId}</li>
-                        <li>${rental.isbn}</li>
-                        <li>${rental.bookNumber}</li>
-                        <li>${rental.checkoutDate}</li>
-                    </ul>
-                </li>
+                <div class="container col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">${rental.title}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table-condensed">
+                                <tr><td>Book number:</td><td>${rental.bookNumber}</td></tr>
+                                <tr><td>Checkout date:</td><td>${rental.checkout}</td></tr>
+                                <tr><td>Rental time: </td><td>${rental.rentalTime}</td></tr>
+                                <tr><td>Due by: </td><td>${rental.dueBy}</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </c:if>
         </c:forEach>
-        </ul>
-    </div>
 </div>

@@ -1,10 +1,12 @@
 package library.persistence;
 
-import library.entities.CheckoutResults;
+import library.entities.SimpleRental;
+import library.results.CheckoutResults;
 import library.entities.Rental;
-import library.entities.ReturnResults;
+import library.results.ReturnResults;
 import org.junit.Before;
 import org.junit.Test;
+import org.opensaml.xml.encryption.P;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -75,6 +77,19 @@ public class RentalDAOTest {
     @Test
     public void returnForm() {
         ReturnResults results = dao.returnFromForm("0446522597", "2");
+    }
+
+    @Test
+    public void getUserRentals() {
+        List<SimpleRental> rentals = dao.getUserRentals("1005");
+        for (SimpleRental rental : rentals) {
+            if (rental.getReturnDate() == null) {
+                System.out.println(rental.getTitle());
+                System.out.println(rental.getCheckoutDate());
+                System.out.println(rental.getReturnDate());
+            }
+        }
+
     }
 
 

@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="col-lg-8 col-lg-offset-2">
     <h4>Search Results</h4>
-    <h5 >Search results for books with...</h5>
+    <h5 >Search results for *...*</h5>
     <h5>
         Showing ${(currentPage - 1) * 10 + 1} - ${((currentPage - 1) * 10) + results.size()} of ${numberOfBooks} results
     </h5>
@@ -21,7 +21,7 @@
                         <li>ISBN: ${book.isbn}</li>
                         <li>Publisher: ${book.publisher}</li>
                         <li>Edition: ${book.edition}</li>
-                        <li>Copies: ${book.copies}</li>
+                        <li>Total Copies: ${book.totalCopies}</li>
                         <li>Copies Available: ${book.availableCopies}</li>
                         <li>Number of Pages: ${book.numberPages}</li>
                         <li>Format: ${book.format}</li>

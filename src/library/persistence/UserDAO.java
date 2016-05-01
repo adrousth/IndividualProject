@@ -1,6 +1,6 @@
 package library.persistence;
 
-import library.entities.NewUserResults;
+import library.results.NewUserResults;
 import library.entities.SimpleUser;
 import library.entities.User;
 import org.apache.commons.lang.RandomStringUtils;

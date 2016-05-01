@@ -10,8 +10,6 @@ import java.util.Date;
  * Created by Student on 2/11/2016.
  */
 public class Rental implements Serializable {
-
-
     private int rentalId;
     private String isbn;
     private int userId;
@@ -35,6 +33,17 @@ public class Rental implements Serializable {
         this.fees = fees;
         this.feesInfo = feesInfo;
         this.checkoutDate = checkoutDate;
+    }
+
+    public SimpleRental createSimpleRental() {
+        SimpleRental rental = new SimpleRental();
+        rental.setRentalTime(rentalTime);
+        rental.setCheckoutDate(checkoutDate);
+        rental.setBookNumber(isbn + "-" + bookNumber);
+        rental.setReturnDate(returnDate);
+        rental.setTitle(book.getTitle());
+        rental.formatDates();
+        return rental;
     }
 
     public String getIsbn() {
@@ -109,5 +118,13 @@ public class Rental implements Serializable {
 
     public void setFeesInfo(String feesInfo) {
         this.feesInfo = feesInfo;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
 }

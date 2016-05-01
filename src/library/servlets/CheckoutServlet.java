@@ -1,6 +1,6 @@
 package library.servlets;
 
-import library.entities.CheckoutResults;
+import library.results.CheckoutResults;
 import library.persistence.RentalDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -40,11 +40,6 @@ public class CheckoutServlet extends HttpServlet {
         System.out.println(days);
 
         CheckoutResults results = rentalDAO.checkoutFromForm(userId, isbn, bookNumber, days);
-
-        for (String message: results.getMessages()) {
-            System.out.println(message);
-        }
-        System.out.println(results.getDate());
 
 
         String url = "/admin/admin.jsp";

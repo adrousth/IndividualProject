@@ -1,7 +1,7 @@
 package library.servlets;
 
 import library.entities.Book;
-import library.entities.SearchResults;
+import library.results.SearchResults;
 import library.persistence.BookDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -12,10 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Created by Alex on 4/10/2016.

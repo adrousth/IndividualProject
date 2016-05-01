@@ -2,6 +2,7 @@ package library.persistence;
 
 import library.entities.*;
 //import org.apache.log4j.Logger;
+import library.results.SearchResults;
 import org.apache.log4j.Logger;
 import org.hibernate.*;
 import org.hibernate.criterion.Order;
@@ -154,7 +155,7 @@ public class BookDAO extends LibraryDAO {
             changeCheckoutStatus(copy);
             Book book = getBookByIsbn(rental.getIsbn());
             book.decreaseAvailableCopies();
-            //update book
+            updateBook(book);
             return true;
         } else {
             return false;
@@ -167,11 +168,30 @@ public class BookDAO extends LibraryDAO {
             changeCheckoutStatus(copy);
             Book book = getBookByIsbn(rental.getIsbn());
             book.increaseAvailableCopies();
-            // update book
+            updateBook(book);
             return true;
         } else {
             return false;
         }
+    }
+
+    public int updateBook(Book book) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction tx = null;
+        int i = 0;
+        try {
+            tx = session.beginTransaction();
+            session.update("Book", book);
+            tx.commit();
+            i = 1;
+        } catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            log.error(e);
+            i = -1;
+        } finally {
+            session.close();
+        }
+        return i;
     }
 
     public List<Book> getAllBooks() {

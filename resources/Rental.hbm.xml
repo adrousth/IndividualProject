@@ -36,6 +36,8 @@
         <property name="bookNumber" column="book_number"
                   type="int"/>
 
+        <many-to-one name="book" class="library.entities.Book" column="isbn" insert="false" update="false"/>
+
         <!--
         <many-to-one name="userId" class="library.entities.User" column="user_id" />
         <many-to-one name="isbn" class="library.entities.BookCopy" column="isbn"/>

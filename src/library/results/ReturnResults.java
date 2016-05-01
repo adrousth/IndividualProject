@@ -1,5 +1,7 @@
-package library.entities;
+package library.results;
 
+import library.entities.SimpleBook;
+import library.entities.SimpleUser;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import java.text.DateFormat;

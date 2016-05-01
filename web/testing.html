@@ -28,28 +28,38 @@ Logo?
 
 
 
-
-
-
-
 <div class="container">
-    <form class="container form-horizontal col-lg-6 col-lg-offset-2">
-        <fieldset>
-            <legend>Returns</legend>
-            <div class="form-group">
-                <label for="isbn" class="col-lg-2 control-label">ISBN</label>
-                <div class="col-lg-5">
-                    <input class="form-control" id="isbn" name="isbn" placeholder="ISBN" type="text">
-                </div>
-                <label for="bookNumber" class="col-lg-2 control-label">Book-num</label>
-                <div class="col-lg-2">
-                    <input class="form-control" id="bookNumber" name="bookNumber" placeholder="" type="text">
-                </div>
-                </div>
-            </fieldset>
-        </form>
+    <div class="container col-lg-5 text-center">
+        <h3>Home Page for *user*</h3>
+        <h4>Welcome</h4>
+        <p>The current *user* home page for my website, most links do not work</p>
+        <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+        <a href="#">change password</a>
     </div>
-<div class="panel-footer">here is the footer</div>
+    <h2>Checkouts</h2>
 
+    <div class="container col-lg-5">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">${rental.title}</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table-condensed">
+                <tr><td>Book number:</td><td>${rental.bookNumber}</td></tr>
+                <tr><td>Checkout date:</td><td>${rental.checkoutDate}</td></tr>
+                <tr><td>Rental time: </td><td>${rental.rentalTime}</td></tr>
+                <tr><td>name:</td><td>item</td></tr>
+            </table>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="panel-footer">here is the footer</div>
+<ul class="panel-body list-unstyled list-inline">
+    <li class="item"><div>name</div><div> item</div></li>
+    <li><div></div><div></div></li>
+    <li><div></div><div></div></li>
+</ul>
 </body>
 </html>

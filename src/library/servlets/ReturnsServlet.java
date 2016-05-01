@@ -1,6 +1,6 @@
 package library.servlets;
 
-import library.entities.ReturnResults;
+import library.results.ReturnResults;
 import library.persistence.RentalDAO;
 
 import javax.servlet.RequestDispatcher;

@@ -1,4 +1,6 @@
-package library.entities;
+package library.results;
+
+import library.entities.Book;
 
 import java.util.ArrayList;
 import java.util.Comparator;

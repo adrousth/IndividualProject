@@ -1,6 +1,4 @@
-package library.entities;
-
-import java.util.ArrayList;
+package library.results;
 
 /**
  * Created by Alex on 4/22/2016.

@@ -1,6 +1,6 @@
 package library.servlets;
 
-import library.entities.NewUserResults;
+import library.results.NewUserResults;
 import library.persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;

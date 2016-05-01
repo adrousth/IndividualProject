@@ -1,6 +1,8 @@
 package library.persistence;
 
 import library.entities.*;
+import library.results.CheckoutResults;
+import library.results.ReturnResults;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -67,6 +69,22 @@ public class RentalDAO extends LibraryDAO {
         return i;
     }
 
+    public List<SimpleRental> getUserRentals(String userId) {
+        List<SimpleRental> simpleRentals = new ArrayList<>();
+        List<Rental> rentals;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        rentals = (List<Rental>) session.createCriteria(Rental.class).add(Restrictions.eq("userId", Integer.parseInt(userId))).list();
+        for (Rental rental : rentals) {
+            simpleRentals.add(rental.createSimpleRental());
+        }
+
+        session.close();
+
+        return simpleRentals;
+
+    }
+
 
     public List<Rental> getAllRentals() {
         List<Rental> allRentals = null;
@@ -121,7 +139,7 @@ public class RentalDAO extends LibraryDAO {
         }
 
         if (user == null) {
-            results.addMessage("Invalid user id");
+            results.addMessage("Error: Invalid user id");
         }
 
         BookDAO bookDAO = new BookDAO();
@@ -132,17 +150,21 @@ public class RentalDAO extends LibraryDAO {
             copy = bookDAO.getCopyById(number, isbn);
         } catch (NumberFormatException e) {
             e.printStackTrace();
+            results.addMessage("Error: Invalid book number");
         }
         if (copy == null) {
             results.addMessage("Error: Book not found");
         }
         if (results.getMessages().size() == 0) {
             Rental rental = new Rental();
+
             rental.setUserId(id);
             rental.setCheckoutDate(new Date());
             rental.setBookNumber(number);
             rental.setIsbn(isbn);
+
             int time = Integer.parseInt(days);
+
             rental.setRentalTime(time);
 
             int rentalId = addRental(rental);

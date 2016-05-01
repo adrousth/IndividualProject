@@ -1,6 +1,7 @@
 package library.servlets;
 
 import library.entities.Rental;
+import library.entities.SimpleRental;
 import library.entities.SimpleUser;
 import library.entities.User;
 import library.persistence.RentalDAO;
@@ -32,7 +33,7 @@ public class UserHomeDisplay extends HttpServlet {
         }
 
         RentalDAO rentalDAO = (RentalDAO) context.getAttribute("rentalDAO");
-        List<Rental> rentals = rentalDAO.getAllRentals();
+        List<SimpleRental> rentals = rentalDAO.getUserRentals(request.getRemoteUser());
 
         String url = "/user/user.jsp";
         String content = "/user/userHomePage.jsp";
