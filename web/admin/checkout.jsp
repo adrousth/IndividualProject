@@ -17,7 +17,7 @@
     </c:choose>
 </div>
 <div class="container">
-    <form class="container form-horizontal col-lg-6 col-lg-offset-2" action="/admin/submit-checkout" method="post">
+    <form class="container form-horizontal col-lg-6 col-lg-offset-2" action="/admin/checkout" method="post">
         <fieldset>
             <legend>Checkout</legend>
             <div class="form-group">

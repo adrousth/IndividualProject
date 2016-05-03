@@ -16,10 +16,25 @@ import java.io.IOException;
  * Created by Alex on 4/23/2016.
  */
 @WebServlet(
-        name = "submit-checkout",
-        urlPatterns = { "/admin/submit-checkout" }
+        name = "checkout",
+        urlPatterns = { "/admin/checkout" }
 )
 public class CheckoutServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+
+        String url = "/admin/admin.jsp";
+        String content = "/admin/checkout.jsp";
+
+        request.setAttribute("pageTitle", "Checkouts");
+        request.setAttribute("PageContent", content);
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+
+        dispatcher.forward(request, response);
+
+    }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -42,16 +57,12 @@ public class CheckoutServlet extends HttpServlet {
         CheckoutResults results = rentalDAO.checkoutFromForm(userId, isbn, bookNumber, days);
 
 
-        String url = "/admin/admin.jsp";
-        String content = "/admin/checkout.jsp";
+
+
 
         request.setAttribute("results", results);
-        request.setAttribute("pageTitle", "Checkouts");
-        request.setAttribute("PageContent", content);
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-
-        dispatcher.forward(request, response);
+        doGet(request, response);
 
     }
 }

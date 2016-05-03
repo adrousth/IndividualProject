@@ -11,9 +11,9 @@
                     <li><div class="col-lg-2">Edition:</div> ${results.book.edition}</li>
                     <li><div class="col-lg-2">Format:</div> ${results.book.format}</li>
                 </ul>
-
-                <li>${results.daysLate} days late</li>
-
+                <c:if test="${results.daysLate > 0}">
+                    <li>${results.daysLate} days late</li>
+                </c:if>
             </ul>
         </c:when>
         <c:otherwise>

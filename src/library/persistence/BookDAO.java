@@ -13,13 +13,15 @@ import java.util.*;
 
 /**
  * Created by Student on 2/16/2016.
+ * Dao for books and book copies.
  */
 public class BookDAO extends LibraryDAO {
 
     private final Logger log = Logger.getLogger(this.getClass());
-    /*
-     adds a copy of a book to the database. atm only called by addBook when a new book is entered
-     ToDo: be able to add individual books
+
+    /**
+     * Adds a copy of a book to the database.
+     * @param bookCopy The copy of the book to be added.
      */
     private void addBookCopy(BookCopy bookCopy) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -39,15 +41,15 @@ public class BookDAO extends LibraryDAO {
     }
 
 
-    /*
-     adds a new book to the database, as well as copies based on the number of copies.
-     ToDo: Check to make sure that the book doesn't already exist
-
+    /**
+     * Adds a new book to the database, as well as copies based on the number of copies.
+     * @param book The book to be added
+     * @return The newly added book id if successful, otherwise 0 or -1.
      */
     public String addBook(Book book) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
-        String bookId = "";
+        String bookId = "0";
         log.info("Book being added");
         try {
             tx = session.beginTransaction();
@@ -76,9 +78,11 @@ public class BookDAO extends LibraryDAO {
     }
 
 
-    /*
-     finds a single book copy by the isbn and the book number
-     ToDo: implement findBookCopies method?
+    /**
+     * Finds a single book copy by the isbn and the book number
+     * @param bookNumber The book number of the book.
+     * @param isbn The isbn of the book.
+     * @return The book copy that was found, if any.
      */
     public BookCopy getCopyById(int bookNumber, String isbn) {
         List<BookCopy> copies = null;
@@ -96,6 +100,13 @@ public class BookDAO extends LibraryDAO {
         return copy;
     }
 
+
+    /**
+     * Gets a (simple) copy of the book based on the isbn and book number.
+     * @param bookNumber The book number of the book.
+     * @param isbn The isbn of the book.
+     * @return The (simple) book that was found, if any.
+      */
     public SimpleBook getSimpleCopyById(int bookNumber, String isbn) {
         List<BookCopy> copies;
         SimpleBook book = null;
@@ -113,6 +124,11 @@ public class BookDAO extends LibraryDAO {
         return book;
     }
 
+    /**
+     * Finds the Book based on the isbn
+     * @param isbn The isbn of the book.
+     * @return The book that was found, if any.
+     */
     public Book getBookByIsbn(String isbn) {
         Book book = new Book();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -125,15 +141,19 @@ public class BookDAO extends LibraryDAO {
         return book;
     }
 
+    /**
+     * Changes the checkout status of the book copy and updates the database.
+     * @param bookCopy The book copy to be changed.
+     */
     public void changeCheckoutStatus(BookCopy bookCopy) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
         if (bookCopy.getCheckoutStatus() == 'I') {
             bookCopy.setCheckoutStatus('O');
-            // decrease copies available
+
         } else {
             bookCopy.setCheckoutStatus('I');
-            // increase copies available
+
         }
         try {
             tx = session.beginTransaction();
@@ -149,6 +169,12 @@ public class BookDAO extends LibraryDAO {
         }
     }
 
+
+    /**
+     * Checks out the book copy based on the rental.
+     * @param rental The rental being checked out.
+     * @return True if the book was able to be checked out, false otherwise.
+     */
     public boolean checkoutBookCopy(Rental rental) {
         BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
         if (copy.getCheckoutStatus() == 'I') {
@@ -162,6 +188,11 @@ public class BookDAO extends LibraryDAO {
         }
     }
 
+    /**
+     * Returns the book copy based on the rental
+     * @param rental The rental being returned.
+     * @return True if the book was able to be returned, false otherwise.
+     */
     public boolean returnBookCopy(Rental rental) {
         BookCopy copy = getCopyById(rental.getBookNumber(), rental.getIsbn());
         if (copy.getCheckoutStatus() == 'O') {
@@ -175,6 +206,11 @@ public class BookDAO extends LibraryDAO {
         }
     }
 
+    /**
+     * Updates the information on the book.
+     * @param book The book to be updated
+     * @return 1 if update was successful, 0 otherwise.
+     */
     public int updateBook(Book book) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
@@ -194,6 +230,10 @@ public class BookDAO extends LibraryDAO {
         return i;
     }
 
+    /**
+     * Returns all books in the database
+     * @return A List of all the books.
+     */
     public List<Book> getAllBooks() {
         List<Book> allBooks = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -203,6 +243,14 @@ public class BookDAO extends LibraryDAO {
         return allBooks;
     }
 
+    /**
+     * Returns a list of authors.
+     * @param firstResult
+     * @param numberOfBooks
+     * @param searchType
+     * @param searchValue
+     * @return
+     */
     public List<Author> searchForNumberOfAuthorBooks(int firstResult, int numberOfBooks, String searchType, String searchValue) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -214,6 +262,14 @@ public class BookDAO extends LibraryDAO {
         return authors;
     }
 
+    /**
+     * Returns a number of books and other information based on the search information.
+     * @param firstResult The first book in the list to be returned, 0 based.
+     * @param numberOfBooks The number of books to be returned.
+     * @param searchType The type of search being done, 'title', 'isbn' etc.
+     * @param searchValue The value of said search.
+     * @return The results of the search.
+     */
     public SearchResults searchForNumberOfBooks(int firstResult, int numberOfBooks, String searchType, String searchValue) {
         List<Book> books = null;
         SearchResults searchResults = new SearchResults();
@@ -244,6 +300,12 @@ public class BookDAO extends LibraryDAO {
         return searchResults;
     }
 
+    /**
+     * not used
+     * @param searchType
+     * @param searchValue
+     * @return
+     */
     public int getNumberOfBooks(String searchType, String searchValue) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         int number = 0;

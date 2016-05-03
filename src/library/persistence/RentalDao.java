@@ -13,19 +13,24 @@ import java.util.*;
 
 /**
  * Created by Student on 2/28/2016.
+ * Dao for checking out and returning books
+ *
  */
 public class RentalDAO extends LibraryDAO {
 
+
+    /**
+     * Adds the passed rental to the database
+     * @param rental The rental to be added.
+     * @return The rental id from the newly added rental. Returns -1 if the BookCopy in the rental does not exist.
+     *         Returns 0 if the rental could not be added for any reason.
+     */
     public int addRental(Rental rental) {
 
         BookDAO bookDAO = new BookDAO();
-
-
         if (!bookDAO.checkoutBookCopy(rental)) {
             return -1;
         }
-
-
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
         int rentalId = 0;
@@ -43,6 +48,11 @@ public class RentalDAO extends LibraryDAO {
         return rentalId;
     }
 
+    /**
+     * Updates the rental table with a returning book copy.
+     * @param rental The Rental to be updated.
+     * @return 1 if the update succeeds. -1 if the BookCopy does not exist. 0 if the update failed for any reason.
+     */
     public int returningRental(Rental rental) {
         BookDAO bookDAO = new BookDAO();
 
@@ -69,12 +79,18 @@ public class RentalDAO extends LibraryDAO {
         return i;
     }
 
+    /**
+     * Gets all Rentals for a user.
+     * @param userId The id for the user.
+     * @return A list of (simple) rentals for the specified user.
+     */
     public List<SimpleRental> getUserRentals(String userId) {
         List<SimpleRental> simpleRentals = new ArrayList<>();
         List<Rental> rentals;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
-        rentals = (List<Rental>) session.createCriteria(Rental.class).add(Restrictions.eq("userId", Integer.parseInt(userId))).list();
+        rentals = (List<Rental>) session.createCriteria(Rental.class)
+                        .add(Restrictions.eq("userId", Integer.parseInt(userId))).list();
         for (Rental rental : rentals) {
             simpleRentals.add(rental.createSimpleRental());
         }
@@ -86,6 +102,10 @@ public class RentalDAO extends LibraryDAO {
     }
 
 
+    /**
+     * Gets all rentals from the database.
+     * @return A list of all the rentals.
+     */
     public List<Rental> getAllRentals() {
         List<Rental> allRentals = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -96,6 +116,13 @@ public class RentalDAO extends LibraryDAO {
         return allRentals;
     }
 
+
+    /**
+     * Gets the most recent rental for the specified book copy.
+     * @param bookNumber The number for the book copy.
+     * @param isbn The isbn of the book copy.
+     * @return The most recent Rental of the book copy.
+     */
     public Rental getRental(int bookNumber, String isbn) {
         Map<String, Object> propertiesMap = new HashMap<>();
 
@@ -123,6 +150,14 @@ public class RentalDAO extends LibraryDAO {
 
     }
 
+    /**
+     * Checks out a book to a user from the web form.
+     * @param userId The user the book is being checked out to.
+     * @param isbn The isbn of the book.
+     * @param bookNumber The book number of the book.
+     * @param days The number of days the book is being checked out for.
+     * @return The results of the checkout.
+     */
     public CheckoutResults checkoutFromForm(String userId, String isbn,
                                             String bookNumber, String days) {
 
@@ -182,6 +217,12 @@ public class RentalDAO extends LibraryDAO {
         return results;
     }
 
+    /**
+     * Returns a book from the web form.
+     * @param isbn The isbn of the book.
+     * @param bookNumber The book number of the book.
+     * @return The results of the return.
+     */
     public ReturnResults returnFromForm(String isbn, String bookNumber) {
         ReturnResults results = new ReturnResults();
 

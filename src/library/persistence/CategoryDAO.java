@@ -10,10 +10,10 @@ import java.util.List;
 
 /**
  * Created by Student on 2/27/2016.
+ * Dao for categories, not currently implemented.
  */
 public class CategoryDAO extends LibraryDAO {
-    //todo fix methods to use startTransaction from library dao
-    //todo add logging
+
     public void addBookCategory(Category category) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = startTransaction(session);

@@ -11,9 +11,15 @@ import java.util.List;
 
 /**
  * Created by Student on 2/23/2016.
+ * Dao for authors.
  */
 public class AuthorDAO extends LibraryDAO {
-    //todo fix methods to use startTransaction from library dao
+
+    /**
+     * Adds an author to the database
+     * @param newAuthor The author to be added.
+     * @return The new author id if insert was successful, otherwise 0 or -1 if it was not added.
+     */
     public String addAuthor(Author newAuthor) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -34,8 +40,11 @@ public class AuthorDAO extends LibraryDAO {
         }
         return authorId;
     }
-    /*
-        unused atm
+
+    /**
+     * finds an author based on the given ID
+     * @param authorId The if for the author.
+     * @return The author that was found.
      */
     public Author findAuthorById(int authorId) {
         Author author = null;
@@ -54,10 +63,13 @@ public class AuthorDAO extends LibraryDAO {
         }
         return author;
     }
-    /*
-     find authors by param based on search type
-     searchType = id, name etc.
-     searchParam = 1001, "Steve" etc.
+
+    /**
+     *
+     * @param searchType
+     * @param searchParam
+     * @return
+     *
      */
     public Collection<Author> findAuthorByParam(String searchType, Object searchParam) {
 
@@ -80,6 +92,11 @@ public class AuthorDAO extends LibraryDAO {
         }
         return authors;
     }
+
+    /**
+     * gets all authors
+     * @return
+     */
     public Collection<Author> getAllAuthors() {
 
         Collection<Author> authors = null;

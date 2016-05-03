@@ -19,14 +19,16 @@ import java.util.regex.Pattern;
 
 /**
  * Created by Student on 3/15/2016.
+ * Dao for users.
  */
 public class UserDAO extends LibraryDAO {
     private final Logger log = Logger.getLogger(this.getClass());
     private final String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 
-    /*
-     adds a copy of a book to the database. atm only called by addBook when a new book is entered
-     ToDo: be able to add individual books
+    /**
+     * Adds a user to the database.
+     * @param user The user being added.
+     * @return The new user id if successfully added, 0 otherwise.
      */
     public int addNewUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -50,6 +52,10 @@ public class UserDAO extends LibraryDAO {
         return userId;
     }
 
+    /**
+     * Updates the user.
+     * @param user The user being updated.
+     */
     public void updateUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
@@ -68,6 +74,12 @@ public class UserDAO extends LibraryDAO {
         }
 
     }
+
+    /**
+     * Gets a user based on their id.
+     * @param userId The id of the user,
+     * @return The user, if found.
+     */
     public User getUserById(int userId) {
         List<User> users;
         User user = null;
@@ -81,6 +93,11 @@ public class UserDAO extends LibraryDAO {
         return user;
     }
 
+    /**
+     * Gets a (simple) user based on their id
+     * @param userId The id of the user.
+     * @return The (simple) user, if found.
+     */
     public SimpleUser getSimpleUserById(int userId) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -91,8 +108,21 @@ public class UserDAO extends LibraryDAO {
         return user;
     }
 
+    /**
+     * Adds a new user from the web form. Requires at list a valid first name, last name, birthday and email.
+     * @param firstName New user's first name.
+     * @param lastName New user's last name.
+     * @param birthday New user's b-day.
+     * @param email New user's email.
+     * @param phone New user's phone number.
+     * @param addressOne New user's address (one).
+     * @param addressTwo New user's address (two).
+     * @param city New user's city.
+     * @param state New user's state.
+     * @param zip New user's zip code.
+     * @return The results of adding the new user.
+     */
     public NewUserResults newUserFromForm(String firstName, String lastName, String birthday, String email, String phone, String addressOne, String addressTwo, String city, String state, String zip) {
-        System.out.println(birthday);
         NewUserResults results = new NewUserResults();
         DateFormat format = new SimpleDateFormat("yyyy-dd-MM");
         Date date = null;
