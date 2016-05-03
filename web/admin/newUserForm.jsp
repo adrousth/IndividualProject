@@ -19,7 +19,7 @@
 
 </div>
 <div class="container">
-<form class="form-horizontal col-lg-6 col-lg-offset-2" action="/admin/addUser" method="POST">
+<form class="form-horizontal col-lg-6 col-lg-offset-2" action="/admin/newUser" method="POST">
     <fieldset>
         <legend>New User</legend>
         <div class="form-group">

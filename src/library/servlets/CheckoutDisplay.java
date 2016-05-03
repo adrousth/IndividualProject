@@ -1,3 +1,4 @@
+/*
 package library.servlets;
 
 import javax.servlet.RequestDispatcher;
@@ -7,10 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+*/
 /**
  * Created by Alex on 4/25/2016.
  */
+/*
 @WebServlet(
         name = "checkout",
         urlPatterns = { "/admin/checkout" }
@@ -33,3 +35,4 @@ public class CheckoutDisplay extends HttpServlet {
 
     }
 }
+*/

@@ -9,7 +9,7 @@
 <div class="container">
 <form class="form-horizontal col-lg-4 col-lg-offset-2" action="/admin/addBook" method="post">
     <fieldset>
-        <legend>Add New Book Form</legend>
+        <legend>Add New Book Form (not currently working)</legend>
 
         <div class="form-group">
             <label for="isbn" class="col-lg-2 control-label">ISBN</label>

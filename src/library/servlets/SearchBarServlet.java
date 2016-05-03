@@ -21,6 +21,7 @@ import java.util.List;
         urlPatterns = { "/searchBar" } // search/#
 )
 public class SearchBarServlet extends HttpServlet {
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 

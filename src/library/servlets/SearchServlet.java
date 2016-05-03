@@ -29,9 +29,12 @@ public class SearchServlet extends HttpServlet {
         float maxPages = 10;
         String url = "/search/search.jsp";
         String content = "/search/searchResults.jsp";
+
         String params = "";
         String search = "";
+
         int numberOfBooks = 0;
+
         ServletContext context = getServletContext();
         BookDAO dao = (BookDAO) context.getAttribute("bookDAO");
         SearchResults results;
@@ -61,21 +64,16 @@ public class SearchServlet extends HttpServlet {
         }
 
 
-
-        //List<Book> results = dao.searchForNumberOfBooks((pageNumber - 1)*booksPerPage, booksPerPage, "", "");
-
         numberOfBooks = results.getCount();
 
         int numberOfPages = (int) Math.ceil((float)numberOfBooks / booksPerPage);
         if (numberOfPages < maxPages) {
             maxPages = numberOfPages;
         }
+
         int halfMaxPages = (int) (maxPages / 2);
 
-
-
         List<Book> books = results.getBooks();
-
 
         request.setAttribute("halfMaxPages", halfMaxPages);
         request.setAttribute("params", params);

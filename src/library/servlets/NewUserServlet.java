@@ -16,10 +16,27 @@ import java.io.IOException;
  * Created by Alex on 4/22/2016.
  */
 @WebServlet(
-        name = "add-new-user",
-        urlPatterns = { "/admin/addUser" }
+        name = "new-user",
+        urlPatterns = { "/admin/newUser" }
 )
 public class NewUserServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+
+        String url = "/admin/admin.jsp";
+        String content = "/admin/newUserForm.jsp";
+
+
+
+        request.setAttribute("pageTitle", "New User");
+        request.setAttribute("PageContent", content);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+
+        dispatcher.forward(request, response);
+
+    }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -39,20 +56,11 @@ public class NewUserServlet extends HttpServlet {
 
         NewUserResults results = userDAO.newUserFromForm(firstName, lastName, birthday, email, phone, addressOne, addressTwo, city, state, zip);
 
-        for (String message : results.getMessages()) {
-            System.out.println(message);
-        }
-
-        String url = "/admin/admin.jsp";
-        String content = "/admin/newUserForm.jsp";
 
         request.setAttribute("results", results);
 
-        request.setAttribute("pageTitle", "New User");
-        request.setAttribute("PageContent", content);
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+        doGet(request, response);
 
-        dispatcher.forward(request, response);
 
     }
 }

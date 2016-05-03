@@ -27,7 +27,7 @@
     <c:remove var="results"/>
 </div>
 <div class="container">
-    <form class="container form-horizontal col-lg-6 col-lg-offset-2" action="/admin/submit-return" method="post">
+    <form class="container form-horizontal col-lg-6 col-lg-offset-2" action="/admin/returns" method="post">
         <fieldset>
             <legend>Returns</legend>
             <div class="form-group">
