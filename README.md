@@ -2,22 +2,24 @@
 Individual project repository
 
 ## Problem Statement
-A rental/loan system for library, books only.
+A website that could be used by a library to view/checkout/return books.
 
 ## Project Technologies/Techniques
 
 * Security/Authentication
   * Admin role: add new products, change book status checkout/in.
-  * User role: check out items, add items to wait lists.
+  * User role: add items to wait list. view books currently checked out.
   * All: can view books.
 * Database
-  * Store users and what they have rented
-  * Store rental item info
+  * Users/roles
+  * Books
+  * Authors
+  * Checkouts/returns info
 * Web Services or APIs
-  * N/A
+  * goodreads -> populates database with books/authors based on author names
 * Logging
   * Log4J
 * Unit Testing
   * JUnit
 * Independent Research Topic
-  * TBD
+  * Pagination, Bootstrap
