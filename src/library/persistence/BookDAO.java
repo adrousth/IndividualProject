@@ -264,7 +264,7 @@ public class BookDAO extends LibraryDAO {
 
     /**
      * Returns a number of books and other information based on the search information.
-     * @param firstResult The first book in the list to be returned, 0 based.
+     * @param firstResult The first result for the search, 0 based.
      * @param numberOfBooks The number of books to be returned.
      * @param searchType The type of search being done, 'title', 'isbn' etc.
      * @param searchValue The value of said search.
@@ -294,6 +294,8 @@ public class BookDAO extends LibraryDAO {
             books = session.createCriteria(Book.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).setFirstResult(firstResult).setMaxResults(numberOfBooks).addOrder(Order.asc("title")).list();
             number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).add(Restrictions.like(searchType, "%" + searchValue + "%")).uniqueResult());
         }
+
+
 
         searchResults.setBooks(books);
         searchResults.setCount(number);

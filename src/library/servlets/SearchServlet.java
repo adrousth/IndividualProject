@@ -16,16 +16,28 @@ import java.util.List;
 
 /**
  * Created by Alex on 4/10/2016.
+ * Servlet for performing searches.
  */
 @WebServlet(
         name = "search",
-        urlPatterns = { "/search" } // search/#
+        urlPatterns = { "/search" }
 )
 public class SearchServlet extends HttpServlet {
+
+    private enum PARAMS {page, isbn, title, firstName, lastName}
+
+    /**
+     *  Handles HTTP GET requests.
+     *@param  request                   the HttpServletRequest object
+     *@param  response                   the HttpServletResponse object
+     *@exception  ServletException  if there is a Servlet failure
+     *@exception  IOException       if there is an IO failure
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         int pageNumber = 1;
-        int booksPerPage = 10;
+        int booksPerPage = 20;
         float maxPages = 10;
         String url = "/search/search.jsp";
         String content = "/search/searchResults.jsp";
@@ -40,14 +52,18 @@ public class SearchServlet extends HttpServlet {
         SearchResults results;
 
         if (request.getParameter("page") != null) {
-            pageNumber = Integer.parseInt(request.getParameter("page"));
+            try {
+                pageNumber = Integer.parseInt(request.getParameter("page"));
+            } catch (Exception e) {
+                pageNumber = 1;
+            }
         }
 
-        if(request.getParameter("isbn") != null) {
+        if (request.getParameter("isbn") != null) {
             search = request.getParameter("isbn");
             results = dao.searchForNumberOfBooks((pageNumber - 1)*booksPerPage, booksPerPage, "isbn", search);
             params += "&isbn=" + request.getParameter("isbn");
-        } else if(request.getParameter("firstName") != null) {
+        } else if (request.getParameter("firstName") != null) {
             search = request.getParameter("firstName");
             results = dao.searchForNumberOfBooks((pageNumber - 1)*booksPerPage, booksPerPage, "firstName", search);
             params += "&firstName=" + request.getParameter("firstName");
@@ -71,14 +87,16 @@ public class SearchServlet extends HttpServlet {
             maxPages = numberOfPages;
         }
 
+        if (results.getBooks().size() == 0 && results.getCount() > 0) {
+            // go to error page
+        }
         int halfMaxPages = (int) (maxPages / 2);
 
-        List<Book> books = results.getBooks();
-
+        request.setAttribute("search", search);
         request.setAttribute("halfMaxPages", halfMaxPages);
         request.setAttribute("params", params);
         request.setAttribute("maxPages", maxPages);
-        request.setAttribute("results", books);
+        request.setAttribute("results", results);
         request.setAttribute("pageTitle", "Search Results");
         request.setAttribute("PageContent", content);
         request.setAttribute("currentPage", pageNumber);

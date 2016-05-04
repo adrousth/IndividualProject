@@ -14,6 +14,7 @@ import java.io.IOException;
 
 /**
  * Created by Student on 3/26/2016.
+ * Servlet for logging in.
  */
 @WebServlet(
         name = "login",

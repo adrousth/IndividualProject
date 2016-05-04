@@ -1,16 +1,23 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="col-lg-8 col-lg-offset-2">
     <h4>Search Results</h4>
-    <h5 >Search results for *...*</h5>
+    <c:choose>
+        <c:when test="">
+            <h5 >Search results for ${search}</h5>
+        </c:when>
+        <c:otherwise>
+
+        </c:otherwise>
+    </c:choose>
     <h5>
-        Showing ${(currentPage - 1) * 10 + 1} - ${((currentPage - 1) * 10) + results.size()} of ${numberOfBooks} results
+        Showing ${(currentPage - 1) * results.booksPerPage + 1} - ${((currentPage - 1) * results.booksPerPage) + results.booksPerPage} of ${numberOfBooks} results
     </h5>
 </div>
 <c:if test="${numberOfPages > 1}">
     <c:import url="/search/pagination.jsp"/>
 </c:if>
 <div  class="container">
-    <c:forEach var="book" items="${results}">
+    <c:forEach var="book" items="${results.books}">
 
             <div class="container panel panel-primary col-lg-9">
                 <div class="panel-heading">

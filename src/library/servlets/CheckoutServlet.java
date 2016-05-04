@@ -14,12 +14,20 @@ import java.io.IOException;
 
 /**
  * Created by Alex on 4/23/2016.
+ * Servlet for checking out books
  */
 @WebServlet(
         name = "checkout",
         urlPatterns = { "/admin/checkout" }
 )
 public class CheckoutServlet extends HttpServlet {
+    /**
+     * Handles HTTP GET requests.
+     *@param  request                   the HttpServletRequest object
+     *@param  response                   the HttpServletResponse object
+     *@exception  ServletException  if there is a Servlet failure
+     *@exception  IOException       if there is an IO failure
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -36,6 +44,13 @@ public class CheckoutServlet extends HttpServlet {
 
     }
 
+    /**
+     * Handles HTTP POST requests.
+     *@param  request                   the HttpServletRequest object
+     *@param  response                   the HttpServletResponse object
+     *@exception  ServletException  if there is a Servlet failure
+     *@exception  IOException       if there is an IO failure
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -55,10 +70,6 @@ public class CheckoutServlet extends HttpServlet {
         System.out.println(days);
 
         CheckoutResults results = rentalDAO.checkoutFromForm(userId, isbn, bookNumber, days);
-
-
-
-
 
         request.setAttribute("results", results);
 
