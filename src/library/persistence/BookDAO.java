@@ -18,12 +18,13 @@ import java.util.*;
 public class BookDAO extends LibraryDAO {
 
     private final Logger log = Logger.getLogger(this.getClass());
+    private SessionFactory factory;
 
     /**
      * Adds a copy of a book to the database.
      * @param bookCopy The copy of the book to be added.
      */
-    private void addBookCopy(BookCopy bookCopy) {
+    public void addBookCopy(BookCopy bookCopy) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
         try {
@@ -32,6 +33,25 @@ public class BookDAO extends LibraryDAO {
             tx.commit();
 
             log.info("Added book number: " + bookCopy.getBookNumber() + " with isbn: " + bookCopy.getIsbn());
+        } catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            log.error(e);
+        } finally {
+            session.close();
+        }
+    }
+
+    public void deleteBook(Book book) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Transaction tx = null;
+        try {
+
+            tx = session.beginTransaction();
+            session.delete("Book", book);
+
+            tx.commit();
+
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
@@ -138,6 +158,7 @@ public class BookDAO extends LibraryDAO {
         if (books.size() > 0) {
             book = books.get(0);
         }
+        session.close();
         return book;
     }
 
@@ -296,7 +317,7 @@ public class BookDAO extends LibraryDAO {
         }
 
 
-
+        searchResults.setNumberOfBooks(books.size());
         searchResults.setBooks(books);
         searchResults.setCount(number);
         return searchResults;

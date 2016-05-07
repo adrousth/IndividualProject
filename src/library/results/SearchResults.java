@@ -20,6 +20,16 @@ public class SearchResults extends Results {
     private String searchValue;
     private int numberOfPages;
     private String params;
+    private int numberOfBooks;
+
+
+    public int getNumberOfBooks() {
+        return numberOfBooks;
+    }
+
+    public void setNumberOfBooks(int numberOfBooks) {
+        this.numberOfBooks = numberOfBooks;
+    }
 
     public SearchResults() {
         super();

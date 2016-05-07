@@ -46,7 +46,7 @@ public class AuthorDAO extends LibraryDAO {
      * @param authorId The if for the author.
      * @return The author that was found.
      */
-    public Author findAuthorById(int authorId) {
+    public Author findAuthorById(String authorId) {
         Author author = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
@@ -116,6 +116,25 @@ public class AuthorDAO extends LibraryDAO {
             session.close();
         }
         return authors;
+    }
+
+    public void deleteAuthor(Author author) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Transaction tx = null;
+        try {
+
+            tx = session.beginTransaction();
+            session.delete("Author", author);
+
+            tx.commit();
+
+        } catch (HibernateException e) {
+            if (tx!=null) tx.rollback();
+            log.error(e);
+        } finally {
+            session.close();
+        }
     }
 
 }

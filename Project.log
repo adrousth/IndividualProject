@@ -130,3 +130,1001 @@
 2016-04-29 15:03:07,933 752  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
 2016-04-29 15:03:08,056 875  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2016-04-29 15:03:08,063 882  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:12:13,776 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:12:13,840 64   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:12:13,854 78   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:12:13,856 80   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:12:13,934 158  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:12:13,934 158  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:12:14,273 497  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:12:14,690 914  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:12:14,744 968  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:12:14,777 1001 [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:12:14,825 1049 [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:12:14,865 1089 [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:12:14,968 1192 [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:12:15,179 1403 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:12:15,208 1432 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:12:15,208 1432 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:12:15,208 1432 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:12:15,208 1432 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:12:16,249 2473 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:12:16,297 2521 [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:12:16,745 2969 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:12:16,785 3009 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:15:53,472 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:15:53,483 11   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:15:53,486 14   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:15:53,488 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:15:53,517 45   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:15:53,517 45   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:15:53,618 146  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:15:53,722 250  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:15:53,750 278  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:15:53,775 303  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:15:53,795 323  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:15:53,807 335  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:15:53,820 348  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:15:53,882 410  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:15:53,890 418  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:15:53,890 418  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:15:53,890 418  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:15:53,891 419  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:15:54,220 748  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:15:54,238 766  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:15:54,458 986  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:15:54,465 993  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:16:25,344 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:16:25,359 15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:16:25,363 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:16:25,365 21   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:16:25,399 55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:16:25,400 56   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:16:25,521 177  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:16:25,661 317  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:16:25,687 343  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:16:25,711 367  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:16:25,728 384  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:16:25,744 400  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:16:25,759 415  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:16:25,864 520  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:16:25,879 535  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:16:25,879 535  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:16:25,880 536  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:16:25,880 536  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:16:26,243 899  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:16:26,263 919  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:16:26,420 1076 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:16:26,428 1084 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:16:27,377 2033 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-04 09:16:27,377 2033 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry '100' for key 'PRIMARY'
+2016-05-04 09:16:27,445 2101 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 09:16:42,172 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:16:42,184 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:16:42,190 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:16:42,192 20   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:16:42,221 49   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:16:42,221 49   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:16:42,327 155  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:16:42,428 256  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:16:42,450 278  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:16:42,472 300  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:16:42,487 315  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:16:42,497 325  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:16:42,509 337  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:16:42,575 403  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:16:42,585 413  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:16:42,585 413  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:16:42,586 414  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:16:42,638 466  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:16:42,968 796  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:16:42,988 816  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:16:43,136 964  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:16:43,145 973  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:23:11,042 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:23:11,055 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:23:11,059 17   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:23:11,063 21   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:23:11,094 52   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:23:11,094 52   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:23:11,190 148  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:23:11,290 248  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:23:11,313 271  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:23:11,334 292  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:23:11,350 308  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:23:11,365 323  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:23:11,379 337  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:23:11,454 412  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:23:11,464 422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:23:11,464 422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:23:11,465 423  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:23:11,465 423  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:23:11,814 772  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:23:11,832 790  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:23:11,974 932  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:23:11,982 940  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:23:52,490 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:23:52,505 15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:23:52,508 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:23:52,510 20   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:23:52,545 55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:23:52,545 55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:23:52,647 157  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:23:52,758 268  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:23:52,781 291  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:23:52,800 310  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:23:52,812 322  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:23:52,823 333  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:23:52,834 344  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:23:52,900 410  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:23:52,911 421  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:23:52,912 422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:23:52,912 422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:23:52,912 422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:23:53,241 751  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:23:53,257 767  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:23:53,392 902  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:23:53,400 910  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:23:54,612 2122 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-04 09:24:39,804 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:24:39,817 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:24:39,820 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:24:39,823 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:24:39,852 48   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:24:39,852 48   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:24:39,965 161  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:24:40,082 278  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:24:40,107 303  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:24:40,127 323  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:24:40,142 338  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:24:40,154 350  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:24:40,166 362  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:24:40,229 425  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:24:40,237 433  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:24:40,237 433  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:24:40,237 433  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:24:40,237 433  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:24:40,558 754  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:24:40,579 775  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:24:40,720 916  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:24:40,729 925  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:25:05,456 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:25:05,469 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:25:05,475 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:25:05,478 22   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:25:05,507 51   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:25:05,507 51   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:25:05,619 163  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:25:05,717 261  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:25:05,736 280  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:25:05,756 300  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:25:05,773 317  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:25:05,782 326  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:25:05,795 339  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:25:05,857 401  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:25:05,863 407  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:25:05,864 408  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:25:05,864 408  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:25:05,864 408  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:25:06,178 722  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:25:06,196 740  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:25:06,326 870  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:25:06,336 880  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:25:22,699 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:25:22,712 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:25:22,714 15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:25:22,717 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:25:22,746 47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:25:22,747 48   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:25:22,852 153  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:25:22,950 251  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:25:22,974 275  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:25:22,995 296  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:25:23,011 312  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:25:23,022 323  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:25:23,035 336  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:25:23,101 402  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:25:23,109 410  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:25:23,109 410  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:25:23,110 411  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:25:23,110 411  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:25:23,438 739  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:25:23,454 755  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:25:23,594 895  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:25:23,602 903  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:25:42,064 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:25:42,076 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:25:42,080 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:25:42,083 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:25:42,117 53   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:25:42,117 53   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:25:42,225 161  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:25:42,324 260  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:25:42,347 283  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:25:42,367 303  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:25:42,383 319  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:25:42,394 330  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:25:42,406 342  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:25:42,468 404  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:25:42,475 411  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:25:42,476 412  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:25:42,476 412  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:25:42,476 412  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:25:42,782 718  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:25:42,799 735  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:25:42,937 873  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:25:42,945 881  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:26:02,041 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:26:02,054 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:26:02,058 17   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:26:02,060 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:26:02,094 53   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:26:02,094 53   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:26:02,195 154  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:26:02,288 247  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:26:02,313 272  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:26:02,332 291  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:26:02,348 307  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:26:02,359 318  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:26:02,370 329  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:26:02,433 392  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:26:02,442 401  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:26:02,442 401  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:26:02,442 401  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:26:02,443 402  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:26:02,780 739  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:26:02,798 757  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:26:02,928 887  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:26:02,936 895  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:26:29,813 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:26:29,826 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:26:29,828 15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:26:29,830 17   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:26:29,862 49   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:26:29,862 49   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:26:29,964 151  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:26:30,059 246  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:26:30,084 271  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:26:30,102 289  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:26:30,115 302  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:26:30,127 314  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:26:30,140 327  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:26:30,207 394  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:26:30,215 402  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:26:30,216 403  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:26:30,216 403  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:26:30,216 403  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:26:30,526 713  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:26:30,547 734  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:26:30,687 874  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:26:30,694 881  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:27:05,037 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:27:05,049 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:27:05,052 15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:27:05,055 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:27:05,091 54   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:27:05,091 54   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:27:05,219 182  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:27:05,335 298  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:27:05,358 321  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:27:05,379 342  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:27:05,397 360  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:27:05,407 370  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:27:05,421 384  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:27:05,492 455  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:27:05,502 465  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:27:05,502 465  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:27:05,502 465  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:27:05,503 466  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:27:05,928 891  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:27:05,948 911  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:27:06,123 1086 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:27:06,132 1095 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 09:27:37,619 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 09:27:37,631 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 09:27:37,635 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 09:27:37,638 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 09:27:37,669 50   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 09:27:37,669 50   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 09:27:37,771 152  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 09:27:37,879 260  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 09:27:37,905 286  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 09:27:37,927 308  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 09:27:37,943 324  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 09:27:37,954 335  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 09:27:37,965 346  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 09:27:38,028 409  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 09:27:38,036 417  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 09:27:38,036 417  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 09:27:38,036 417  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 09:27:38,037 418  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 09:27:38,408 789  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 09:27:38,424 805  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 09:27:38,560 941  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 09:27:38,568 949  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 11:16:46,352 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 11:16:46,363 11   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 11:16:46,366 14   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 11:16:46,368 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 11:16:46,397 45   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 11:16:46,397 45   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 11:16:46,508 156  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 11:16:46,612 260  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 11:16:46,641 289  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 11:16:46,659 307  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 11:16:46,676 324  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 11:16:46,688 336  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 11:16:46,702 350  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 11:16:46,773 421  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 11:16:46,782 430  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 11:16:46,782 430  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 11:16:46,783 431  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 11:16:46,783 431  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 11:16:47,148 796  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 11:16:47,169 817  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 11:16:47,322 970  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 11:16:47,332 980  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 11:16:48,057 1705 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:16:48,332 1980 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 11:16:48,388 2036 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 11:16:48,388 2036 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:16:48,499 2147 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 11:16:48,499 2147 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:16:48,621 2269 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 11:16:48,666 2314 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 11:16:48,710 2358 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 11:16:48,711 2359 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:16:49,245 2893 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:16:49,245 2893 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:16:49,310 2958 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:16:49,310 2958 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:16:49,316 2964 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:16:49,316 2964 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:16:49,372 3020 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:16:49,373 3021 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:16:49,378 3026 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:16:49,379 3027 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:16:49,410 3058 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:16:49,410 3058 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:20:41,241 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 11:20:41,254 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 11:20:41,259 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 11:20:41,261 20   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 11:20:41,296 55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 11:20:41,296 55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 11:20:41,403 162  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 11:20:41,528 287  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 11:20:41,556 315  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 11:20:41,574 333  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 11:20:41,587 346  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 11:20:41,598 357  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 11:20:41,611 370  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 11:20:41,674 433  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 11:20:41,681 440  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 11:20:41,681 440  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 11:20:41,681 440  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 11:20:41,682 441  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 11:20:42,035 794  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 11:20:42,053 812  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 11:20:42,193 952  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 11:20:42,202 961  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 11:20:43,002 1761 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:20:43,293 2052 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 11:20:43,348 2107 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 11:20:43,349 2108 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:20:43,448 2207 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 11:20:43,448 2207 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:20:43,537 2296 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 11:20:43,581 2340 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 11:20:43,626 2385 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 11:20:43,627 2386 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:20:43,835 2594 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:20:43,835 2594 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:20:43,881 2640 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:20:43,881 2640 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:20:43,886 2645 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:20:43,886 2645 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:20:43,925 2684 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:20:43,926 2685 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:20:43,929 2688 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:20:43,930 2689 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:20:43,969 2728 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:20:43,970 2729 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:22:31,367 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 11:22:31,379 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 11:22:31,383 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 11:22:31,386 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 11:22:31,424 57   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 11:22:31,425 58   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 11:22:31,552 185  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 11:22:31,675 308  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 11:22:31,706 339  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 11:22:31,720 353  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 11:22:31,736 369  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 11:22:31,747 380  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 11:22:31,758 391  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 11:22:31,820 453  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 11:22:31,828 461  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 11:22:31,829 462  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 11:22:31,829 462  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 11:22:31,829 462  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 11:22:32,152 785  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 11:22:32,171 804  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 11:22:32,332 965  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 11:22:32,339 972  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 11:22:33,073 1706 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:22:33,322 1955 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 11:22:33,389 2022 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 11:22:33,390 2023 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:22:33,523 2156 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 11:22:33,523 2156 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:22:33,611 2244 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 11:22:33,655 2288 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 11:22:33,733 2366 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 11:22:33,733 2366 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:22:33,956 2589 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:22:33,956 2589 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:22:34,022 2655 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:22:34,023 2656 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:22:34,029 2662 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:22:34,029 2662 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:22:34,088 2721 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:22:34,089 2722 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:22:34,094 2727 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:22:34,094 2727 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:22:34,134 2767 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:22:34,134 2767 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:23:19,848 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 11:23:19,862 14   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 11:23:19,867 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 11:23:19,870 22   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 11:23:19,914 66   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 11:23:19,915 67   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 11:23:20,036 188  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 11:23:20,135 287  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 11:23:20,165 317  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 11:23:20,182 334  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 11:23:20,195 347  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 11:23:20,204 356  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 11:23:20,214 366  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 11:23:20,275 427  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 11:23:20,285 437  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 11:23:20,285 437  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 11:23:20,286 438  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 11:23:20,286 438  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 11:23:20,604 756  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 11:23:20,622 774  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 11:23:20,759 911  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 11:23:20,766 918  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 11:23:21,489 1641 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:23:21,726 1878 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 11:23:21,780 1932 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 11:23:21,781 1933 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:23:21,914 2066 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 11:23:21,915 2067 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:23:22,021 2173 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 11:23:22,059 2211 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 11:23:22,103 2255 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 11:23:22,104 2256 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:23:22,432 2584 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:23:22,433 2585 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:23:22,492 2644 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:23:22,493 2645 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:23:22,499 2651 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:23:22,499 2651 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:23:22,537 2689 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:23:22,538 2690 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:23:22,563 2715 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:23:22,563 2715 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:23:22,604 2756 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:23:22,604 2756 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:25:17,022 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 11:25:17,035 13   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 11:25:17,039 17   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 11:25:17,042 20   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 11:25:17,072 50   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 11:25:17,072 50   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 11:25:17,175 153  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 11:25:17,272 250  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 11:25:17,300 278  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 11:25:17,316 294  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 11:25:17,334 312  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 11:25:17,344 322  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 11:25:17,354 332  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 11:25:17,423 401  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 11:25:17,433 411  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 11:25:17,433 411  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 11:25:17,434 412  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 11:25:17,434 412  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 11:25:17,821 799  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 11:25:17,842 820  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 11:25:17,989 967  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 11:25:17,996 974  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 11:25:18,699 1677 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:25:19,033 2011 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 11:25:19,111 2089 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 11:25:19,112 2090 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:25:19,200 2178 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 11:25:19,201 2179 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:25:19,289 2267 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 11:25:19,333 2311 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 11:25:19,401 2379 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 11:25:19,401 2379 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 11:25:19,648 2626 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:25:19,648 2626 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:25:19,689 2667 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:25:19,689 2667 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:25:19,691 2669 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:25:19,691 2669 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:25:19,733 2711 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:25:19,734 2712 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 11:25:19,738 2716 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1451, SQLState: 23000
+2016-05-04 11:25:19,739 2717 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Cannot delete or update a parent row: a foreign key constraint fails (`library`.`book_copies`, CONSTRAINT `book_copies_books_isbn_fk` FOREIGN KEY (`isbn`) REFERENCES `books` (`isbn`))
+2016-05-04 11:25:19,778 2756 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 11:25:19,779 2757 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 16:25:25,417 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 16:25:25,429 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 16:25:25,433 16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 16:25:25,435 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 16:25:25,465 48   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 16:25:25,465 48   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 16:25:25,581 164  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 16:25:25,697 280  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 16:25:25,749 332  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 16:25:25,779 362  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 16:25:25,801 384  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 16:25:25,858 441  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 16:25:25,896 479  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 16:25:25,962 545  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 16:25:25,969 552  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 16:25:25,969 552  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 16:25:25,970 553  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 16:25:25,971 554  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 16:25:26,319 902  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 16:25:26,341 924  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 16:25:26,529 1112 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 16:25:26,542 1125 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 16:25:27,352 1935 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:25:27,911 2494 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 16:25:27,976 2559 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 16:25:27,977 2560 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:25:28,121 2704 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 16:25:28,122 2705 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:25:28,261 2844 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 16:25:28,339 2922 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 16:25:28,410 2993 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 16:25:28,410 2993 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:25:28,677 3260 [main] ERROR library.persistence.BookDAO  - org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions
+2016-05-04 16:25:28,723 3306 [main] ERROR library.persistence.BookDAO  - org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions
+2016-05-04 16:25:28,753 3336 [main] ERROR library.persistence.BookDAO  - org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions
+2016-05-04 16:25:28,795 3378 [main] ERROR library.persistence.BookDAO  - org.hibernate.HibernateException: Illegal attempt to associate a collection with two open sessions
+2016-05-04 16:26:53,732 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-04 16:26:53,750 18   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-04 16:26:53,754 22   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-04 16:26:53,756 24   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-04 16:26:53,788 56   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-04 16:26:53,788 56   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-04 16:26:53,899 167  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-04 16:26:54,004 272  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-04 16:26:54,033 301  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-04 16:26:54,052 320  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-04 16:26:54,065 333  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-04 16:26:54,076 344  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-04 16:26:54,090 358  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-04 16:26:54,154 422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-04 16:26:54,160 428  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-04 16:26:54,161 429  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-04 16:26:54,161 429  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-04 16:26:54,161 429  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-04 16:26:54,487 755  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-04 16:26:54,504 772  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-04 16:26:54,650 918  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-04 16:26:54,657 925  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-04 16:26:55,359 1627 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:26:55,604 1872 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-04 16:26:55,660 1928 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-04 16:26:55,661 1929 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:26:55,749 2017 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-04 16:26:55,750 2018 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:26:55,838 2106 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-04 16:26:55,882 2150 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-04 16:26:55,927 2195 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-04 16:26:55,928 2196 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-04 16:26:56,320 2588 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-04 16:26:56,320 2588 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-04 16:26:56,322 2590 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 16:26:56,322 2590 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 16:26:56,329 2597 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-04 16:26:56,329 2597 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-04 16:26:56,329 2597 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 16:26:56,329 2597 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-04 16:26:56,338 2606 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-04 16:26:56,338 2606 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-04 16:26:56,339 2607 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-04 16:26:56,339 2607 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:22,225 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-05 13:47:22,286 61   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-05 13:47:22,292 67   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-05 13:47:22,296 71   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-05 13:47:22,374 149  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-05 13:47:22,375 150  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-05 13:47:22,557 332  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Book.hbm.xml
+2016-05-05 13:47:22,777 552  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Users.hbm.xml
+2016-05-05 13:47:22,885 660  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Authors.hbm.xml
+2016-05-05 13:47:22,938 713  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: BookCopy.hbm.xml
+2016-05-05 13:47:22,991 766  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Category.hbm.xml
+2016-05-05 13:47:23,041 816  [main] INFO  org.hibernate.cfg.Configuration  - HHH000221: Reading mappings from resource: Rental.hbm.xml
+2016-05-05 13:47:23,088 863  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-05 13:47:23,187 962  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-05 13:47:23,200 975  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-05 13:47:23,201 976  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-05 13:47:23,202 977  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-05 13:47:23,202 977  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-05 13:47:23,572 1347 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-05 13:47:23,588 1363 [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-05 13:47:23,834 1609 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-05 13:47:23,850 1625 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-05 13:47:25,518 3293 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:25,951 3726 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghij
+2016-05-05 13:47:25,995 3770 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghij
+2016-05-05 13:47:25,996 3771 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,084 3859 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghik
+2016-05-05 13:47:26,084 3859 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,172 3947 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghil
+2016-05-05 13:47:26,217 3992 [main] INFO  library.persistence.BookDAO  - Added book number: 2 with isbn: abcdefghil
+2016-05-05 13:47:26,261 4036 [main] INFO  library.persistence.BookDAO  - Added book number: 3 with isbn: abcdefghil
+2016-05-05 13:47:26,261 4036 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,467 4242 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,467 4242 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,485 4260 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,485 4260 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,495 4270 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,496 4271 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,496 4271 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,496 4271 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,509 4284 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,509 4284 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,510 4285 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,510 4285 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,587 4362 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,592 4367 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,593 4368 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,594 4369 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,594 4369 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,617 4392 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,617 4392 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,618 4393 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,619 4394 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,639 4414 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,639 4414 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,640 4415 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,641 4416 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,660 4435 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,660 4435 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,660 4435 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,660 4435 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,662 4437 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,684 4459 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,686 4461 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,687 4462 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,687 4462 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,687 4462 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,699 4474 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,699 4474 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,700 4475 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,700 4475 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,711 4486 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,711 4486 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,712 4487 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,712 4487 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,729 4504 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,729 4504 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,730 4505 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,730 4505 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,732 4507 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,733 4508 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,736 4511 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,736 4511 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,737 4512 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,737 4512 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,749 4524 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,750 4525 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,750 4525 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,750 4525 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,761 4536 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,762 4537 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,762 4537 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,762 4537 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,773 4548 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,773 4548 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,774 4549 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,774 4549 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,777 4552 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,779 4554 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,787 4562 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,787 4562 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,787 4562 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,788 4563 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,801 4576 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,801 4576 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,802 4577 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,802 4577 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,811 4586 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,812 4587 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,812 4587 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,812 4587 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,823 4598 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,823 4598 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,824 4599 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,824 4599 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,826 4601 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,828 4603 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,830 4605 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,830 4605 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,831 4606 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,831 4606 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,841 4616 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,841 4616 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,841 4616 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,842 4617 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,850 4625 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,850 4625 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,850 4625 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,850 4625 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,861 4636 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,861 4636 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,862 4637 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,862 4637 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,864 4639 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,865 4640 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,868 4643 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,868 4643 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,869 4644 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,869 4644 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,881 4656 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,881 4656 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,881 4656 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,881 4656 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,890 4665 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,890 4665 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,890 4665 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,890 4665 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,903 4678 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,903 4678 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,904 4679 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,904 4679 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,906 4681 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,908 4683 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,912 4687 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,912 4687 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,913 4688 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,913 4688 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,924 4699 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,925 4700 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,925 4700 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,925 4700 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,935 4710 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,935 4710 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,935 4710 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,935 4710 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,946 4721 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,946 4721 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,946 4721 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,946 4721 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,948 4723 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:26,950 4725 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:26,953 4728 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:26,953 4728 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:26,954 4729 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,954 4729 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,965 4740 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,965 4740 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,966 4741 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,966 4741 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,977 4752 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,977 4752 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,981 4756 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,981 4756 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,994 4769 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:26,994 4769 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:26,995 4770 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:26,995 4770 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:26,998 4773 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,001 4776 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,005 4780 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,006 4781 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,006 4781 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,006 4781 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,018 4793 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,018 4793 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,018 4793 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,018 4793 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,028 4803 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,028 4803 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,029 4804 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,029 4804 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,040 4815 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,040 4815 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,041 4816 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,041 4816 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,045 4820 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,046 4821 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,053 4828 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,053 4828 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,054 4829 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,055 4830 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,077 4852 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,078 4853 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,078 4853 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,078 4853 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,083 4858 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,083 4858 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,083 4858 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,083 4858 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,093 4868 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,093 4868 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,094 4869 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,094 4869 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,095 4870 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,096 4871 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,100 4875 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,100 4875 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,101 4876 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,101 4876 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,109 4884 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,109 4884 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,109 4884 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,110 4885 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,114 4889 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,114 4889 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,114 4889 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,114 4889 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,120 4895 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,120 4895 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,120 4895 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,120 4895 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,121 4896 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,122 4897 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,124 4899 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,124 4899 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,126 4901 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,126 4901 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,138 4913 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,138 4913 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,138 4913 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,138 4913 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,144 4919 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,145 4920 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,145 4920 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,145 4920 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,153 4928 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,153 4928 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,154 4929 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,154 4929 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,155 4930 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,156 4931 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,160 4935 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,160 4935 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,166 4941 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,167 4942 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,174 4949 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,175 4950 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,176 4951 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,176 4951 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,181 4956 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,181 4956 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,182 4957 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,182 4957 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,187 4962 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,187 4962 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,188 4963 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,188 4963 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,189 4964 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,189 4964 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,191 4966 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,192 4967 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,192 4967 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,192 4967 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,198 4973 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,199 4974 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,199 4974 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,199 4974 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,205 4980 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,205 4980 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,205 4980 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,205 4980 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,214 4989 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,214 4989 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,215 4990 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,215 4990 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,216 4991 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,218 4993 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,220 4995 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,220 4995 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,221 4996 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,221 4996 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,231 5006 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,231 5006 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,231 5006 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,231 5006 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,236 5011 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,236 5011 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,236 5011 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,236 5011 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,242 5017 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,243 5018 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,243 5018 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,244 5019 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,245 5020 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,246 5021 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,248 5023 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,248 5023 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,248 5023 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,248 5023 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,257 5032 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,257 5032 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,258 5033 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,258 5033 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,264 5039 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,264 5039 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,264 5039 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,264 5039 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,269 5044 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,270 5045 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,270 5045 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,270 5045 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,271 5046 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,272 5047 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,273 5048 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,273 5048 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,274 5049 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,274 5049 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,281 5056 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,281 5056 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,282 5057 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,282 5057 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,287 5062 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,287 5062 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,288 5063 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,288 5063 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,295 5070 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,295 5070 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,295 5070 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,295 5070 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,296 5071 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,297 5072 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,299 5074 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,299 5074 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,299 5074 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,299 5074 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,305 5080 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,305 5080 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,306 5081 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,306 5081 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,314 5089 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,314 5089 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,315 5090 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,315 5090 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,322 5097 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,322 5097 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,322 5097 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,322 5097 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,323 5098 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing
+2016-05-05 13:47:27,325 5100 [main] INFO  library.persistence.BookDAO  - Book being added
+2016-05-05 13:47:27,328 5103 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-05-05 13:47:27,328 5103 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'abcdefghij' for key 'PRIMARY'
+2016-05-05 13:47:27,328 5103 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,329 5104 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,335 5110 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,335 5110 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,335 5110 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,336 5111 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,344 5119 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,344 5119 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,344 5119 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,344 5119 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,351 5126 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1048, SQLState: 23000
+2016-05-05 13:47:27,351 5126 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Column 'isbn' cannot be null
+2016-05-05 13:47:27,352 5127 [main] ERROR library.persistence.BookDAO  - org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-05 13:47:27,352 5127 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-05-05 13:47:27,353 5128 [main] INFO  org.hibernate.event.internal.DefaultDeleteEventListener  - HHH000114: Handling transient entity in delete processing

@@ -10,7 +10,7 @@
         </c:otherwise>
     </c:choose>
     <h5>
-        Showing ${(currentPage - 1) * results.booksPerPage + 1} - ${((currentPage - 1) * results.booksPerPage) + results.booksPerPage} of ${numberOfBooks} results
+        Showing ${(currentPage - 1) * results.booksPerPage + 1} - ${((currentPage - 1) * results.booksPerPage) + results.numberOfBooks} of ${numberOfBooks} results
     </h5>
 </div>
 <c:if test="${numberOfPages > 1}">

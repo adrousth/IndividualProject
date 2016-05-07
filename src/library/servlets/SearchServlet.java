@@ -82,13 +82,15 @@ public class SearchServlet extends HttpServlet {
 
         numberOfBooks = results.getCount();
 
+
         int numberOfPages = (int) Math.ceil((float)numberOfBooks / booksPerPage);
         if (numberOfPages < maxPages) {
             maxPages = numberOfPages;
         }
+        results.setNumberOfPages(numberOfPages);
 
         if (results.getBooks().size() == 0 && results.getCount() > 0) {
-            // go to error page
+            content = "/search/searchError.jsp";
         }
         int halfMaxPages = (int) (maxPages / 2);
 

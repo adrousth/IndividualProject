@@ -1,6 +1,7 @@
 package library.persistence;
 
 import library.entities.Author;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,63 +16,88 @@ import static org.junit.Assert.*;
  */
 public class AuthorDAOTest {
     AuthorDAO dao;
+    Author testAuthor;
+    Author testAuthor1;
+    Author testAuthor2;
+    Author testAuthor3;
     @Before
     public void setup() {
         dao = new AuthorDAO();
+        testAuthor = new Author();
+        testAuthor1 = new Author();
+        testAuthor2 = new Author();
+        testAuthor3 = new Author();
+
+        testAuthor1.setAuthorId("abc");
+        testAuthor1.setFirstName("Johnson");
+        testAuthor1.setLastName("Smith");
+
+        testAuthor2.setAuthorId("def");
+        testAuthor2.setFirstName("Johnson");
+        testAuthor2.setLastName("Deer");
+
+        testAuthor3.setAuthorId("ghi");
+        testAuthor3.setFirstName("Joe");
+        testAuthor3.setLastName("Smith");
+
+
+        dao.addAuthor(testAuthor1);
+        dao.addAuthor(testAuthor2);
+        dao.addAuthor(testAuthor3);
+
+
     }
     @Test
     public void testAddAuthor() throws Exception {
-        Author testAuthor = new Author();
-
         testAuthor.setAuthorId("100");
         testAuthor.setFirstName("Joe");
         testAuthor.setLastName("Smith");
 
         String i = "0";
         i = dao.addAuthor(testAuthor);
-        assertTrue(i != "0");
+        assertTrue(!i.equals("0"));
+        dao.deleteAuthor(testAuthor);
     }
+
     @Test
     public void testSearchAuthorById() throws Exception {
+        testAuthor.setAuthorId("100");
+        testAuthor.setFirstName("Joe");
+        testAuthor.setLastName("Smith");
+        String i = "0";
+        i = dao.addAuthor(testAuthor);
+        Author newAuthor = dao.findAuthorById("100");
 
-        Author newAuthor = dao.findAuthorById(101);
-        System.out.println(newAuthor.getFirstName());
-        System.out.println(newAuthor.getLastName());
-        System.out.println(newAuthor.getAuthorId());
+        assertTrue(newAuthor.getAuthorId().equals("100"));
+        assertTrue(newAuthor.getFirstName().equals("Joe"));
+        assertTrue(newAuthor.getLastName().equals("Smith"));
+        dao.deleteAuthor(testAuthor);
     }
     @Test
     public void testSearchAuthorByLastName() throws Exception {
-        Set<Author> x = (Set<Author>) dao.findAuthorByParam("lastName", "Smith");
-        outputSearchResults(x);
-        assertTrue(x.size() == 3);
+        List<Author> x = (List<Author>) dao.findAuthorByParam("lastName", "Smith");
+        assertTrue(x.size() == 2);
     }
     @Test
     public void testSearchAuthorByFirstName() throws Exception {
-        Set<Author> x = (Set<Author>) dao.findAuthorByParam("firstName", "Fred");
-        outputSearchResults(x);
+        List<Author> x = (List<Author>) dao.findAuthorByParam("firstName", "Johnson");
         assertTrue(x.size() == 2);
     }
     @Test
     public void testSearchAuthorById2() throws Exception {
-        Set<Author> x = (Set<Author>) dao.findAuthorByParam("authorId", 104);
-        outputSearchResults(x);
-
+        List<Author> x = (List<Author>) dao.findAuthorByParam("authorId", "abc");
+        assertTrue(x.size() == 1);
     }
     @Test
     public void testGetAllAuthors() throws Exception {
-        Set<Author> x = (Set<Author>) dao.getAllAuthors();
-        outputSearchResults(x);
-        assertTrue(x.size() == 4);
+        List<Author> x = (List<Author>) dao.getAllAuthors();
+        assertTrue(x.size() >= 3);
     }
 
-    private void outputSearchResults(Collection<Author> authors) {
-
-        for (Author author : authors) {
-
-            System.out.print("First Name: " + author.getFirstName());
-            System.out.print(" Last Name: " +author.getLastName());
-            System.out.println(" ID: " + author.getAuthorId());
-        }
+    @After
+    public void tearDown() {
+        dao.deleteAuthor(testAuthor1);
+        dao.deleteAuthor(testAuthor2);
+        dao.deleteAuthor(testAuthor3);
     }
-
 }

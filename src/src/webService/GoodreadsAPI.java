@@ -15,7 +15,7 @@ import java.net.URL;
  */
 public class GoodreadsAPI {
 
-    private final static String SERVICE_URL = "https://www.goodreads.com/";
+    private final static String SERVICE_URL = "http://tomcat2-savannaholson.rhcloud.com/webService%5Fwar/webService/";
     private final static String API_KEY = "?key=FCu2HvScdASGklfD1GmDBg";
     private final static String AUTHOR_INFO_URL = "api/author_url/";
     private final static String AUTHOR_BOOK_URL = "author/list/";

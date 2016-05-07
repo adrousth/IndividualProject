@@ -3,6 +3,7 @@ package library.persistence;
 import library.entities.*;
 import library.results.SearchResults;
 import org.hibernate.Transaction;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,28 +17,60 @@ import static org.junit.Assert.*;
  * Created by Student on 2/21/2016.
  */
 public class BookDAOTest {
-    Transaction transaction = null;
     BookDAO dao = null;
-    CategoryDAO cDao = null;
     AuthorDAO aDao = null;
+    Book testBook;
+    Book testBook1;
+    Book testBook2;
+    Book testBook3;
+    Book testBook4;
     @Before
     public void setup() {
         dao = new BookDAO();
-        cDao = new CategoryDAO();
         aDao = new AuthorDAO();
+        testBook = new Book();
+
+        testBook1 = new Book();
+        testBook1.setIsbn("abcdefghij");
+        testBook1.setTitle("Hello World");
+        testBook1.setTotalCopies(2);
+
+        testBook2 = new Book();
+        testBook2.setIsbn("abcdefghik");
+        testBook2.setTitle("Hello World2");
+        testBook2.setTotalCopies(1);
+
+        testBook3 = new Book();
+        testBook3.setIsbn("abcdefghil");
+        testBook3.setTitle("Hello World3");
+        testBook3.setTotalCopies(3);
+
+        testBook4 = new Book();
+        testBook4.setIsbn("abcdefghim");
+        testBook4.setTitle("Hello World4");
+        testBook4.setTotalCopies(0);
+
+        dao.addBook(testBook1);
+        dao.addBook(testBook2);
+        dao.addBook(testBook3);
+        dao.addBook(testBook4);
+
+    }
+
+    @After
+    public void tearDown() throws Exception {
+
+        dao.deleteBook(dao.getBookByIsbn(testBook1.getIsbn()));
+        dao.deleteBook(dao.getBookByIsbn(testBook2.getIsbn()));
+        dao.deleteBook(dao.getBookByIsbn(testBook3.getIsbn()));
+        dao.deleteBook(dao.getBookByIsbn(testBook4.getIsbn()));
     }
 
     @Test
     public void testGetAllBooks() {
         List<Book> books = dao.getAllBooks();
-        int i = 1;
-        for (Book book: books) {
-            System.out.println("book #: " + i);
-            System.out.println(book.getIsbn());
-            System.out.println(book.getTitle());
-            System.out.println();
-            i++;
-        }
+        assertTrue(books.size() > 0);
+
     }
 
     @Test
@@ -128,6 +161,67 @@ public class BookDAOTest {
             System.out.println("book number: " + copy.getBookNumber());
             System.out.println("isbn: " + copy.getIsbn());
         }
+
+    }
+
+
+    @Test
+    public void addBook() throws Exception {
+
+    }
+
+    @Test
+    public void getCopyById() throws Exception {
+
+    }
+
+    @Test
+    public void getSimpleCopyById() throws Exception {
+
+    }
+
+    @Test
+    public void getBookByIsbn() throws Exception {
+
+    }
+
+    @Test
+    public void changeCheckoutStatus() throws Exception {
+
+    }
+
+    @Test
+    public void checkoutBookCopy() throws Exception {
+
+    }
+
+    @Test
+    public void returnBookCopy() throws Exception {
+
+    }
+
+    @Test
+    public void updateBook() throws Exception {
+
+    }
+
+    @Test
+    public void getAllBooks() throws Exception {
+
+    }
+
+    @Test
+    public void searchForNumberOfAuthorBooks() throws Exception {
+
+    }
+
+    @Test
+    public void searchForNumberOfBooks() throws Exception {
+
+    }
+
+    @Test
+    public void getNumberOfBooks() throws Exception {
 
     }
 }

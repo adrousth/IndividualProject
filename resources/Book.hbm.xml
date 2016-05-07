@@ -44,7 +44,7 @@
             <many-to-many column="book_category" class="library.entities.Category"/>
         </set>
 
-        <set name="bookCopies">
+        <set name="bookCopies" cascade="all-delete-orphan, save-update">
             <key>
                 <column name="isbn"/>
             </key>

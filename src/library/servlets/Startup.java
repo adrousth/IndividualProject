@@ -22,20 +22,7 @@ import java.util.ArrayList;
 public class Startup extends HttpServlet {
     public void init() throws ServletException {
 
-        /*
-        ArrayList<LibraryDAO> libraryDirectory = new ArrayList<>();
-        LibraryDAO authorDirectory = new AuthorDAO();
-        LibraryDAO bookDirectory = new BookDAO();
-        LibraryDAO categoryDirectory = new CategoryDAO();
-        LibraryDAO rentalDirectory = new RentalDAO();
-        LibraryDAO userDirectory = new UserDAO();
-        libraryDirectory.add(authorDirectory);
-        libraryDirectory.add(bookDirectory);
-        libraryDirectory.add(categoryDirectory);
-        libraryDirectory.add(rentalDirectory);
-        libraryDirectory.add(userDirectory);
-        */
-            final Logger log = Logger.getLogger(this.getClass());
+        final Logger log = Logger.getLogger(this.getClass());
         BookDAO bookDAO = new BookDAO();
         UserDAO userDAO = new UserDAO();
         RentalDAO rentalDAO = new RentalDAO();
