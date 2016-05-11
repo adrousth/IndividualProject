@@ -39,6 +39,7 @@ public class RentalDAO extends LibraryDAO {
 
             rentalId = (Integer) session.save("Rental", rental);
             tx.commit();
+            log.info("Added rental");
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
@@ -55,12 +56,9 @@ public class RentalDAO extends LibraryDAO {
      */
     public int returningRental(Rental rental) {
         BookDAO bookDAO = new BookDAO();
-
-
         if (!bookDAO.returnBookCopy(rental)) {
             return -1;
         }
-
         rental.setReturnDate(new Date());
         int i = 0;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -70,6 +68,7 @@ public class RentalDAO extends LibraryDAO {
             session.update("Rental", rental);
             tx.commit();
             i = 1;
+            log.info("Rental returned");
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
@@ -170,7 +169,7 @@ public class RentalDAO extends LibraryDAO {
             id = Integer.parseInt(userId);
             user = userDAO.getUserById(id);
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         if (user == null) {

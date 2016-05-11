@@ -68,7 +68,6 @@ public class UserDAO extends LibraryDAO {
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
-            e.printStackTrace();
         } finally {
             session.close();
         }
@@ -135,7 +134,7 @@ public class UserDAO extends LibraryDAO {
         try {
             date = format.parse(birthday);
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error(e);
             results.addMessage("invalid date");
         }
         if (!Pattern.matches(EMAIL_REGEX, email)) {

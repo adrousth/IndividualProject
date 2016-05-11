@@ -75,22 +75,22 @@ public class AuthorDAOTest {
     }
     @Test
     public void testSearchAuthorByLastName() throws Exception {
-        List<Author> x = (List<Author>) dao.findAuthorByParam("lastName", "Smith");
+        List<Author> x = dao.findAuthorByParam("lastName", "Smith");
         assertTrue(x.size() == 2);
     }
     @Test
     public void testSearchAuthorByFirstName() throws Exception {
-        List<Author> x = (List<Author>) dao.findAuthorByParam("firstName", "Johnson");
+        List<Author> x = dao.findAuthorByParam("firstName", "Johnson");
         assertTrue(x.size() == 2);
     }
     @Test
     public void testSearchAuthorById2() throws Exception {
-        List<Author> x = (List<Author>) dao.findAuthorByParam("authorId", "abc");
+        List<Author> x = dao.findAuthorByParam("authorId", "abc");
         assertTrue(x.size() == 1);
     }
     @Test
     public void testGetAllAuthors() throws Exception {
-        List<Author> x = (List<Author>) dao.getAllAuthors();
+        List<Author> x = dao.getAllAuthors();
         assertTrue(x.size() >= 3);
     }
 

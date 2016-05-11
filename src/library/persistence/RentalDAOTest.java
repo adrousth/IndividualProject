@@ -30,9 +30,8 @@ public class RentalDAOTest {
     public void testAddRental() throws Exception {
         UserDAO userDAO = new UserDAO();
         Date date = new Date();
-        //String isbn, int userId, int bookNumber, int rentalTime, float fees, String feesInfo, Date checkoutDate) {
+
         System.out.println(date);
-        //Rental rental = new Rental("0006498523", 1001, 3, 5, (float) 0.00, "", date);
         Rental rental = new Rental();
         rental.setIsbn("0006498523");
         rental.setBookNumber(3);

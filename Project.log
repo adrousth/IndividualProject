@@ -2555,3 +2555,79 @@
 2016-05-11 17:02:20,534 2433 [main] INFO  library.persistence.BookDAO  - Added book number: 1 with isbn: abcdefghim
 2016-05-11 17:02:20,689 2588 [main] INFO  library.persistence.BookDAO  - book copy with isbn: abcdefghil number: 3 has had it's checkout status changed too O
 2016-05-11 17:02:20,744 2643 [main] INFO  library.persistence.BookDAO  - book copy with isbn: abcdefghil number: 3 has had it's checkout status changed too I
+2016-05-11 17:15:14,576 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-11 17:15:14,615 39   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.2.2.Final}
+2016-05-11 17:15:14,619 43   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-05-11 17:15:14,622 46   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-05-11 17:15:14,659 83   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-11 17:15:14,659 83   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-11 17:15:14,778 202  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-05-11 17:15:15,183 607  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-11 17:15:15,191 615  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+2016-05-11 17:15:15,192 616  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-05-11 17:15:15,192 616  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/library]
+2016-05-11 17:15:15,192 616  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-05-11 17:15:15,486 910  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 17:15:15,498 922  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 17:15:15,547 971  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-11 17:15:15,557 981  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 17:15:16,555 1979 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:16,793 2217 [main] INFO  library.persistence.AuthorDAO  - Added author with id: abc
+2016-05-11 17:15:16,797 2221 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:16,846 2270 [main] INFO  library.persistence.AuthorDAO  - Added author with id: def
+2016-05-11 17:15:16,847 2271 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:16,914 2338 [main] INFO  library.persistence.AuthorDAO  - Added author with id: ghi
+2016-05-11 17:15:17,068 2492 [main] INFO  library.persistence.AuthorDAO  - Author with id: abc has been deleted
+2016-05-11 17:15:17,247 2671 [main] INFO  library.persistence.AuthorDAO  - Author with id: def has been deleted
+2016-05-11 17:15:17,290 2714 [main] INFO  library.persistence.AuthorDAO  - Author with id: ghi has been deleted
+2016-05-11 17:15:17,295 2719 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,336 2760 [main] INFO  library.persistence.AuthorDAO  - Added author with id: abc
+2016-05-11 17:15:17,337 2761 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,380 2804 [main] INFO  library.persistence.AuthorDAO  - Added author with id: def
+2016-05-11 17:15:17,381 2805 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,425 2849 [main] INFO  library.persistence.AuthorDAO  - Added author with id: ghi
+2016-05-11 17:15:17,426 2850 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,469 2893 [main] INFO  library.persistence.AuthorDAO  - Added author with id: 100
+2016-05-11 17:15:17,547 2971 [main] INFO  library.persistence.AuthorDAO  - Author with id: 100 has been deleted
+2016-05-11 17:15:17,603 3027 [main] INFO  library.persistence.AuthorDAO  - Author with id: abc has been deleted
+2016-05-11 17:15:17,647 3071 [main] INFO  library.persistence.AuthorDAO  - Author with id: def has been deleted
+2016-05-11 17:15:17,696 3120 [main] INFO  library.persistence.AuthorDAO  - Author with id: ghi has been deleted
+2016-05-11 17:15:17,697 3121 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,736 3160 [main] INFO  library.persistence.AuthorDAO  - Added author with id: abc
+2016-05-11 17:15:17,736 3160 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,780 3204 [main] INFO  library.persistence.AuthorDAO  - Added author with id: def
+2016-05-11 17:15:17,781 3205 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:17,825 3249 [main] INFO  library.persistence.AuthorDAO  - Added author with id: ghi
+2016-05-11 17:15:17,880 3304 [main] INFO  library.persistence.AuthorDAO  - Author with id: abc has been deleted
+2016-05-11 17:15:17,925 3349 [main] INFO  library.persistence.AuthorDAO  - Author with id: def has been deleted
+2016-05-11 17:15:17,969 3393 [main] INFO  library.persistence.AuthorDAO  - Author with id: ghi has been deleted
+2016-05-11 17:15:17,970 3394 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,014 3438 [main] INFO  library.persistence.AuthorDAO  - Added author with id: abc
+2016-05-11 17:15:18,015 3439 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,058 3482 [main] INFO  library.persistence.AuthorDAO  - Added author with id: def
+2016-05-11 17:15:18,058 3482 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,102 3526 [main] INFO  library.persistence.AuthorDAO  - Added author with id: ghi
+2016-05-11 17:15:18,103 3527 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,169 3593 [main] INFO  library.persistence.AuthorDAO  - Added author with id: 100
+2016-05-11 17:15:18,214 3638 [main] INFO  library.persistence.AuthorDAO  - Author with id: 100 has been deleted
+2016-05-11 17:15:18,258 3682 [main] INFO  library.persistence.AuthorDAO  - Author with id: abc has been deleted
+2016-05-11 17:15:18,325 3749 [main] INFO  library.persistence.AuthorDAO  - Author with id: def has been deleted
+2016-05-11 17:15:18,369 3793 [main] INFO  library.persistence.AuthorDAO  - Author with id: ghi has been deleted
+2016-05-11 17:15:18,370 3794 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,414 3838 [main] INFO  library.persistence.AuthorDAO  - Added author with id: abc
+2016-05-11 17:15:18,414 3838 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,458 3882 [main] INFO  library.persistence.AuthorDAO  - Added author with id: def
+2016-05-11 17:15:18,458 3882 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,503 3927 [main] INFO  library.persistence.AuthorDAO  - Added author with id: ghi
+2016-05-11 17:15:18,547 3971 [main] INFO  library.persistence.AuthorDAO  - Author with id: abc has been deleted
+2016-05-11 17:15:18,592 4016 [main] INFO  library.persistence.AuthorDAO  - Author with id: def has been deleted
+2016-05-11 17:15:18,636 4060 [main] INFO  library.persistence.AuthorDAO  - Author with id: ghi has been deleted
+2016-05-11 17:15:18,636 4060 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,681 4105 [main] INFO  library.persistence.AuthorDAO  - Added author with id: abc
+2016-05-11 17:15:18,682 4106 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,725 4149 [main] INFO  library.persistence.AuthorDAO  - Added author with id: def
+2016-05-11 17:15:18,725 4149 [main] INFO  library.persistence.AuthorDAO  - Adding author
+2016-05-11 17:15:18,769 4193 [main] INFO  library.persistence.AuthorDAO  - Added author with id: ghi
+2016-05-11 17:15:18,813 4237 [main] INFO  library.persistence.AuthorDAO  - Author with id: abc has been deleted
+2016-05-11 17:15:18,869 4293 [main] INFO  library.persistence.AuthorDAO  - Author with id: def has been deleted
+2016-05-11 17:15:18,925 4349 [main] INFO  library.persistence.AuthorDAO  - Author with id: ghi has been deleted

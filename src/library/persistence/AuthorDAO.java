@@ -26,15 +26,15 @@ public class AuthorDAO extends LibraryDAO {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
         String authorId = "0";
+        log.info("Adding author");
         try {
             tx = session.beginTransaction();
             authorId = (String) session.save("Author", newAuthor);
-
             tx.commit();
-            //log.info("Added user: " + employee + " with id of: " + employeeId);
+            log.info("Added author with id: " + authorId);
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
-            e.printStackTrace();//log.error(e);
+            log.error(e);
             authorId = "-1";
         } finally {
             session.close();
@@ -43,59 +43,38 @@ public class AuthorDAO extends LibraryDAO {
     }
 
     /**
-     * finds an author based on the given ID
+     * Finds an author based on the given ID
      * @param authorId The if for the author.
      * @return The author that was found.
      */
     public Author findAuthorById(String authorId) {
         Author author = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction tx = null;
-        try {
 
-            tx = session.beginTransaction();
-            author = (Author) session.get(Author.class, authorId);
-            //log.info("Added user: " + employee + " with id of: " + employeeId);
-        } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
-            e.printStackTrace();//log.error(e);
-        } finally {
-            session.close();
-        }
+        author = (Author) session.get(Author.class, authorId);
+
         return author;
     }
 
     /**
-     *
-     * @param searchType
-     * @param searchParam
-     * @return
+     * Gets an author based on a type of search.
+     * @param searchType The field used in the search ex. firstName, authorId
+     * @param searchParam The term to be used in the search.
+     * @return A list of authors that meet the criteria.
      *
      */
-    public Collection<Author> findAuthorByParam(String searchType, Object searchParam) {
+    public List<Author> findAuthorByParam(String searchType, Object searchParam) {
 
-        Collection<Author> authors = null;
-
-
+        List<Author> authors = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction tx = null;
-        try {
+        authors = session.createCriteria(Author.class).add(Restrictions.eq(searchType, searchParam)).list();
+        session.close();
 
-            tx = session.beginTransaction();
-            authors = session.createCriteria(Author.class).add(Restrictions.eq(searchType, searchParam)).list();
-
-
-        } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
-            e.printStackTrace();//log.error(e);
-        } finally {
-            session.close();
-        }
         return authors;
     }
 
     /**
-     * gets all authors
+     * Gets all authors.
      * @return A list of all authors.
      */
     public List<Author> getAllAuthors() {
