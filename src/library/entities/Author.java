@@ -1,16 +1,25 @@
 package library.entities;
 
+import javax.persistence.*;
 import java.util.Set;
 import java.util.TreeSet;
 
 /**
  * Created by Student on 2/11/2016.
  */
+@Entity
+@Table(name = "authors")
 public class Author {
+    @Id
+    @Column(name = "author_id")
     private String authorId;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "name")
     private String name;
+    @ManyToMany(mappedBy="authors")
     private Set<Book> books;
 
     public Author() {

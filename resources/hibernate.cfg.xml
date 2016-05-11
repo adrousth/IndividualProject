@@ -17,23 +17,7 @@
             root
         </property>
         <property name="connection.password"></property>
-        <mapping resource="Book.hbm.xml" />
-        <mapping class="library.entities.Book" />
 
-        <mapping resource="Users.hbm.xml" />
-        <mapping class="library.entities.User" />
-
-        <mapping resource="Authors.hbm.xml" />
-        <mapping class="library.entities.Author" />
-
-        <mapping resource="BookCopy.hbm.xml" />
-        <mapping class="library.entities.BookCopy" />
-
-        <mapping resource="Category.hbm.xml" />
-        <mapping class="library.entities.Category" />
-
-        <mapping resource="Rental.hbm.xml" />
-        <mapping class="library.entities.Rental" />
     </session-factory>
 
 </hibernate-configuration>

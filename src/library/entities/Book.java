@@ -1,29 +1,45 @@
 package library.entities;
 
+import javax.persistence.*;
 import java.util.*;
 
 /**
  * Created by Student on 2/11/2016.
  */
+@Entity
+@Table(name = "books")
 public class Book {
+    @Id
+    @Column(name = "isbn")
     private String isbn;
+    @Column(name = "title")
     private String title;
+    @Column(name = "publisher")
     private String publisher;
+    @Column(name = "publish_year")
     private String publishYear;
+    @Column(name = "edition")
     private String edition;
+    @Column(name = "copies")
     private int totalCopies;
+    @Column(name = "copies_available")
     private int availableCopies;
+    @Column(name = "number_pages")
     private String numberPages;
+    @Column(name = "format")
     private String format;
+    @Column(name = "description")
     private String description;
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
     private Set<BookCopy> bookCopies;
+    @ManyToMany
+    @JoinTable(name="book_authors", joinColumns=@JoinColumn(name="isbn"),
+            inverseJoinColumns=@JoinColumn(name="author_id"))
     private Set<Author> authors;
-    private Set<Category> categories;
 
     public Book() {
-        authors = new HashSet<>();
-        categories = new HashSet<>();
-        bookCopies = new HashSet<>();
+        authors = new TreeSet<>();
+        bookCopies = new TreeSet<>();
     }
 
     public void decreaseAvailableCopies() {
@@ -140,18 +156,6 @@ public class Book {
 
     public void addAuthor(Author author) {
         authors.add(author);
-    }
-
-    public Set<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
-    }
-
-    public void addCategory(Category category) {
-        categories.add(category);
     }
 
 }

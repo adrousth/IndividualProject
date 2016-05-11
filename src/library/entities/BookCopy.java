@@ -1,4 +1,5 @@
 package library.entities;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
@@ -6,15 +7,37 @@ import java.util.TreeSet;
 /**
  * Created by Student on 2/11/2016.
  */
+@Entity
+@Table(name = "book_copies")
 public class BookCopy implements Serializable{
+    @Id
+    @Column(name = "isbn")
     private String isbn;
+    @Id
+    @Column(name = "book_number")
     private int bookNumber;
+    @Column(name = "book_condition")
     private String bookCondition;
+    @Column(name = "checkout_status")
     private char checkoutStatus; // char use single quotes - 'A' not "A"
+
+    @ManyToOne
+    @JoinColumn(name = "isbn", insertable = false, updatable = false )
+    private Book book;
+
+    @OneToMany(mappedBy = "bookCopy")
     private Set<Rental> rentals;
 
     public BookCopy() {
         rentals = new TreeSet<>();
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     public String getIsbn() {

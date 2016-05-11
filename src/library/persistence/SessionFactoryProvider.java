@@ -1,5 +1,6 @@
 package library.persistence;
 
+import library.entities.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
@@ -14,7 +15,12 @@ public class SessionFactoryProvider {
 
     public static void createSessionFactory() {
         Configuration configuration = new Configuration();
-        configuration.configure();
+        configuration.configure().addAnnotatedClass(Book.class)
+                                 .addAnnotatedClass(BookCopy.class)
+                                 .addAnnotatedClass(Author.class)
+                                 .addAnnotatedClass(Rental.class)
+                                 .addAnnotatedClass(User.class).buildMappings();
+
         ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
     }

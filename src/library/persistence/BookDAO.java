@@ -36,9 +36,9 @@ public class BookDAO extends LibraryDAO {
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
-        } finally {
-            session.close();
         }
+
+
     }
 
     public void deleteBook(Book book) {
@@ -46,7 +46,6 @@ public class BookDAO extends LibraryDAO {
 
         Transaction tx = null;
         try {
-
             tx = session.beginTransaction();
             session.delete("Book", book);
 
@@ -75,7 +74,8 @@ public class BookDAO extends LibraryDAO {
             tx = session.beginTransaction();
             bookId = (String) session.save("Book", book);
             tx.commit();
-
+            log.info("Added book with isbn: " + book.getIsbn());
+            log.info("Book copies now being added");
             for (int i = 0; i < book.getTotalCopies(); i++) {
                 BookCopy newBook = new BookCopy();
                 newBook.setIsbn(book.getIsbn());
@@ -88,7 +88,6 @@ public class BookDAO extends LibraryDAO {
             if (tx != null) {
                 tx.rollback();
             }
-            session.close();
             bookId = "-1";
             log.error(e);
         } finally {
@@ -105,7 +104,7 @@ public class BookDAO extends LibraryDAO {
      * @return The book copy that was found, if any.
      */
     public BookCopy getCopyById(int bookNumber, String isbn) {
-        List<BookCopy> copies = null;
+        List<BookCopy> copies = new ArrayList<>();
         BookCopy copy = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
@@ -113,7 +112,7 @@ public class BookDAO extends LibraryDAO {
                 .add(Restrictions.eq("isbn", isbn))
                 .add(Restrictions.eq("bookNumber", bookNumber))
                 .list();
-        if (copies != null && copies.size() > 0) {
+        if (copies.size() > 0) {
             copy = copies.get(0);
         }
         session.close();
@@ -128,7 +127,7 @@ public class BookDAO extends LibraryDAO {
      * @return The (simple) book that was found, if any.
       */
     public SimpleBook getSimpleCopyById(int bookNumber, String isbn) {
-        List<BookCopy> copies;
+        List<BookCopy> copies = new ArrayList<>();
         SimpleBook book = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
@@ -171,20 +170,19 @@ public class BookDAO extends LibraryDAO {
         Transaction tx = null;
         if (bookCopy.getCheckoutStatus() == 'I') {
             bookCopy.setCheckoutStatus('O');
-
         } else {
             bookCopy.setCheckoutStatus('I');
-
         }
+
         try {
             tx = session.beginTransaction();
             session.update("BookCopy", bookCopy);
             tx.commit();
-
+            log.info("book copy with isbn: " + bookCopy.getIsbn() + " number: "  + bookCopy.getBookNumber()
+                    + " has had it's checkout status changed too " + bookCopy.getCheckoutStatus() );
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
-            e.printStackTrace();
         } finally {
             session.close();
         }
@@ -203,8 +201,10 @@ public class BookDAO extends LibraryDAO {
             Book book = getBookByIsbn(rental.getIsbn());
             book.decreaseAvailableCopies();
             updateBook(book);
+            log.info("Book copy isbn: " + rental.getIsbn() + " number: " + rental.getBookNumber() + " is now checked out.");
             return true;
         } else {
+            log.error("Book copy isbn: " + rental.getIsbn() + " number: " + rental.getBookNumber() + " is already checked out.");
             return false;
         }
     }
@@ -221,8 +221,10 @@ public class BookDAO extends LibraryDAO {
             Book book = getBookByIsbn(rental.getIsbn());
             book.increaseAvailableCopies();
             updateBook(book);
+            log.info("Book copy isbn: " + rental.getIsbn() + " number: " + rental.getBookNumber() + " has been returned");
             return true;
         } else {
+            log.error("Book copy isbn: " + rental.getIsbn() + " number: " + rental.getBookNumber() + " has not been checked out");
             return false;
         }
     }
@@ -240,6 +242,7 @@ public class BookDAO extends LibraryDAO {
             tx = session.beginTransaction();
             session.update("Book", book);
             tx.commit();
+            log.info("Book with: " + book.getIsbn() + " updated");
             i = 1;
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
@@ -275,11 +278,7 @@ public class BookDAO extends LibraryDAO {
     public List<Author> searchForNumberOfAuthorBooks(int firstResult, int numberOfBooks, String searchType, String searchValue) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-
-
         List<Author> authors = session.createCriteria(Author.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).list();
-
-
         return authors;
     }
 
@@ -292,7 +291,7 @@ public class BookDAO extends LibraryDAO {
      * @return The results of the search.
      */
     public SearchResults searchForNumberOfBooks(int firstResult, int numberOfBooks, String searchType, String searchValue) {
-        List<Book> books = null;
+        List<Book> books = new ArrayList<>();
         SearchResults searchResults = new SearchResults();
 
         int number = 0;
@@ -302,15 +301,17 @@ public class BookDAO extends LibraryDAO {
             books = session.createCriteria(Book.class).setFirstResult(firstResult).setMaxResults(numberOfBooks).addOrder(Order.asc("title")).list();
             number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).uniqueResult());
         } else if (searchType.equals("firstName") || searchType.equals("lastName")) {
-            Author author = (Author) session.createCriteria(Author.class).add(Restrictions.eq(searchType, searchValue)).list().get(0);
-            number = author.getBooks().size();
-
-            if ((numberOfBooks + firstResult) > author.getBooks().size()) {
-                books = new ArrayList<>(author.getBooks()).subList(firstResult, author.getBooks().size());
-            } else {
-                books = new ArrayList<>(author.getBooks()).subList(firstResult, firstResult + numberOfBooks);
+            List<Author> authors = (List<Author>) session.createCriteria(Author.class).add(Restrictions.eq(searchType, searchValue)).list();
+            Author author = new Author();
+            if (authors.size() > 0) {
+                author = authors.get(0);
+                number = author.getBooks().size();
+                if ((numberOfBooks + firstResult) > author.getBooks().size()) {
+                    books = new ArrayList<>(author.getBooks()).subList(firstResult, author.getBooks().size());
+                } else {
+                    books = new ArrayList<>(author.getBooks()).subList(firstResult, firstResult + numberOfBooks);
+                }
             }
-
         } else {
             books = session.createCriteria(Book.class).add(Restrictions.like(searchType, "%" + searchValue + "%")).setFirstResult(firstResult).setMaxResults(numberOfBooks).addOrder(Order.asc("title")).list();
             number = Math.toIntExact((Long) session.createCriteria(Book.class).setProjection(Projections.rowCount()).add(Restrictions.like(searchType, "%" + searchValue + "%")).uniqueResult());

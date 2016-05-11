@@ -1,26 +1,44 @@
 package library.entities;
 
+import javax.persistence.*;
 import java.util.*;
 
 /**
  * Created by Student on 2/11/2016.
  */
+@Entity
+@Table(name = "users")
 public class User {
+    @Id @GeneratedValue
+    @Column(name = "user_id")
     private int userId;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "address_one")
     private String addressOne;
+    @Column(name = "address_two")
     private String addressTwo;
+    @Column(name = "state")
     private String state;
+    @Column(name = "city")
     private String city;
+    @Column(name = "zip_code")
     private String zipCode;
+    @Column(name = "birthday")
     private Date birthday;
+    @Column(name = "email")
     private String email;
+    @Column(name = "phone_number")
     private String phone;
+    @Column(name = "password")
     private String password;
+    @Column(name = "fees")
     private float fees;
+    @OneToMany(mappedBy = "user")
     private Set<Rental> rentals;
-    private String role;
+
 
     public User() {
         rentals = new TreeSet<>();
@@ -29,6 +47,7 @@ public class User {
 
 
     public User(String firstName, String lastName, Date birthday , String email, String phone, String addressOne, String addressTwo, String city, String state, String zipCode, String password) {
+        this();
         this.firstName = firstName;
         this.lastName = lastName;
         this.addressOne = addressOne;
@@ -40,6 +59,7 @@ public class User {
         this.phone = phone;
         this.zipCode = zipCode;
         this.password = password;
+
     }
 
     public SimpleUser simpleUserInfo() {
@@ -54,13 +74,9 @@ public class User {
         return user;
     }
 
-    public String getRole() {
-        return role;
-    }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+
+
 
     public float getFees() {
         return fees;

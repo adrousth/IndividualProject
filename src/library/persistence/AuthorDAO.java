@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -95,29 +96,21 @@ public class AuthorDAO extends LibraryDAO {
 
     /**
      * gets all authors
-     * @return
+     * @return A list of all authors.
      */
-    public Collection<Author> getAllAuthors() {
+    public List<Author> getAllAuthors() {
 
-        Collection<Author> authors = null;
-
+        List<Author> authors;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction tx = null;
-        try {
-
-            tx = session.beginTransaction();
-            authors = session.createCriteria(Author.class).list();
-
-
-        } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
-            e.printStackTrace();//log.error(e);
-        } finally {
-            session.close();
-        }
+        authors = session.createCriteria(Author.class).list();
+        session.close();
         return authors;
     }
 
+    /**
+     * Deletes an author from the database.
+     * @param author The author to be deleted.
+     */
     public void deleteAuthor(Author author) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
@@ -128,7 +121,7 @@ public class AuthorDAO extends LibraryDAO {
             session.delete("Author", author);
 
             tx.commit();
-
+            log.info("Author with id: " + author.getAuthorId() + " has been deleted");
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
